@@ -81,7 +81,7 @@ MU contains:
 | 14 | L12 | F6 (clicked, shared or installed; no money lost yet) | MU |
 | 15 | L12b | "What happened?" start page | L12 |
 | 16 | L13 | Radar v1: signal to card PR in 24 hours | L04, L08 |
-| 17 | L14 | Odia, Hindi and audio | L01 lines approved; a human reader per language |
+| 17 | L14 | Odia, Hindi and audio | Odia and Hindi opening lines written by Satya (deferred from L01); a human reader per language |
 | 18 | L15 | Drift monitor: a changed source flags its facts and every page that uses them | L05 |
 | 19 | L16 | Impersonation watch | L06 |
 | 20 | L17 | Public launch | L08 to L16 |
@@ -102,7 +102,7 @@ After L17, life-event playbooks E1 to E8 (rules/taxonomy.md), ordered by what re
   - Pick or rewrite the English opening line.
   - Write or approve the Odia and Hindi lines himself.
   - Approve, change or cut each house rules section and each allowed term. Decide lakh and crore.
-- **DONE WHEN:** rules/house-rules.md shows the opening line as `approved` in en, or and hi, each with a date and Satya's initials. Every house rules section is `approved` or `cut`. Every row in rules/allowed-terms.md is `approved` or removed.
+- **DONE WHEN:** rules/house-rules.md shows the opening line as `approved` in en, with a date and Satya's initials. The or and hi lines are deferred to L14 (Satya, 30 September 2026). Every house rules section is `approved` or `cut`. Every row in rules/allowed-terms.md is `approved` or removed.
 - **FILES in bounds:** rules/house-rules.md, rules/allowed-terms.md, STATE.md. **Out of bounds:** everything else.
 - **Estimate:** 60 min machine, 75 min Satya.
 
@@ -193,6 +193,7 @@ One loop for each family: F1, F5, F3, F4, F6, in that order. Facts first, in the
 ### L14 · Odia, Hindi and audio
 
 - **GOAL:** every live page and fact exists in or and hi, checked by a human who reads that language, and each playbook has an audio version read by a human voice.
+- **USER DOES first:** write the Odia and Hindi opening lines (deferred from L01). rules/house-rules.md, section 1, records them as `approved` with a date and initials.
 - **DONE WHEN:** each translation and fact statement has `verified_by` set by a human reader of that language. Each audio file is under 400 KB with its transcript on the page. Machine translation alone never goes live.
 
 ### L15 · Drift monitor

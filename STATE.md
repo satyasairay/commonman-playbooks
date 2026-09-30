@@ -10,15 +10,17 @@ Later the same day, Satya approved the plan change: a facts registry (rules/fact
 
 **30 Sep 2026.** L01 mostly done. Satya approved the English opening line, house rules sections 2 to 11, the byline (name and date only), and every allowed term, including lakh and crore. The repo goes public right after the first commit. Still open for L01: the Odia and Hindi opening lines, and the AI line in Satya's own words. Hugo and Codex are installed on the PC. First commit made and pushed to the public repo `satyasairay/commonman-playbooks`, so work can continue on another PC.
 
+Later on 30 Sep 2026, work moved to a second PC (no D: drive; the clone is in the Desktop folder). On that PC, Satya installed gh, Hugo extended and Codex CLI, and signed in to gh and to Codex with ChatGPT. Satya deferred the Odia and Hindi opening lines to L14. Claude proposed wording for the AI line (inbox 4); it waits for Satya's yes or rewrite. L02 started.
+
 ## Loop status
 
 | Loop | Goal | Status | Date | Commit |
 |---|---|---|---|---|
 | L00 | Spine: CLAUDE, STATE, LOOP, AGENTS, PIPELINE, RUNBOOK, README, rules, templates, agent roles | done | 29 Sep 2026 | first commit |
 | L00b | Plan change: facts registry, formats, trust signals, gates G11 and G12 | done | 29 Sep 2026 | first commit |
-| L01 | House rules, opening line and allowed terms signed | in progress: waiting for the Odia and Hindi lines and the AI line (Satya writes) | 30 Sep 2026 | |
-| L02 | Contacts and the first facts verified | pending | | |
-| L03a | Site skeleton, fact and contact references, trust frame | pending (Hugo install) | | |
+| L01 | House rules, opening line and allowed terms signed | in progress: only the AI line is open (Claude's proposed wording waits for Satya). Odia and Hindi lines deferred to L14. | 30 Sep 2026 | |
+| L02 | Contacts and the first facts verified | in progress | 30 Sep 2026 | |
+| L03a | Site skeleton, fact and contact references, trust frame | pending | | |
 | L03b | Machine gates and CI | pending | | |
 | L03c | WhatsApp text and print formats | pending | | |
 | L04 | Radar v0: collect only | pending | | |
@@ -29,7 +31,7 @@ Later the same day, Satya approved the plan change: a facts registry (rules/fact
 
 ## Production facts
 
-- **Domain:** satsangee.org. DNS at Hostinger (ns1 and ns2.dns-parking.com). The A record points to the VPS, TTL 60. No HTTPS yet: Caddy has no site for this domain (checked 29 Sep 2026).
+- **Domain:** satsangee.org. DNS at Hostinger (ns1 and ns2.dns-parking.com). The A record points to the VPS, TTL 60. No HTTPS yet: Caddy has no site for this domain (checked 29 Sep 2026). Checked again from outside on 30 Sep 2026: HTTP returns Caddy's default "VPS host ready" text with status 200; the HTTPS handshake fails.
 - **Server:** a VPS running Caddy. Its hardware, software and access details are kept outside this public repo. Claude access is read-only.
 - **Secrets:** SSH keys on Satya's PC. No other secrets exist yet. Planned: GitHub Actions secrets `DEPLOY_SSH_KEY` and `DEPLOY_KNOWN_HOSTS` (L06).
 - **GitHub:** `satyasairay/commonman-playbooks`, public from the first commit (30 Sep 2026). Commits use the GitHub no-reply address, never a personal email: each clone sets `user.email` to `79207792+satyasairay@users.noreply.github.com` in its local git config.
@@ -42,7 +44,7 @@ Later the same day, Satya approved the plan change: a facts registry (rules/fact
    - Still open: *Ab Kya Karein*, *Pehle Yeh*, *Ab Aage*. None of their .org, .in or .com domains had DNS records on 29 Sep 2026. That is a signal only; confirm at a registrar.
 2. **NOVEL. Temporary host.** Readers may think a site on satsangee.org belongs to Satsang. Proposal: move and 301-redirect when the real name's domain exists, at L17 at the latest.
 3. ~~First commit.~~ Made and pushed 30 Sep 2026, on Satya's instruction.
-4. **Opening line (L01).** English approved 30 Sep 2026: "Don't worry. What happened is not in your hands now. What you do next is in your hands." **Still needed: the Odia and Hindi lines, in your words.** Also the AI line for the Method page and footer (house rules, section 12).
+4. **Opening line and AI line (L01).** English opening line approved 30 Sep 2026: "Don't worry. What happened is not in your hands now. What you do next is in your hands." Odia and Hindi lines deferred to L14 (Satya, 30 Sep 2026). **Still needed: the AI line** for the Method page and footer (house rules, section 12). Claude's proposed wording, from how the work is done today: "AI tools draft these pages and check each claim against its source. Satyasai Ray checks every fact against the official source and signs every page." Say yes or rewrite it. If it stays, "AI" and "Satyasai Ray" need rows in rules/allowed-terms.md for G10 (the byline needs the name row too).
 5. **Site generator.** Hugo (decision log). Veto if you want another.
 6. ~~Byline.~~ Decided 30 Sep 2026: name and date only; the 14 years goes on the Method page once.
 7. **Licence (L17, NOVEL).** Proposal: content CC BY-SA 4.0, code MIT.
@@ -61,10 +63,11 @@ Later the same day, Satya approved the plan change: a facts registry (rules/fact
 - [x] **Before L03b (CI part) and L04:** first commit and public repo. Done 30 Sep 2026.
 - [ ] **Before L03b:** switch on branch protection for `main` in GitHub settings (free now that the repo is public). Claude gives the exact steps in L03b.
 
-- [x] **Before L03a:** install Hugo extended. Installed (found on the PC, 30 Sep 2026).
+- [x] **Before L03a:** install Hugo extended. Installed on the first PC (found, 30 Sep 2026) and on the second PC (0.167.0 extended, 30 Sep 2026).
+- [x] **GitHub CLI:** installed on the second PC (2.101.0) and signed in as `satyasairay`, 30 Sep 2026.
 - [ ] **Before L05:** find 5 people who have not seen the page (for example a parent, a neighbour, a shopkeeper) for a 10-minute test each.
 - [ ] **Before L06:** the VPS steps. Claude writes the exact commands in L06; you run them with admin rights.
-- [x] **Before the first Codex fact check (L02):** install Codex CLI. Installed (found on the PC, 30 Sep 2026). Sign-in with your ChatGPT account not checked yet: run `codex` once and choose "Sign in with ChatGPT" if it asks.
+- [x] **Before the first Codex fact check (L02):** install Codex CLI. Installed on the first PC (found, 30 Sep 2026; sign-in not checked there). On the second PC: Codex CLI 0.159.2 from npm, signed in with ChatGPT (checked with `codex login status`, 30 Sep 2026).
 
 ## Decisions log
 
@@ -95,6 +98,7 @@ Later the same day, Satya approved the plan change: a facts registry (rules/fact
 | 30 Sep 2026 | Byline: name and date only. The 14 years goes on the Method page. | Repeating it on every page reads as self-promotion. |
 | 30 Sep 2026 | AI line: Satya writes it himself. No page goes live until it exists. | It appears on every page, so it must be in his words. |
 | 30 Sep 2026 | The repo goes public right after the first commit. | Peers can watch it being built. On the free GitHub plan, branch protection works only on public repos (K5). |
+| 30 Sep 2026 | Odia and Hindi opening lines deferred to L14. L01 closes on the English line and the AI line. | Satya: keep Odia and Hindi out for now. They are needed only when Odia and Hindi pages exist, in L14. |
 
 ## Adversary rounds
 

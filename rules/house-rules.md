@@ -4,7 +4,7 @@ Every draft follows these rules. The drafter reads this file before writing anyt
 
 | Section | Status | Date | Initials |
 |---|---|---|---|
-| 1 Opening line | en approved; or and hi open | 30 Sep 2026 | SR |
+| 1 Opening line | en approved; or and hi deferred to L14 | 30 Sep 2026 | SR |
 | 2 The reader | approved | 30 Sep 2026 | SR |
 | 3 Voice and language | approved | 30 Sep 2026 | SR |
 | 4 Page structure | approved | 30 Sep 2026 | SR |
@@ -25,8 +25,8 @@ Every playbook and scam card opens with this line. The layout adds it from the i
 | Language | Line | Status | Date | Initials |
 |---|---|---|---|---|
 | en | Don't worry. What happened is not in your hands now. What you do next is in your hands. | approved | 30 Sep 2026 | SR |
-| or | (Satya writes) | open | | |
-| hi | (Satya writes) | open | | |
+| or | (Satya writes, in L14) | deferred to L14 | 30 Sep 2026 | SR |
+| hi | (Satya writes, in L14) | deferred to L14 | 30 Sep 2026 | SR |
 
 The line stays one short line, so pages where time matters (money just left, someone is threatening you right now) reach the clock at once. It is never machine-translated.
 
