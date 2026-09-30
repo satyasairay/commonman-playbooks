@@ -97,7 +97,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** A fraudulent transaction is one made by someone else using your payment details that they got from you by fraud. It is also one you approved yourself because someone forced or threatened you.
 - **conditions:** The same definition also covers any unauthorised transaction (RBI-LIAB27-03). An electronic banking transaction means an "electronic funds transfer" under Section 2(c) of the Payment and Settlement Systems Act, 2007, and includes card present and card not present transactions (new paragraph 4(10D)).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(15A)
 - **quote:** "Fraudulent electronic banking transaction (Fraudulent EBT) means an EBT executed by a third-party using the credentials obtained from the customer through fraudulent means or executed by the customer by granting approval under coercion or duress from the third-party"
 - **verified on / by:**
@@ -110,7 +110,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** An unauthorised transaction is one you did not authorise. It includes one caused by the bank's negligence or by a fault somewhere else in the system.
 - **conditions:** "Inter alia": the list is not complete. "A fault somewhere else in the system" is the source's "third-party breach" (RBI-LIAB27-08). The definition of a fraudulent transaction includes every unauthorised transaction (new paragraph 4(15A), see RBI-LIAB27-02).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(26B)
 - **quote:** "Unauthorised electronic banking transaction (Unauthorised EBT) means an EBT which is not authorised by a customer and inter alia includes an EBT occurring on account of negligence by a bank and / or a third-party breach."
 - **verified on / by:**
@@ -123,7 +123,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** right
 - **statement.en:** If the fraud happened because of the bank's negligence or fault, you pay nothing and the bank must reverse the transaction. This is so even if you did not report it.
 - **conditions:** What counts as the bank's negligence: RBI-LIAB27-05 to 07.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76L
 - **quote:** "entitled to zero liability and reversal of the transaction in cases where the fraudulent EBT occurs due to negligence / deficiency on the part of the bank, irrespective of whether the transaction is reported by the customer or not."
 - **verified on / by:**
@@ -136,7 +136,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** The bank is negligent if, among other things, it has not put in place the safety systems it must have, or has not sent the alerts it must send.
 - **conditions:** The list is open ("inter alia"). The other items are in RBI-LIAB27-06 and 07.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(20B), items (i) and (ii)
 - **quote:** "Negligence by a bank inter alia includes the following actions by the bank: (i) not putting in place the mandated systems and procedures to ensure safety and security of EBTs; or (ii) not sending mandatory alerts for EBTs; or"
 - **verified on / by:**
@@ -149,7 +149,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** The bank is also negligent if it does not give you a way to report fraud or a lost card at any hour on any day, or does not act with care on your report.
 - **conditions:** Part of the open list in new paragraph 4(20B), which begins "Negligence by a bank inter alia includes the following actions by the bank".
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(20B), items (iii) and (iv)
 - **quote:** "(iii) not providing 24x7 channels for reporting of fraudulent EBTs or loss of debit / credit card; or (iv) not acting diligently upon a customer notification regarding unauthorised EBT(s) or loss of debit / credit card; or"
 - **verified on / by:**
@@ -162,7 +162,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** The bank is also negligent if a system failure, a security breach or a fraud inside the bank led to the transaction.
 - **conditions:** Part of the open list in new paragraph 4(20B).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(20B), item (v)
 - **quote:** "(v) system malfunctions / security breaches / internal frauds leading to unauthorised EBTs."
 - **verified on / by:**
@@ -175,7 +175,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** A third-party breach is when the fault lies neither with the bank nor with you, but somewhere else in the system.
 - **conditions:** Examples of "somewhere else": RBI-LIAB27-09.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(26.1A)
 - **quote:** "Third-party breach means a situation where the deficiency lies neither with the bank nor with the customer but lies elsewhere in the system"
 - **verified on / by:**
@@ -188,7 +188,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** This includes a fault at a go-between such as a third-party application provider, a payment aggregator, a payment gateway or a telecom company.
 - **conditions:** "Such as ... etc.": the list is not complete. The source does not define "third-party application provider".
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(26.1A)
 - **quote:** "lies elsewhere in the system and includes deficiency on the part of an intermediary such as a Third-Party Application Provider (TPAP), Payment Aggregator (PA), Payment Gateway (PG), Telecom Service Provider (TSP), etc."
 - **open question:** The source does not name SIM swap or any other scam type. Whether a telecom company's SIM swap lapse counts is a reading of the text, not the text.
@@ -202,7 +202,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** deadline
 - **statement.en:** If the fault lies somewhere else in the system, and you report the transaction to your bank within 5 calendar days of the day it happened, you pay nothing and the bank must reverse it.
 - **conditions:** Calendar days, not working days. Counted from the date of the transaction, not from the bank's alert. The report must reach the bank itself. Only for a third-party breach (RBI-LIAB27-08).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76M
 - **quote:** "A customer shall be entitled to zero liability and reversal of the transaction in cases of third-party breach where the customer reports the unauthorised fraudulent EBT to the bank within five calendar days from the date of its occurrence."
 - **verified on / by:**
@@ -215,7 +215,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** If the fault lies somewhere else in the system and you report it to the bank after 5 calendar days, the bank's own policy decides how much you pay.
 - **conditions:** Only for a third-party breach (RBI-LIAB27-08). The bank may also waive your liability at its discretion (paragraph 76P).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76M
 - **quote:** "In cases of third-party breach reported to the bank after five calendar days, the customer’s liability shall be determined as per the bank’s policy."
 - **verified on / by:**
@@ -226,11 +226,11 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 ### RBI-LIAB27-12
 
 - **kind:** rule
-- **statement.en:** If the fraud happened because you were careless, you bear the loss until you report it to the bank. The part of the loss that the small-value compensation covers is not yours to bear.
-- **conditions:** What counts as your negligence: RBI-LIAB27-13 to 16. The compensation: RBI-LIAB27-22 to 27.
-- **applies to:** all
+- **statement.en:** If the fraud happened because you were careless, you are liable for the loss, except the part that the small-value compensation covers.
+- **conditions:** Only until you report the fraud to the bank: the paragraph ends "until he / she reports the fraudulent EBT to the bank". Losses after your report: RBI-LIAB27-17. What counts as your negligence: RBI-LIAB27-13 to 16. The compensation: RBI-LIAB27-22 to 27.
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76N
-- **quote:** "shall be liable for the loss incurred by him / her, to the extent of loss not eligible for compensation as per the mechanism detailed at paragraph 76T below, until he / she reports the fraudulent EBT to the bank."
+- **quote:** "negligence by the customer, he / she shall be liable for the loss incurred by him / her, to the extent of loss not eligible for compensation as per the mechanism detailed at paragraph 76T below,"
 - **verified on / by:**
 - **recheck by:** 90 days after verification
 - **status:** candidate
@@ -241,7 +241,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** Your negligence includes not taking reasonable care of your PIN, password, OTP or other details. One example is giving them to another person to make a transaction, whether you meant to or not.
 - **conditions:** Part of the open list in new paragraph 4(20C), which begins "Negligence by a customer inter alia includes the following actions by the customer". The source gives a second example: writing down and storing the PIN with a debit or credit card.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(20C), item (i)
 - **quote:** "(i) failing to exercise reasonable care in usage of credentials such as PIN, password, OTP or other details (e.g., providing credentials for carrying out transactions to another person, whether intentionally or otherwise"
 - **verified on / by:**
@@ -254,7 +254,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** Your negligence also includes not telling the bank promptly after you find out about a fraud or lose your debit or credit card.
 - **conditions:** Part of the open list in new paragraph 4(20C).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(20C), item (ii)
 - **quote:** "(ii) not notifying the bank promptly after finding out about a fraudulent EBT, or loss of a debit / credit card; or"
 - **verified on / by:**
@@ -267,7 +267,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** Your negligence also includes not paying attention to a specific and clear warning from the bank, meant for you, that a payment you are about to make is likely a scam.
 - **conditions:** Part of the open list in new paragraph 4(20C).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(20C), item (iii)
 - **quote:** "(iii) not paying attention to specific, directed and clear warnings from the bank that a prospective transaction is likely a scam; or"
 - **verified on / by:**
@@ -280,7 +280,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** Your negligence also includes downloading harmful apps, and not updating your mobile number or email address with the bank when it changes.
 - **conditions:** Part of the open list in new paragraph 4(20C).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(20C), items (iv) and (v)
 - **quote:** "(iv) downloading malicious apps; or (v) failing to update her / his registered mobile number / email address with the bank in case of change."
 - **open question:** "Malicious apps" is not defined. Seed card 1 (sideloaded apps) must use this fact with care.
@@ -294,7 +294,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** Any loss from unauthorised transactions made after you report the fraud to the bank is the bank's to bear.
 - **conditions:** Counted from your report to the bank.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76O
 - **quote:** "Loss arising from any unauthorised transaction occurring after the reporting of the fraudulent EBT by a customer to a bank shall be borne by the bank."
 - **verified on / by:**
@@ -307,7 +307,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** It is for the bank to prove that you are liable.
 - **conditions:** For complaints about fraudulent transactions.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76K
 - **quote:** "The burden of proving customer liability in complaints involving fraudulent EBTs shall lie on the bank."
 - **verified on / by:**
@@ -318,11 +318,24 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 ### RBI-LIAB27-19
 
 - **kind:** deadline
-- **statement.en:** For a fraud inside India, the bank must examine your complaint, decide who is liable and reply to you within 45 calendar days of getting your complaint.
-- **conditions:** The bank's policy may set a shorter time; 45 calendar days is the most. For a fraud across borders the most is 60 calendar days. If you pay nothing (RBI-LIAB27-04 or 10), the reply must include the details of the reversal. If the loss came from your negligence, the reply must include the compensation details in eligible cases.
-- **applies to:** all
+- **statement.en:** For a fraud inside India, the time in the bank's policy cannot be more than 45 calendar days from the day the bank got your complaint.
+- **conditions:** "This timeline" is the time in the bank's policy within which it examines the complaint, establishes liability and replies, as applicable (RBI-LIAB27-32). For a fraud across borders the most is 60 calendar days. If you pay nothing (RBI-LIAB27-04 or 10), the reply must include the details of the reversal. If the loss came from your negligence, the reply must include the compensation details in eligible cases.
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76Q
 - **quote:** "this timeline shall not exceed 45 calendar days from the date of receipt of the complaint by the bank in case of a complaint arising out of domestic fraudulent EBT(s)"
+- **verified on / by:**
+- **recheck by:** 90 days after verification
+- **status:** candidate
+- **version:** v1
+
+### RBI-LIAB27-32
+
+- **kind:** process
+- **statement.en:** The bank must examine your fraud complaint, decide who is liable, and reply to you as applicable, within the time set in its policy.
+- **conditions:** The longest time the policy may set: RBI-LIAB27-19. What the reply must include: RBI-LIAB27-19, conditions.
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
+- **source:** src-rbi-03, paragraph 76Q, first sentence
+- **quote:** "A bank shall ensure that a complaint arising out of fraudulent EBT(s) is examined, liability therein is established and response, as applicable, is issued to the customer within such time as may be specified in the bank’s policy."
 - **verified on / by:**
 - **recheck by:** 90 days after verification
 - **status:** candidate
@@ -333,7 +346,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** deadline
 - **statement.en:** For a fraud on your credit card, the bank must give you a temporary credit of the amount within 5 calendar days of your report.
 - **conditions:** Credit cards only. The temporary credit cannot be used (RBI-LIAB27-21).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76R
 - **quote:** "fraudulent EBT(s) in a credit card, a bank shall provide shadow reversal equivalent to the amount involved in the fraudulent EBT(s) within five calendar days from the date of receipt of notification"
 - **open question:** The new rules set no temporary-credit deadline for bank accounts or debit cards.
@@ -347,7 +360,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** You cannot use this temporary credit, and you do not pay extra interest or charges on it.
 - **conditions:** The source calls it a "shadow reversal": a temporary credit before the bank's investigation or any insurance claim is settled.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, new paragraph 4(25A)
 - **quote:** "While the customer shall not be allowed to use such amount, he / she will not bear any additional burden of interest / charges."
 - **verified on / by:**
@@ -358,9 +371,9 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 ### RBI-LIAB27-22
 
 - **kind:** amount
-- **statement.en:** In cases of your own negligence, you can get compensation of 85% of your net loss or ₹25,000, whichever is less. You can get it only once in your lifetime.
+- **statement.en:** You can get compensation of 85% of your net loss or ₹25,000, whichever is less. You can get it only once in your lifetime.
 - **conditions:** Net loss is the gross loss minus any money recovered, before or after the compensation is paid. Only when RBI-LIAB27-23 and 24 are met. Only for frauds up to one year from the effective date of the rules (RBI-LIAB27-27). For a joint account, only one holder may claim; claiming as a joint holder bars a later claim as a single holder, and the other way round (Explanation to paragraph 76T(1)).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76T(1)
 - **quote:** "shall be compensated 85 per cent of the net loss amount (calculated after reducing recoveries made, whether before or after paying the compensation, from the gross loss amount), or ₹25,000, whichever is less, once during her / his lifetime"
 - **verified on / by:**
@@ -372,8 +385,8 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 
 - **kind:** rule
 - **statement.en:** This compensation is for a genuine victim who is an individual, including a sole proprietor, who has made a complaint about a total loss of ₹50,000 or less, where the loss came from their own negligence.
-- **conditions:** The bank must find the loss genuine under its own policy (paragraph 76T(1)(a)). The victim must also report in time (RBI-LIAB27-24). Only for frauds up to one year from the effective date (RBI-LIAB27-27). "Their own negligence" is the source's reference to paragraph 76N (RBI-LIAB27-12).
-- **applies to:** all
+- **conditions:** The bank must find the loss genuine under its own policy (paragraph 76T(1)(a)). The victim must also report in time (RBI-LIAB27-24). Only for frauds up to one year from the effective date (RBI-LIAB27-27). Only once in a lifetime, and only one holder of a joint account may claim (RBI-LIAB27-22). "Their own negligence" is the source's reference to paragraph 76N (RBI-LIAB27-12).
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76T(1)
 - **quote:** "A bona fide victim, being an individual person, including a sole proprietor, and having lodged a complaint involving gross loss of an amount up to ₹50,000 on account of fraudulent EBT(s) covered under paragraph 76N above"
 - **verified on / by:**
@@ -386,7 +399,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** deadline
 - **statement.en:** To get this compensation, report the fraud in both places within 5 calendar days of the day it happened: on the National Cyber Crime Reporting Portal or the National Cyber Crime Helpline, and to your bank.
 - **conditions:** Both reports are needed. Calendar days, counted from the date of the transaction.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76T(1)(b)
 - **quote:** "(b) the victim has reported the fraudulent EBT(s) on the National Cyber Crime Reporting Portal or National Cyber Crime Helpline (1930) and to the bank within five calendar days from its occurrence."
 - **verified on / by:**
@@ -399,7 +412,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** process
 - **statement.en:** If the bank finds your complaint genuine, it must give you a form to claim this compensation.
 - **conditions:** After the bank's examination under paragraph 76Q (RBI-LIAB27-19).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76T(4)
 - **quote:** "where the customer’s bank is satisfied that the complaint is bona fide, it shall provide the customer an application form as per the format provided at Annex II(1) to claim compensation for the loss suffered by her / him."
 - **verified on / by:**
@@ -412,7 +425,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** deadline
 - **statement.en:** The bank must pay the compensation within 5 calendar days of getting your filled form.
 - **conditions:** Counted from the bank's receipt of your application.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76T(5)
 - **quote:** "The customer’s bank shall, within five calendar days of receipt of the application from a customer, compensate the customer as given above."
 - **verified on / by:**
@@ -425,7 +438,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** This compensation is paid only for frauds that happen up to one year from the date these rules take effect.
 - **conditions:** None stated beyond the quote.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76U
 - **quote:** "The compensation shall be payable for losses incurred on fraudulent EBTs occurring up to one year from the effective date of these Directions."
 - **open question:** "Effective date" is not defined. Paragraph 3(2) applies the rules to transactions on or after 1 January 2027, but does not call that the effective date.
@@ -439,7 +452,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** right
 - **statement.en:** If the bank rejects your complaint and holds you liable, it must tell you why and give you the supporting details, if any.
 - **conditions:** "Rejected" means the bank found you liable.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76S
 - **quote:** "In case of rejected complaints, i.e., in cases where customer liability is established, a bank shall disclose the reason for such rejection and with the supporting details, if any, to the customer."
 - **verified on / by:**
@@ -452,7 +465,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** process
 - **statement.en:** When you report a fraud, the bank must at once send you an acknowledgement with the complaint number and the date and time it got your complaint.
 - **conditions:** The bank registers your report as a complaint. The acknowledgement may come by SMS, email or in the app.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76I
 - **quote:** "sends an immediate acknowledgement to the customer, along with the complaint number and the date and time of receipt of the complaint"
 - **verified on / by:**
@@ -465,7 +478,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** process
 - **statement.en:** The bank's transaction SMS must give a number that you can send an SMS to at once, to object to the transaction.
 - **conditions:** One of the reporting channels the bank must give (paragraph 76G).
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76G(2)
 - **quote:** "provide a number in the transaction alert SMS itself, to which the customer can immediately send an SMS to notify her / his objection, if any; and"
 - **verified on / by:**
@@ -478,7 +491,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** process
 - **statement.en:** Once you report the fraud, the bank must act promptly to stop more unauthorised transactions in your accounts, and tell you what it did.
 - **conditions:** "Under advice to him / her": the bank must tell you.
-- **applies to:** all
+- **applies to:** all; scope as in RBI-LIAB27-01 (transactions on or after 1 January 2027, at the banks named there)
 - **source:** src-rbi-03, paragraph 76J
 - **quote:** "On receipt of a complaint regarding any fraudulent EBT from a customer, a bank shall take prompt steps to prevent further unauthorised EBTs in the customer’s account(s) under advice to him / her."
 - **verified on / by:**
@@ -493,7 +506,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** right
 - **statement.en:** If something your bank did, or failed to do, gave you poor service, you can complain to the RBI Ombudsman yourself or through someone you authorise.
 - **conditions:** "Deficiency in service" means a shortcoming in any service the bank must give, whether or not you lost money (clause 3(1)(i)). An authorised representative must be a person other than an advocate, "duly appointed and authorised in writing" (clause 3(1)(c)). The Scheme covers commercial banks, regional rural banks, state and central co-operative banks, scheduled urban co-operative banks, non-scheduled urban co-operative banks with deposits of ₹50 crore or more (clause 1(3)(a)), some NBFCs (clause 1(3)(b)), non-bank prepaid payment instrument issuers (clause 1(3)(c)) and credit information companies (clause 1(3)(d)). It does not cover a bank in resolution or winding up, or under All-Inclusive Directions (clause 3(1)(e)). A complaint is maintainable only if every condition in clause 10(1) is met: (a) addressed to the Ombudsman directly (RBI-OMB-06); (b) no advocate as representative (RBI-OMB-07); (c) complete information as in clause 11; (d) not abusive, frivolous or vexatious; (e) complained to the bank first (RBI-OMB-02); (f) no reply in time or not satisfied (RBI-OMB-03, 04); (g) within 90 days (RBI-OMB-05); (h), (i) not already pending before, or decided by, the Ombudsman; (j), (k) not pending before, or decided by, a court or similar forum (RBI-OMB-09); (l) the complaint to the bank was made within the period of limitation under the Limitation Act, 1963. Clause 10(2) excludes some matters, for example a bank's commercial judgment, and an action the bank took on the order of a court or a law enforcing authority.
-- **applies to:** all
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 9
 - **quote:** "Any customer aggrieved by an act or omission of a Regulated Entity resulting in deficiency in service may file a complaint under the Scheme personally or through an authorised representative as defined under clause 3(1)(c)."
 - **verified on / by:**
@@ -506,7 +519,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** Before you go to the Ombudsman, you must first complain to your bank, in writing or another way, and be able to show proof that you did.
 - **conditions:** A complaint that does not meet this is rejected at the start (clause 10(3)).
-- **applies to:** all
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 10(1)(e)
 - **quote:** "the Complainant had first made a complaint in writing or through any other mode to the Regulated Entity concerned, where proof of having made a complaint can be produced by the Complainant, before making a complaint under the Scheme"
 - **verified on / by:**
@@ -519,7 +532,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** deadline
 - **statement.en:** One condition for going to the Ombudsman is met if your bank has not replied within 30 days, or within the time set by RBI, NPCI or card network rules if that is longer. The time counts from when the bank got your complaint.
 - **conditions:** Counted from the bank's receipt of your complaint. "Whichever is higher" in clause 10(1)(f). This is one of the clause 10(1) conditions, and every one of them must be met (listed under RBI-OMB-01). The clause 10(2) exclusions also apply.
-- **applies to:** all
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 10(1)(f)
 - **quote:** "has not received any reply within 30 days or within the time specified by the Reserve Bank, National Payments Corporation of India, or under Card Network guidelines, if any, whichever is higher after the Regulated Entity received the complaint"
 - **open question:** The Scheme and its FAQ do not say whether "the time specified by the Reserve Bank" includes the 45-day limit for fraud complaints (RBI-LIAB27-19). If it does, a fraud victim with no reply may have to wait that long. The Scheme's Annex says "whichever is later". Do not state a wait for fraud cases until this is settled.
@@ -533,7 +546,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** right
 - **statement.en:** The same condition is also met if your bank has replied and you are not satisfied with the reply.
 - **conditions:** This is one of the clause 10(1) conditions, and every one of them must be met (listed under RBI-OMB-01). The clause 10(2) exclusions also apply.
-- **applies to:** all
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 10(1)(f)
 - **quote:** "or the Complainant is not satisfied with the reply / resolution provided by the Regulated Entity"
 - **verified on / by:**
@@ -546,7 +559,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** deadline
 - **statement.en:** Complain to the Ombudsman within 90 days. Count from the end of the waiting time in RBI-OMB-03, or from the date of the last message from your bank, whichever is later.
 - **conditions:** One of the clause 10(1) conditions (listed under RBI-OMB-01).
-- **applies to:** all
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 10(1)(g)
 - **quote:** "the complaint is made to the RBI Ombudsman within 90 days from the date on which the timeline specified in sub-clause (1)(f) expires or the date of the last communication from the concerned Regulated Entity, whichever is later"
 - **verified on / by:**
@@ -559,7 +572,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** Send your complaint to the RBI Ombudsman directly. Only marking a copy to RBI on your email or letter to the bank does not count.
 - **conditions:** By email or on paper, the same rule applies.
-- **applies to:** all
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 10(1)(a)
 - **quote:** "the complaint is addressed to the RBI Ombudsman directly. However, it does not include a communication in which the Reserve Bank is merely endorsed/marked in copy (whether by e-mail or in physical form)"
 - **verified on / by:**
@@ -572,7 +585,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** rule
 - **statement.en:** You can complain yourself or through someone you authorise, but that person cannot be a lawyer, unless the lawyer is the person who was wronged.
 - **conditions:** The representative must be "duly appointed and authorised in writing" by you (clause 3(1)(c)).
-- **applies to:** all
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 10(1)(b)
 - **quote:** "the complaint is lodged by the Complainant personally or through an authorised representative other than an advocate unless the advocate is the aggrieved person"
 - **verified on / by:**
@@ -582,10 +595,10 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 
 ### RBI-OMB-08
 
-- **kind:** right
-- **statement.en:** A police investigation or a criminal case about the same matter does not stop you from going to the Ombudsman.
-- **conditions:** Explanation to clause 10(1), on what "the same grievance" means.
-- **applies to:** all
+- **kind:** rule
+- **statement.en:** For the rule in RBI-OMB-09, a criminal case or a police investigation about the matter does not count as the same grievance.
+- **conditions:** Only "for the purposes of sub-clause (1)(j) and (1)(k)" (the opening words of the Explanation). Separately, clause 16(1)(c) lets the Ombudsman reject a complaint at any stage if a case on the same cause of action is filed before a court, tribunal, arbitrator or similar forum while the complaint is being examined; the Explanation does not cover clause 16.
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 10(1), Explanation 1
 - **quote:** "a complaint relating to the same grievance does not include criminal proceedings pending or decided before a Court or Tribunal or any police investigation initiated in a criminal offence."
 - **verified on / by:**
@@ -596,9 +609,9 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 ### RBI-OMB-09
 
 - **kind:** rule
-- **statement.en:** You cannot go to the Ombudsman if the same grievance is already before a court, a tribunal, an arbitrator or a similar forum, whether or not that case was brought by you.
-- **conditions:** The same applies if such a forum has already settled or decided it on merits (clause 10(1)(k)). A criminal case or a police investigation does not count as the same grievance (Explanation 1, RBI-OMB-08).
-- **applies to:** all
+- **statement.en:** You cannot go to the Ombudsman if the same grievance is already before a court, a tribunal, an arbitrator or a similar forum.
+- **conditions:** This holds "whether or not received from the same Complainant or along with one or more of the Complainants" (the words after the quote). The same applies if such a forum has already settled or decided it on merits (clause 10(1)(k)). A criminal case or a police investigation does not count as the same grievance (Explanation 1, RBI-OMB-08).
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, clause 10(1)(j)
 - **quote:** "the complaint is not relating to the same grievance, which is already pending before any Court, Tribunal or Arbitrator or any other judicial or quasi-judicial forum"
 - **open question:** The Scheme does not say whether a consumer commission counts as a "quasi-judicial forum". Do not name one on a page without a source.
@@ -612,7 +625,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **kind:** process
 - **statement.en:** You can complain to the RBI Ombudsman in three ways: online on RBI's complaint portal, by email, or by post or courier with the complaint form and your documents.
 - **conditions:** The portal is contact C05 and the email is contact C20. The postal address is in the source (Annex, Part A, item 6). A complaint on paper must be signed by you or your authorised representative (clause 11(2)).
-- **applies to:** all
+- **applies to:** all; complaints to the Ombudsman received on or after 1 July 2026 (clause 20)
 - **source:** src-rbi-02, Annex, Part A, item 6
 - **quote:** "(i) through the online CMS portal at https://cms.rbi.org.in ; (ii) or by emailing to: crpc@rbi.org.in; or (iii) by sending a filled-in complaint form with supporting documents by post/courier to the following address:"
 - **verified on / by:**
@@ -734,7 +747,7 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **conditions:** Counted within a given complaint, for each bank. "Subject to the conditions prescribed in the SOP"; no official copy of the SOP was found on 30 Sep 2026.
 - **applies to:** all
 - **source:** src-mrm-01, question 4
-- **quote:** "where the amount put on hold in a given bank is below ₹50,000, restoration through the police instructions may proceed without FIR requirements, subject to the conditions prescribed in the SOP."
+- **quote:** "In a given complaint, where the amount put on hold in a given bank is below ₹50,000, restoration through the police instructions may proceed without FIR requirements, subject to the conditions prescribed in the SOP."
 - **open question:** The FAQ says "bank" here and "bank account" in I4C-MRM-08, and neither covers exactly ₹50,000.
 - **verified on / by:**
 - **recheck by:** 90 days after verification
