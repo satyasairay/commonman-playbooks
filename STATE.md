@@ -12,6 +12,8 @@ Later the same day, Satya approved the plan change: a facts registry (rules/fact
 
 Later on 30 Sep 2026, work moved to a second PC (no D: drive; the clone is in the Desktop folder). On that PC, Satya installed gh, Hugo extended and Codex CLI, and signed in to gh and to Codex with ChatGPT. Satya deferred the Odia and Hindi opening lines to L14. Claude proposed wording for the AI line (inbox 4); it waits for Satya's yes or rewrite. L02 started.
 
+L02, same day: research found the sources and quotes for 18 contacts (3 of them new: C19 to C21) and drafted 62 candidate facts in five groups: RBI liability rules from 1 January 2027 (31), RBI Ombudsman Scheme 2026 (10), reporting and the Money Restoration Module (12), Zero FIR (6), and seed card 1 (3). The Claude fact check found 27 PARTIAL rows (statements a little wider than their quotes, or missing conditions) and no CONTRADICTED or NOT FOUND rows; all 27 were fixed before the PR. All 24 sources are saved in `.cache/sources/` on the second PC only (not committed; excluded through `.git/info/exclude` until L03a adds `.gitignore`). A script checked every quote against its saved copy: 0 missing, and the script was mutation-checked. Three findings change the plan: the 2017 RBI liability circular is withdrawn and its text now sits in the 2025 Directions; new liability rules apply to transactions from 1 January 2027; and the 2021 Ombudsman Scheme was replaced on 1 July 2026. Fact PR opened: https://github.com/satyasairay/commonman-playbooks/pull/1 (branch `draft/fact-f2-and-contacts`). Waiting for Satya: the decisions in inbox 12 to 15, the RBI PDF download (user to-do), the Codex check, and his verification.
+
 ## Loop status
 
 | Loop | Goal | Status | Date | Commit |
@@ -19,7 +21,7 @@ Later on 30 Sep 2026, work moved to a second PC (no D: drive; the clone is in th
 | L00 | Spine: CLAUDE, STATE, LOOP, AGENTS, PIPELINE, RUNBOOK, README, rules, templates, agent roles | done | 29 Sep 2026 | first commit |
 | L00b | Plan change: facts registry, formats, trust signals, gates G11 and G12 | done | 29 Sep 2026 | first commit |
 | L01 | House rules, opening line and allowed terms signed | in progress: only the AI line is open (Claude's proposed wording waits for Satya). Odia and Hindi lines deferred to L14. | 30 Sep 2026 | |
-| L02 | Contacts and the first facts verified | in progress | 30 Sep 2026 | |
+| L02 | Contacts and the first facts verified | in progress: fact PR open; waiting for Satya (inbox 12 to 15, RBI PDF, Codex check, verification) | 30 Sep 2026 | |
 | L03a | Site skeleton, fact and contact references, trust frame | pending | | |
 | L03b | Machine gates and CI | pending | | |
 | L03c | WhatsApp text and print formats | pending | | |
@@ -52,6 +54,10 @@ Later on 30 Sep 2026, work moved to a second PC (no D: drive; the clone is in th
 9. ~~When the repo goes public.~~ Decided 30 Sep 2026: right after the first commit.
 10. ~~Plan change: one set of facts, many formats.~~ Approved 29 Sep 2026 and written in (decisions log).
 11. ~~Lakh and crore.~~ Decided 30 Sep 2026: allowed.
+12. **NOVEL. F2 and the RBI rule change on 1 January 2027.** Transactions before that date follow the old liability rules (report within 3 working days, fixed limits, credit back within 10 working days). Transactions from that date follow the new rules (report within 5 calendar days, the bank's policy after that, and a small-value compensation of 85% of the net loss or ₹25,000 when the reader was careless). F2 will go live before the switch, so a reader in October to December needs the old rules. Proposal: F2 carries both sets from the start, and the page asks the reader when the money left. Other options: old rules only now and the new rules in December; or new rules only, with a line for older cases. Your call.
+13. **NOVEL. Source for seed card 1.** The I4C advisory PDF could not be fetched (i4c.mha.gov.in did not answer all day, K9). The only official text found is I4C's own CyberDost Telegram post (t.me, not a government domain). Proposal: keep I4C-ADV-2026-08-01 to 03 as `candidate` from the Telegram post, and switch the source to the PDF when the site is back. Or: the card waits for the PDF.
+14. **Contact C12 (Nyaya Setu WhatsApp).** No official page states the number. The same service has an official toll-free number, 14454 (new row C19). Proposal: reject C12 and use C19.
+15. **Contact C04 (Money Restoration Portal).** The address `mrm-ncrp.mha.gov.in` is stated only on the portal's own FAQ; MHA releases name the module but not the address. Please confirm it yourself before verifying; fake "money recovery" sites are a known scam.
 
 ## Commit rules
 
@@ -65,6 +71,8 @@ Later on 30 Sep 2026, work moved to a second PC (no D: drive; the clone is in th
 
 - [x] **Before L03a:** install Hugo extended. Installed on the first PC (found, 30 Sep 2026) and on the second PC (0.167.0 extended, 30 Sep 2026).
 - [x] **GitHub CLI:** installed on the second PC (2.101.0) and signed in as `satyasairay`, 30 Sep 2026.
+- [ ] **For L02 (now):** download the RBI Directions PDF that holds the liability rules for transactions before 1 January 2027. RBI's PDF host shows a human check to scripts, and Claude does not complete those checks. Steps: open https://rbidocs.rbi.org.in/rdocs/notification/PDFs/170MD.PDF in your browser, complete RBI's check if it shows one, and save the file as `C:\Users\USER\Desktop\commonman-playbooks\.cache\sources\src-rbi-04.pdf`. Then tell Claude. Claude extracts paragraphs 64 to 76 and drafts those facts.
+- [ ] **For L02 (now):** run the Codex fact check on this PC, where the saved sources are (AGENTS.md, Job 1, mode A). The exact command is in the PR.
 - [ ] **Before L05:** find 5 people who have not seen the page (for example a parent, a neighbour, a shopkeeper) for a 10-minute test each.
 - [ ] **Before L06:** the VPS steps. Claude writes the exact commands in L06; you run them with admin rights.
 - [x] **Before the first Codex fact check (L02):** install Codex CLI. Installed on the first PC (found, 30 Sep 2026; sign-in not checked there). On the second PC: Codex CLI 0.159.2 from npm, signed in with ChatGPT (checked with `codex login status`, 30 Sep 2026).
@@ -99,6 +107,9 @@ Later on 30 Sep 2026, work moved to a second PC (no D: drive; the clone is in th
 | 30 Sep 2026 | AI line: Satya writes it himself. No page goes live until it exists. | It appears on every page, so it must be in his words. |
 | 30 Sep 2026 | The repo goes public right after the first commit. | Peers can watch it being built. On the free GitHub plan, branch protection works only on public repos (K5). |
 | 30 Sep 2026 | Odia and Hindi opening lines deferred to L14. L01 closes on the English line and the AI line. | Satya: keep Odia and Hindi out for now. They are needed only when Odia and Hindi pages exist, in L14. |
+| 30 Sep 2026 | Source ids are `src-<owner>-<NN>` in small letters. Contacts and facts share one Sources table in rules/facts.md. Each source is saved as the original plus a plain-text copy that the checkers read. | One place for every source. The id cannot clash with fact ids or radar ids. Both checkers read the same text. |
+| 30 Sep 2026 | A fact statement never contains a phone number, URL or email; the page puts a contact reference beside it. | Keeps G1 simple: every number on a page comes through a contact. |
+| 30 Sep 2026 | Facts are drafted only from the text in force. The withdrawn 2017 RBI circular is not used as a source, even though RBI says its text moved "as-is". | Satya's rule: primary source, current text. |
 
 ## Adversary rounds
 
@@ -110,15 +121,22 @@ Later on 30 Sep 2026, work moved to a second PC (no D: drive; the clone is in th
 
 - K1: The Nyaya Setu WhatsApp number has news sources only, no official source yet. Closes in L02.
 - K2: The I4C advisories page has no RSS feed. The radar must compare the HTML listing day to day. Closes in L04.
-- K3: Official URL of the I4C Money Restoration Module not found yet. Closes in L02.
+- K3: Official URL of the I4C Money Restoration Module not found yet. Found on 30 Sep 2026 (contact C04, `mrm-ncrp.mha.gov.in`). Closes when Satya verifies C04.
 - K4: satsangee.org has no TLS certificate because Caddy has no site for it. Closes in L06.
 - K5: Branch protection on `main` is not switched on yet. It is free now that the repo is public. Until it is on, "only Satya merges" is enforced by engine instructions and by a deploy job that runs only from main. Closes in L03b.
 - K6: Four seed cards (digital arrest, task scam, fake investment groups, UPI collect/QR) have only vendor or press sources so far. Each needs an official source before `confirmed`. Closes in L08 and L09.
 - K7: The candidate facts in rules/facts.md come from memory and news. None may be used until found in a primary source and verified. Closes for F2 and card 1 in L02; for the rest, in the loop that needs them.
-- K8: Contact C18 (the WhatsApp share link) needs WhatsApp's own help page as its source. Closes in L02.
+- K8: Contact C18 (the WhatsApp share link) needs WhatsApp's own help page as its source. Found on 30 Sep 2026 (src-whatsapp-01). Closes when Satya verifies C18.
+- K9: i4c.mha.gov.in did not answer on 30 Sep 2026, from India (timeouts on ports 80 and 443) or from outside (connection refused). It blocks contact C03, the card 1 advisory PDF, and the radar's main source (S01). Recheck at the start of the next session.
+- K10: RBI's PDF host (rbidocs.rbi.org.in) shows a human check to scripts. The liability rules for transactions before 1 January 2027 exist only there (170MD.PDF). Satya downloads the file (user to-do). The radar in L04 will need another way to read RBI (for example the HTML notification pages on www.rbi.org.in, which do load).
+- K11: India Code returned HTTP 504 for every BNSS page on 30 Sep 2026. The Zero FIR facts come from the Act as enacted (Gazette), so later amendments are not checked yet.
+- K12: The new RBI liability rules (src-rbi-03) cover commercial banks only. Regional rural banks, small finance banks, payments banks and co-operative banks have their own amendments (issued the same day), not saved yet. Many Odisha readers bank with a regional rural bank.
+- K13: Evidence quotes are verbatim, so they can hold words G10 forbids on English pages (for example "dalals" in the I4C-MRM-10 quote). L03b must decide whether the evidence layer is exempt from G10, or such quotes must be avoided.
+- K14: Source snapshots exist only on the second PC. On another PC, `.cache/sources/` must be fetched again, and rendered or dynamic pages may give a different SHA-256. The fetch script (L03a) should record this.
 
 ## Metrics
 
 | Date | Live pages | Verified facts | Verified contacts | Radar runs | Open signals | Median signal to PR | Corrections | Wrong-fact reports |
 |---|---|---|---|---|---|---|---|---|
 | 29 Sep 2026 | 0 | 0 | 0 | 0 | 0 | n/a | 0 | 0 |
+| 30 Sep 2026 | 0 | 0 (62 candidate) | 0 (18 with a source, waiting) | 0 | 0 | n/a | 0 | 0 |
