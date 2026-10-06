@@ -51,7 +51,7 @@ For rules, rights and deadlines, only primary sources count: the statute (indiac
 | src-mrm-01 | Money Restoration Portal: FAQ (rendered copy) | I4C, MHA | https://mrm-ncrp.mha.gov.in/public-info?tab=faq | `e57f5bdf2cd8073a03e7be66e3e5a12b79bf63cd1be50e40b56073e6003eb3a0` | 30 Sep 2026 |
 | src-mrm-02 | Money Restoration Portal: How to Apply (rendered copy) | I4C, MHA | https://mrm-ncrp.mha.gov.in/public-info?tab=apply | `320dc68388fe32a470266f28a97ffec5f32a7ee22210205469c9e8f5e7dab932` | 30 Sep 2026 |
 | src-mrm-03 | Money Restoration Portal: Raise Refund Request (rendered copy) | I4C, MHA | https://mrm-ncrp.mha.gov.in/raise-request | `d4096b52ba26907cfd3947626512b0a84e4e4fd2636e871b55f79fd4e656b58e` | 30 Sep 2026 |
-| src-cyberdost-01 | CyberDost (I4C) Telegram post 4735, 31 Aug 2026: advisory on malicious adult-content Android apps | I4C, MHA (official Telegram channel) | https://t.me/cyberdosti4c/4735?embed=1&mode=tme | `b81cc0a09de0f034132001dc96319340c237d0a56d4958cc2c820d3b11d64f32` | 30 Sep 2026 |
+| src-i4c-01 | I4C advisory TAU/ADV/018, 26 Aug 2026: Malicious Side Loaded Pornographic Android Apps leading to Unauthorized Financial Transactions | I4C (National Cybercrime Threat Analytics Unit), MHA | https://i4c.mha.gov.in/theme/resources/advisories/ADVISORY-TAU-ADV-NIGHTPLAY-INSTAGRAM-ADS.pdf | `65ae451d79ec0c5c722b213c1303d57782f249d363ab8fa0e8e7f39b263ad1ab` | 6 Oct 2026 |
 
 ## Entry format
 
@@ -877,17 +877,16 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 - **status:** candidate
 - **version:** v1
 
-**Group E. Seed card 1: sideloaded adult-content apps (src-cyberdost-01).** The advisory PDF is on i4c.mha.gov.in, which did not answer on 30 Sep 2026 (known issue K9). These blocks come from I4C's own CyberDost Telegram channel, which is not a government domain. Satya decides whether that source is enough, or whether the card waits for the PDF.
+**Group E. Seed card 1: sideloaded pornographic Android apps (src-i4c-01).** I4C advisory TAU/ADV/018, dated 26 August 2026, from I4C's National Cybercrime Threat Analytics Unit (NCTAU). Fetched on 6 October 2026, when i4c.mha.gov.in answered again. Page numbers are the PDF's pages.
 
 ### I4C-ADV-2026-08-01
 
 - **kind:** advisory
-- **statement.en:** I4C has warned about harmful Android apps that pretend to be adult-content apps. They are promoted through advertisements on social media.
-- **conditions:** Android only.
+- **statement.en:** I4C has seen a rise in financial fraud through harmful Android apps that pretend to be pornography apps. They spread through advertisements on Facebook and Instagram.
+- **conditions:** Android apps only. Observed by I4C's National Cybercrime Threat Analytics Unit.
 - **applies to:** all
-- **source:** src-cyberdost-01, post text
-- **quote:** "I4C, Ministry of Home Affairs, has cautioned citizens against malicious Android apps disguised as adult-content apps and promoted through advertisements on social media platforms."
-- **open question:** The post is dated 31 August 2026. The advisory date (26 August 2026 in rules/taxonomy.md) is not in any saved official text.
+- **source:** src-i4c-01, page 1, first paragraph
+- **quote:** "The National Cybercrime Threat Analytics Unit (NCTAU) has observed a rise in financial frauds perpetrated through malicious Android applications masquerading as pornography apps, circulated through Facebook and Instagram ads"
 - **verified on / by:**
 - **recheck by:** 90 days after verification
 - **status:** candidate
@@ -896,11 +895,11 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 ### I4C-ADV-2026-08-02
 
 - **kind:** advisory
-- **statement.en:** These apps use names such as "Night Play", "Reloop", "Kyss", "Vimo", "Rivo", "Nexo" and "Vixa", and similar names. They may send you to websites that ask you to download an APK file from outside the official app stores.
-- **conditions:** "May"; "along with similar variants".
+- **statement.en:** These apps use names such as "Night Play", "Reloop", "Kyss", "Vimo", "Rivo", "Nexo" and "Vixa", and other similar names.
+- **conditions:** "And other similar variants": the list is not complete.
 - **applies to:** all
-- **source:** src-cyberdost-01, post text
-- **quote:** "Apps operating under names such as “Night Play”, “Reloop”, “Kyss”, “Vimo”, “Rivo”, “Nexo” and “Vixa”, along with similar variants, may redirect users to websites that prompt them to download APK files from outside official app stores."
+- **source:** src-i4c-01, page 1, first paragraph
+- **quote:** "operating under the names "Night Play", "Reloop", "Kyss", “Vimo”, “Rivo”, “Nexo”, “Vixa” and other similar variants."
 - **open question:** App names change fast. A page that lists them needs a short recheck date.
 - **verified on / by:**
 - **recheck by:** 30 days after verification
@@ -910,11 +909,50 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 ### I4C-ADV-2026-08-03
 
 - **kind:** advisory
-- **statement.en:** Once installed, these apps may misuse the Accessibility permission and take control of your phone. This can lead to payments you did not allow.
-- **conditions:** "May"; "potentially". Accessibility is the only permission the post names.
+- **statement.en:** The advertisements lead to websites with pornographic content, where you are asked to download the app as an APK file.
+- **conditions:** "Primarily" through advertisements on Facebook and Instagram. The modus operandi (page 2, item 2) adds that the websites mostly use ".live" domains, and that users are persuaded to install the APK from outside the Google Play Store.
 - **applies to:** all
-- **source:** src-cyberdost-01, post text
-- **quote:** "Once installed, such apps may misuse Accessibility permissions, take control of the device and potentially enable unauthorised financial transactions."
+- **source:** src-i4c-01, page 1, second paragraph
+- **quote:** "These applications are primarily distributed through advertisements on Facebook and Instagram, which redirect to websites serving pornographic content, where the user is prompted to download the APK."
+- **verified on / by:**
+- **recheck by:** 90 days after verification
+- **status:** candidate
+- **version:** v1
+
+### I4C-ADV-2026-08-04
+
+- **kind:** advisory
+- **statement.en:** After it is installed, the app asks for permissions that let it install more apps. By misusing the Accessibility permission, it takes control of your phone, which may lead to financial fraud.
+- **conditions:** "May". The modus operandi (page 2, item 4) adds that once the permissions are given, the malware keeps running in the background.
+- **applies to:** all
+- **source:** src-i4c-01, page 1, second paragraph
+- **quote:** "After installation, the app requests permissions that allow it to install additional applications and by abusing accessibility permission, take control of the users’ device, which may result in financial fraud."
+- **verified on / by:**
+- **recheck by:** 90 days after verification
+- **status:** candidate
+- **version:** v1
+
+### I4C-ADV-2026-08-05
+
+- **kind:** advisory
+- **statement.en:** A second app then gets downloaded and installed, presented as an update, using the permissions that the first app misused.
+- **conditions:** None beyond the quote.
+- **applies to:** all
+- **source:** src-i4c-01, page 2, modus operandi, item 3
+- **quote:** "A secondary package gets downloaded and installed on the pretext of an app update, based on permissions abused by the first, initial app."
+- **verified on / by:**
+- **recheck by:** 90 days after verification
+- **status:** candidate
+- **version:** v1
+
+### I4C-ADV-2026-08-06
+
+- **kind:** advisory
+- **statement.en:** Some of these apps also install a VPN, which may be used to send internet traffic for criminal activity. The app may stop you from uninstalling it through the phone's settings.
+- **conditions:** "Some apps"; "may". The modus operandi (page 2, item 5) adds that the VPN routes all internet traffic through servers the attackers control.
+- **applies to:** all
+- **source:** src-i4c-01, page 1, second paragraph
+- **quote:** "Some apps also install a VPN, which may be used to route internet traffic pertaining to malicious/criminal activity. The app may prevent users from uninstalling it through the device settings."
 - **verified on / by:**
 - **recheck by:** 90 days after verification
 - **status:** candidate
@@ -933,7 +971,8 @@ Topics the first playbooks need. None may be used until it is found in a primary
 | The I4C Money Restoration Module: who can apply, and how | F1, F2 | Money Restoration Portal (mrm-ncrp.mha.gov.in) | Drafted: I4C-MRM-01 to 10. The SOP of 2 January 2026 that the FAQ refers to is not published. |
 | A police station must register an FIR even if the crime happened elsewhere (Zero FIR) | F1 to F5, E7 | BNSS 2023, section 173 | Drafted: BNSS-ZEROFIR-01 to 06, from the Gazette. Still to do: India Code copy (amendments), whether cyber fraud is cognizable (Bharatiya Nyaya Sanhita, First Schedule), section 173(3) preliminary enquiry. |
 | e-Zero FIR for large cyber fraud losses | F1, F2 | MHA release of 19 May 2025 (PIB 2129715): Delhi pilot, losses above ₹10 lakh | Found, not drafted: Delhi only, and no later official text on a wider rollout. |
-| What the sideloaded adult apps do, per the advisory | seed card 1 | I4C advisory PDF (https://i4c.mha.gov.in/theme/resources/advisories/ADVISORY-TAU-ADV-NIGHTPLAY-INSTAGRAM-ADS.pdf) | Drafted from CyberDost only: I4C-ADV-2026-08-01 to 03. The PDF was not reachable (K9). |
+| What the sideloaded adult apps do, per the advisory | seed card 1 | I4C advisory TAU/ADV/018 (src-i4c-01) | Drafted from the PDF on 6 Oct 2026: I4C-ADV-2026-08-01 to 06. |
+| The advisory's precautions and uninstall steps | F6, seed card 1 | src-i4c-01, pages 2 and 3 | Found, not drafted. The advisory's last resort is a factory reset, which wipes the evidence a reader needs for the bank and police complaints; the card and F6 must put evidence steps first (house rules, section 8). |
 | Ombudsman compensation limits, awards and appeals | F1, F2 (later) | RB-IOS 2026, clauses 8(3), 15 and 17 | Found, not drafted (research notes in `.cache/research/c/`) |
 | Credit bureaus must alert you when your credit report is accessed | F4 | RBI circular to credit information companies (2023) | Not started |
 | Compensation when a credit complaint is not settled in time | F4 | the same RBI framework | Not started |
