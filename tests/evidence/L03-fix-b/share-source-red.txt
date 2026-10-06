@@ -1,0 +1,25 @@
+test_S12_share_link_parity_control (test_share_control.ShareControlTests.test_S12_share_link_parity_control) ... ok
+test_canonical_print_address_frame (test_share_control.ShareControlTests.test_canonical_print_address_frame) ... ok
+test_hugo_share_space_encoding (test_share_control.ShareControlTests.test_hugo_share_space_encoding) ... ok
+test_invalid_share_source_returns_G12 (test_share_control.ShareControlTests.test_invalid_share_source_returns_G12) ... ERROR
+test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label) ... ok
+
+======================================================================
+ERROR: test_invalid_share_source_returns_G12 (test_share_control.ShareControlTests.test_invalid_share_source_returns_G12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_share_control.py", line 58, in test_invalid_share_source_returns_G12
+    errors = gates.run(root / 'content', root / 'public', self.ctx)
+  File "<repo>\scripts\gates\gates.py", line 420, in run
+    errors += share_parity(shares, project(meta, body, ctx, language, permalink)['whatsapp'])
+                                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_share_control.py", line 48, in invalid_project
+    raise ValueError('no source steps')
+ValueError: no source steps
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.129s
+
+FAILED (errors=1)
+
+EXIT 1
