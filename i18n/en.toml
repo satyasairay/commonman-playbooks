@@ -1,0 +1,27 @@
+# Draft labels and claims: Satya approves before publication.
+[opening]
+other = "Don't worry. What happened is not in your hands now. What you do next is in your hands."
+[no_contact]
+other = 'We never call you, ask for money or file anything for you.'
+[privacy]
+other = 'This site sets no cookies and loads nothing from other sites. You can check this in your browser.'
+[evidence]
+other = 'Evidence'
+[checked]
+other = 'Checked on'
+[next_check]
+other = 'Next check by'
+[verified]
+other = 'Verified by'
+[unsigned]
+other = 'Draft awaiting review'
+[mistake]
+other = 'Report a mistake'
+[covers]
+other = 'This page covers'
+[excludes]
+other = 'It does not cover'
+[watch]
+other = 'Watch: reported, not yet confirmed'
+[confirmed]
+other = 'Confirmed'

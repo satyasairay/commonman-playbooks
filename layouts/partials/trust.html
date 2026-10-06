@@ -1,0 +1,7 @@
+<section class="trust" data-frame="trust">
+{{ if .Params.verified_by }}<p data-verified-by>{{ i18n "verified" }} {{ .Params.verified_by }} on {{ time.Format "2 January 2006" .Params.verified_on }}.</p>{{ else }}<p data-draft>{{ i18n "unsigned" }}</p>{{ end }}
+{{ with .Params.verified_on }}<p data-checked-on>{{ i18n "checked" }} {{ time.Format "2 January 2006" . }}</p>{{ end }}
+{{ $next := "" }}{{ range .Store.Get "facts" }}{{ if or (eq $next "") (lt .recheck_by $next) }}{{ $next = .recheck_by }}{{ end }}{{ end }}
+{{ with $next }}<p data-next-check>{{ i18n "next_check" }} {{ time.Format "2 January 2006" . }}</p>{{ end }}
+<p data-no-contact>{{ i18n "no_contact" }}</p>
+</section>

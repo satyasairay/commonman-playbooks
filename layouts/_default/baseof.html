@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ .Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="{{ "site.css" | relURL }}">
+</head>
+<body>
+<main>{{ block "main" . }}{{ end }}</main>
+<footer data-frame="footer">
+  <p>{{ i18n "privacy" }}</p>
+  <p><a href="{{ "corrections/" | relLangURL }}">{{ i18n "mistake" }}</a></p>
+  <p data-build-commit="{{ getenv "BUILD_COMMIT" }}">Build {{ getenv "BUILD_COMMIT" }} · {{ getenv "BUILD_DATE" }}</p>
+</footer>
+</body>
+</html>

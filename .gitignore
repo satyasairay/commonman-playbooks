@@ -1,0 +1,7 @@
+public/
+resources/
+.cache/
+data/generated/
+__pycache__/
+*.pyc
+.hugo_build.lock

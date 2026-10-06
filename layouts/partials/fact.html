@@ -1,0 +1,6 @@
+{{ $row := index hugo.Data.generated.facts .id }}
+{{ if not $row }}{{ errorf "Fact %s is missing or not verified" .id }}{{ end }}
+{{ $statement := index $row.statements .page.Language.Lang }}
+{{ if not $statement }}{{ errorf "Fact %s lacks statement for %s" .id .page.Language.Lang }}{{ end }}
+{{ .page.Store.SetInMap "facts" .id $row }}
+<span data-fact="{{ .id }}">{{ $statement }}</span><a class="evidence-link" href="#evidence-{{ .id }}" aria-label="{{ i18n "evidence" }}">[{{ i18n "evidence" }}]</a>

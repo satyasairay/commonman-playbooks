@@ -1,0 +1,14 @@
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #151515; background: white; }
+* { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 44rem; padding: 1rem; font-size: 1.125rem; line-height: 1.55; overflow-wrap: anywhere; }
+a { color: #175563; text-underline-offset: .15em; }
+h1 { font-size: 1.7rem; line-height: 1.2; }
+h2 { font-size: 1.35rem; }
+.opening { font-weight: 600; margin-top: 0; }
+.clock { border-left: .25rem solid #175563; padding-left: 1rem; }
+li { margin-bottom: .8rem; }
+summary { cursor: pointer; padding: .75rem 0; }
+.evidence-link { display: inline-block; padding: .5rem; }
+footer, .trust { border-top: 1px solid #ccc; margin-top: 1.5rem; padding-top: 1rem; font-size: 1rem; }
+blockquote { margin: .5rem 0; padding-left: 1rem; border-left: 2px solid #ccc; }
+@media print { body { max-width: none; padding: 0; color: black; font-size: 12pt; } a { color: black; } }

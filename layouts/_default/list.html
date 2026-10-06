@@ -1,0 +1,5 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<ul>{{ range .Pages }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+<p data-no-contact>{{ i18n "no_contact" }}</p>
+{{ end }}
