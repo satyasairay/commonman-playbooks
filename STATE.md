@@ -16,6 +16,8 @@ L02, same day: research found the sources and quotes for 18 contacts (3 of them 
 
 **6 Oct 2026.** No change on Satya's side since 30 Sep: PR #1 has no Codex check and no verification, the RBI PDF is not downloaded, and inbox 12, 14, 15 and the AI line are open. i4c.mha.gov.in answered again. The card 1 advisory PDF (TAU/ADV/018, 26 Aug 2026) is saved as src-i4c-01, and group E was re-sourced from it on PR #1: six facts, I4C-ADV-2026-08-01 to 06 (66 candidate facts in all). L03a to L03c do not depend on L02, so they go to Codex with the LOOP CARD in `loops/L03-cx.md`, run in Codex's own clone at `C:\Users\USER\Desktop\commonman-playbooks-cx`. Claude reviews each Codex PR.
 
+Same day: Codex (gpt-6.1-sol) ran from 16:01 to 17:44 and stopped at the L03c DONE WHEN. It opened stacked PRs #2 (L03a), #3 (L03b) and #4 (L03c); final CI green, 34 tests, zero Hugo warnings, WhatsApp test text 281 characters, PDF one page. Claude's three-pass review is on PR #4: do not merge yet. Two blockers: a typed phone number passes G1 and G11 through the step-number exemption (`1930.` builds as `<ol start="1930">`), and G11 misses number words, time words and legal names. 22 should-fix items, among them a G4 bypass through `<style>`, gates running only on the drafts build into `public/`, and the print sheet dropping scope and clock. Six evidence logs written as UTF-16 by Windows PowerShell were re-encoded to UTF-8 by Claude on their own branches; merge #2, #3, #4 in that order.
+
 ## Loop status
 
 | Loop | Goal | Status | Date | Commit |
@@ -24,9 +26,9 @@ L02, same day: research found the sources and quotes for 18 contacts (3 of them 
 | L00b | Plan change: facts registry, formats, trust signals, gates G11 and G12 | done | 29 Sep 2026 | first commit |
 | L01 | House rules, opening line and allowed terms signed | in progress: only the AI line is open (Claude's proposed wording waits for Satya). Odia and Hindi lines deferred to L14. | 30 Sep 2026 | |
 | L02 | Contacts and the first facts verified | in progress: fact PR open; waiting for Satya (inbox 12 to 15, RBI PDF, Codex check, verification) | 30 Sep 2026 | |
-| L03a | Site skeleton, fact and contact references, trust frame | handed to Codex (loops/L03-cx.md) | 6 Oct 2026 | |
-| L03b | Machine gates and CI | handed to Codex (loops/L03-cx.md) | 6 Oct 2026 | |
-| L03c | WhatsApp text and print formats | handed to Codex (loops/L03-cx.md) | 6 Oct 2026 | |
+| L03a | Site skeleton, fact and contact references, trust frame | built by Codex, PR #2; Claude review: changes needed | 6 Oct 2026 | |
+| L03b | Machine gates and CI | built by Codex, PR #3; Claude review: 2 blockers | 6 Oct 2026 | |
+| L03c | WhatsApp text and print formats | built by Codex, PR #4; Claude review: changes needed | 6 Oct 2026 | |
 | L04 | Radar v0: collect only | pending | | |
 | L05 | Playbook F2 and first scam card in their formats; 5-reader test | pending | | |
 | L06 | Deploy path, security.txt and takedown drill | blocked: Satya's VPS steps | | |
@@ -135,6 +137,9 @@ L02, same day: research found the sources and quotes for 18 contacts (3 of them 
 - K11: India Code returned HTTP 504 for every BNSS page on 30 Sep 2026. The Zero FIR facts come from the Act as enacted (Gazette), so later amendments are not checked yet.
 - K12: The new RBI liability rules (src-rbi-03) cover commercial banks only. Regional rural banks, small finance banks, payments banks and co-operative banks have their own amendments (issued the same day), not saved yet. Many Odisha readers bank with a regional rural bank.
 - K13: Evidence quotes are verbatim, so they can hold words G10 forbids on English pages (for example "dalals" in the I4C-MRM-10 quote). L03b must decide whether the evidence layer is exempt from G10, or such quotes must be avoided.
+- K15: Private vulnerability reporting is off on the GitHub repo (checked 6 Oct 2026), so the security.txt Contact in PR #2 does not work. Satya switches it on before L06.
+- K16: When branch protection is switched on (K5), it must require both CI jobs, `gates` and `formats`, or G12 is never enforced.
+- K17: The Codex sandbox on this PC runs commands as a separate Windows user. With `--approve-for-me`, Codex's automatic reviewer approved push and PR commands to run outside the sandbox with Satya's stored GitHub login (no new login or token). Codex wrote logs through Windows PowerShell 5.1, which saves `>` output as UTF-16; future cards should say "write files as UTF-8".
 - K14: Source snapshots exist only on the second PC. On another PC, `.cache/sources/` must be fetched again, and rendered or dynamic pages may give a different SHA-256. The fetch script (L03a) should record this.
 
 ## Metrics
