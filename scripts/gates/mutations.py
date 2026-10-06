@@ -53,6 +53,8 @@ CONTROLS = [
     ('page-address', 'gates.py', "return url.scheme == 'https' and url.hostname == ctx.site_host and not url.username and not url.query and not url.fragment and url.path.startswith('/') and url.path.endswith('/')", 'return True'),
     ('generated-english', 'gates.py', "gates = {'G1', 'G2', 'G4', 'G7', 'G9', 'G10', 'G11', 'G12'}", "gates = {'G1', 'G2', 'G4', 'G7', 'G9', 'G11', 'G12'}"),
     ('share-source', 'gates.py', "errors.append(Error('G12', f'invalid share source: {exc}'))", 'pass'),
+    ('browser-build-switch', 'browser_evidence.py', 'self.directory = self.server.build_directory', 'pass'),
+    ('browser-http-status', 'browser_evidence.py', "if response['status'] >= 400 and urlsplit(response['url']).path != '/favicon.ico':", 'if False:'),
 ]
 
 def fixture_mutations():
@@ -110,7 +112,7 @@ def main():
             backup = file.with_name(file.name + '.backup')
             shutil.copy2(file, backup)
             file.write_text(text.replace(old, new), encoding='utf-8')
-            pattern = 'test_share_control.py' if name in {'S12-share-parity', 'page-address', 'share-source'} else 'test_browser_evidence.py' if name == 'network-pages' else 'test_registry.py' if name in {'verified-only', 'source-script'} else 'test_gate*.py'
+            pattern = 'test_share_control.py' if name in {'S12-share-parity', 'page-address', 'share-source'} else 'test_browser_evidence.py' if name in {'network-pages', 'browser-build-switch', 'browser-http-status'} else 'test_registry.py' if name in {'verified-only', 'source-script'} else 'test_gate*.py'
             command = [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', pattern, '-v']
             red = run(root, command)
             if red.returncode == 0 or 'FAIL:' not in red.stderr or 'ERROR:' in red.stderr:

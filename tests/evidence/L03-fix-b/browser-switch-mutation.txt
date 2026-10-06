@@ -1,0 +1,50 @@
+G1 handwritten: RED; backup baseline GREEN
+G1 Hugo-built: RED; backup baseline GREEN
+G2 handwritten: RED; backup baseline GREEN
+G2 Hugo-built: RED; backup baseline GREEN
+G3 handwritten: RED; backup baseline GREEN
+G3 Hugo-built: RED; backup baseline GREEN
+G4 handwritten: RED; backup baseline GREEN
+G4 Hugo-built: RED; backup baseline GREEN
+G4 handwritten: RED; backup baseline GREEN
+G4 Hugo-built: RED; backup baseline GREEN
+G6 handwritten: RED; backup baseline GREEN
+G6 Hugo-built: RED; backup baseline GREEN
+G7 handwritten: RED; backup baseline GREEN
+G7 Hugo-built: RED; backup baseline GREEN
+G8 handwritten: RED; backup baseline GREEN
+G8 Hugo-built: RED; backup baseline GREEN
+G9 handwritten: RED; backup baseline GREEN
+G9 Hugo-built: RED; backup baseline GREEN
+G10 handwritten: RED; backup baseline GREEN
+G10 Hugo-built: RED; backup baseline GREEN
+G10 handwritten: RED; backup baseline GREEN
+G10 Hugo-built: RED; backup baseline GREEN
+G11 handwritten: RED; backup baseline GREEN
+G11 Hugo-built: RED; backup baseline GREEN
+browser-build-switch disabled alone: RED exit 1
+test_S9_every_built_page_and_print_are_selected (test_browser_evidence.BrowserEvidenceTests.test_S9_every_built_page_and_print_are_selected) ... ok
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_idle_connection_uses_current_build_directory (test_browser_evidence.BrowserEvidenceTests.test_idle_connection_uses_current_build_directory) ... 127.0.0.1 - - [06/Oct/2026 22:26:33] code 404, message File not found
+127.0.0.1 - - [06/Oct/2026 22:26:33] "GET /index.html HTTP/1.0" 404 -
+FAIL
+test_missing_page_or_stylesheet_fails (test_browser_evidence.BrowserEvidenceTests.test_missing_page_or_stylesheet_fails) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
+
+======================================================================
+FAIL: test_idle_connection_uses_current_build_directory (test_browser_evidence.BrowserEvidenceTests.test_idle_connection_uses_current_build_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>\tests\test_browser_evidence.py", line 39, in test_idle_connection_uses_current_build_directory
+    self.assertEqual(response.read().split(b'\r\n\r\n', 1)[1], b'CURRENT')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'<!DOCTYPE HTML>\n<html lang="en">\n    <h[433 chars]l>\n' != b'CURRENT'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.549s
+
+FAILED (failures=1)
+
+browser-build-switch backup restored: GREEN exit 0
+
+EXIT 0
