@@ -14,6 +14,8 @@ Later on 30 Sep 2026, work moved to a second PC (no D: drive; the clone is in th
 
 L02, same day: research found the sources and quotes for 18 contacts (3 of them new: C19 to C21) and drafted 63 candidate facts in five groups: RBI liability rules from 1 January 2027 (32), RBI Ombudsman Scheme 2026 (10), reporting and the Money Restoration Module (12), Zero FIR (6), and seed card 1 (3). Three Claude fact-check runs found 27, then 7, then 2 PARTIAL rows (statements a little wider than their quotes, or missing conditions); each set was fixed, the last in commit 5ed45aa. No run found a CONTRADICTED or NOT FOUND row. The last two fixes were not rechecked by Claude; the Codex check covers them. All 24 sources are saved in `.cache/sources/` on the second PC only (not committed; excluded through `.git/info/exclude` until L03a adds `.gitignore`). A script checked every quote against its saved copy: 0 missing, and the script was mutation-checked. Three findings change the plan: the 2017 RBI liability circular is withdrawn and its text now sits in the 2025 Directions; new liability rules apply to transactions from 1 January 2027; and the 2021 Ombudsman Scheme was replaced on 1 July 2026. Fact PR opened: https://github.com/satyasairay/commonman-playbooks/pull/1 (branch `draft/fact-f2-and-contacts`). Waiting for Satya: the decisions in inbox 12 to 15, the RBI PDF download (user to-do), the Codex check, and his verification.
 
+**6 Oct 2026.** No change on Satya's side since 30 Sep: PR #1 has no Codex check and no verification, the RBI PDF is not downloaded, and inbox 12, 14, 15 and the AI line are open. i4c.mha.gov.in answered again. The card 1 advisory PDF (TAU/ADV/018, 26 Aug 2026) is saved as src-i4c-01, and group E was re-sourced from it on PR #1: six facts, I4C-ADV-2026-08-01 to 06 (66 candidate facts in all). L03a to L03c do not depend on L02, so they go to Codex with the LOOP CARD in `loops/L03-cx.md`, run in Codex's own clone at `C:\Users\USER\Desktop\commonman-playbooks-cx`. Claude reviews each Codex PR.
+
 ## Loop status
 
 | Loop | Goal | Status | Date | Commit |
@@ -22,9 +24,9 @@ L02, same day: research found the sources and quotes for 18 contacts (3 of them 
 | L00b | Plan change: facts registry, formats, trust signals, gates G11 and G12 | done | 29 Sep 2026 | first commit |
 | L01 | House rules, opening line and allowed terms signed | in progress: only the AI line is open (Claude's proposed wording waits for Satya). Odia and Hindi lines deferred to L14. | 30 Sep 2026 | |
 | L02 | Contacts and the first facts verified | in progress: fact PR open; waiting for Satya (inbox 12 to 15, RBI PDF, Codex check, verification) | 30 Sep 2026 | |
-| L03a | Site skeleton, fact and contact references, trust frame | pending | | |
-| L03b | Machine gates and CI | pending | | |
-| L03c | WhatsApp text and print formats | pending | | |
+| L03a | Site skeleton, fact and contact references, trust frame | handed to Codex (loops/L03-cx.md) | 6 Oct 2026 | |
+| L03b | Machine gates and CI | handed to Codex (loops/L03-cx.md) | 6 Oct 2026 | |
+| L03c | WhatsApp text and print formats | handed to Codex (loops/L03-cx.md) | 6 Oct 2026 | |
 | L04 | Radar v0: collect only | pending | | |
 | L05 | Playbook F2 and first scam card in their formats; 5-reader test | pending | | |
 | L06 | Deploy path, security.txt and takedown drill | blocked: Satya's VPS steps | | |
@@ -55,7 +57,7 @@ L02, same day: research found the sources and quotes for 18 contacts (3 of them 
 10. ~~Plan change: one set of facts, many formats.~~ Approved 29 Sep 2026 and written in (decisions log).
 11. ~~Lakh and crore.~~ Decided 30 Sep 2026: allowed.
 12. **NOVEL. F2 and the RBI rule change on 1 January 2027.** Transactions before that date follow the old liability rules (report within 3 working days, fixed limits, credit back within 10 working days). Transactions from that date follow the new rules (report within 5 calendar days, the bank's policy after that, and a small-value compensation of 85% of the net loss or ₹25,000 when the reader was careless). F2 will go live before the switch, so a reader in October to December needs the old rules. Proposal: F2 carries both sets from the start, and the page asks the reader when the money left. Other options: old rules only now and the new rules in December; or new rules only, with a line for older cases. Your call.
-13. **NOVEL. Source for seed card 1.** The I4C advisory PDF could not be fetched (i4c.mha.gov.in did not answer all day, K9). The only official text found is I4C's own CyberDost Telegram post (t.me, not a government domain). Proposal: keep I4C-ADV-2026-08-01 to 03 as `candidate` from the Telegram post, and switch the source to the PDF when the site is back. Or: the card waits for the PDF.
+13. ~~Source for seed card 1.~~ Resolved 6 Oct 2026: the I4C advisory PDF was fetched (src-i4c-01) and group E was re-sourced from it, on Satya's instruction.
 14. **Contact C12 (Nyaya Setu WhatsApp).** No official page states the number. The same service has an official toll-free number, 14454 (new row C19). Proposal: reject C12 and use C19.
 15. **Contact C04 (Money Restoration Portal).** The address `mrm-ncrp.mha.gov.in` is stated only on the portal's own FAQ; MHA releases name the module but not the address. Please confirm it yourself before verifying; fake "money recovery" sites are a known scam.
 
@@ -110,6 +112,7 @@ L02, same day: research found the sources and quotes for 18 contacts (3 of them 
 | 30 Sep 2026 | Source ids are `src-<owner>-<NN>` in small letters. Contacts and facts share one Sources table in rules/facts.md. Each source is saved as the original plus a plain-text copy that the checkers read. | One place for every source. The id cannot clash with fact ids or radar ids. Both checkers read the same text. |
 | 30 Sep 2026 | A fact statement never contains a phone number, URL or email; the page puts a contact reference beside it. | Keeps G1 simple: every number on a page comes through a contact. |
 | 30 Sep 2026 | Facts are drafted only from the text in force. The withdrawn 2017 RBI circular is not used as a source, even though RBI says its text moved "as-is". | Satya's rule: primary source, current text. |
+| 6 Oct 2026 | L03a to L03c go to Codex CLI (model gpt-6.1-sol, reasoning high) as one LOOP CARD (`loops/L03-cx.md`), in its own clone, with stacked PRs. Claude reviews each PR. | AGENTS.md Job 2 gives engineering loops to Codex. A second model family reviewing the work avoids shared blind spots. Its own clone keeps the main checkout free for L02. Satya asked for one block that runs for many hours without stopping. |
 
 ## Adversary rounds
 
@@ -127,7 +130,7 @@ L02, same day: research found the sources and quotes for 18 contacts (3 of them 
 - K6: Four seed cards (digital arrest, task scam, fake investment groups, UPI collect/QR) have only vendor or press sources so far. Each needs an official source before `confirmed`. Closes in L08 and L09.
 - K7: The candidate facts in rules/facts.md come from memory and news. None may be used until found in a primary source and verified. Closes for F2 and card 1 in L02; for the rest, in the loop that needs them.
 - K8: Contact C18 (the WhatsApp share link) needs WhatsApp's own help page as its source. Found on 30 Sep 2026 (src-whatsapp-01). Closes when Satya verifies C18.
-- K9: i4c.mha.gov.in did not answer on 30 Sep 2026, from India (timeouts on ports 80 and 443) or from outside (connection refused). It blocks contact C03, the card 1 advisory PDF, and the radar's main source (S01). Recheck at the start of the next session.
+- K9: i4c.mha.gov.in did not answer on 30 Sep 2026, from India (timeouts on ports 80 and 443) or from outside (connection refused). It blocks contact C03, the card 1 advisory PDF, and the radar's main source (S01). The site answered again on 6 Oct 2026 and the advisory PDF was saved. Still open: a source for C03. The site was down for at least one day, so the radar (L04) must record a failed fetch as "source down", not as "no new items".
 - K10: RBI's PDF host (rbidocs.rbi.org.in) shows a human check to scripts. The liability rules for transactions before 1 January 2027 exist only there (170MD.PDF). Satya downloads the file (user to-do). The radar in L04 will need another way to read RBI (for example the HTML notification pages on www.rbi.org.in, which do load).
 - K11: India Code returned HTTP 504 for every BNSS page on 30 Sep 2026. The Zero FIR facts come from the Act as enacted (Gazette), so later amendments are not checked yet.
 - K12: The new RBI liability rules (src-rbi-03) cover commercial banks only. Regional rural banks, small finance banks, payments banks and co-operative banks have their own amendments (issued the same day), not saved yet. Many Odisha readers bank with a regional rural bank.
@@ -140,3 +143,4 @@ L02, same day: research found the sources and quotes for 18 contacts (3 of them 
 |---|---|---|---|---|---|---|---|---|
 | 29 Sep 2026 | 0 | 0 | 0 | 0 | 0 | n/a | 0 | 0 |
 | 30 Sep 2026 | 0 | 0 (63 candidate) | 0 (18 with a source, waiting) | 0 | 0 | n/a | 0 | 0 |
+| 6 Oct 2026 | 0 | 0 (66 candidate) | 0 (18 with a source, waiting) | 0 | 0 | n/a | 0 | 0 |
