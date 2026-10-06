@@ -1,5 +1,6 @@
 """Concrete bypass sequences found during the local adversary pass."""
 import sys
+import hashlib
 import shutil
 import tempfile
 import unittest
@@ -53,7 +54,8 @@ class GateAdversaryTests(unittest.TestCase):
 
     def test_verified_share_base_retains_exact_encoded_text(self):
         self.ctx.contacts['C99'].update(type='url-base', value='https://example.invalid/?text=')
-        text = self.html.replace('href="https://example.invalid/test"', 'data-share-text="Read the test note." href="https://example.invalid/?text=Read+the+test+note."').replace('>https://example.invalid/test</a>', '>WhatsApp</a>')
+        digest = hashlib.sha256(b'Read the test note.').hexdigest()
+        text = self.html.replace('href="https://example.invalid/test"', 'data-share data-share-sha256="' + digest + '" href="https://example.invalid/?text=Read+the+test+note."').replace('>https://example.invalid/test</a>', '>WhatsApp</a>')
         self.assertNotIn('G1', self.gates(text))
         self.assertIn('G1', self.gates(text.replace('?text=Read+', '?text=Send+')))
 

@@ -17,9 +17,10 @@ MUTATIONS = [
     ('export-isolation', 'scripts/facts/export.py', "if args.output.resolve() == (ROOT / 'data/generated').resolve() and", 'if False and'),
     ('source-id', 'scripts/facts/registry.py', 'if not SOURCE_ID.fullmatch(value):', 'if False:'),
     ('https-redirect', 'scripts/sources/fetch_text.py', "if not newurl.lower().startswith('https://'):", 'if False:'),
-    ('page-recheck', 'layouts/partials/trust.html', '.Params.recheck_by | default ""', '""'),
+    ('page-recheck', 'layouts/partials/trust.html', 'partial "date-value.html" .Params.recheck_by', '""'),
     ('footer-ai', 'layouts/_default/baseof.html', 'data-ai-line', 'data-removed'),
     ('privacy', 'hugo.toml', "urls = ['none']", "urls = ['.*']"),
+    ('human-dates', 'layouts/partials/date-value.html', '"October" "10"', '"October" "09"'),
 ]
 
 def copy_repo(target):
