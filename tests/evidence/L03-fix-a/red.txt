@@ -1,0 +1,119 @@
+src-test 249c769939186d08313476bda477feb69b536498b513639f0bc767606c502c89
+Hash proposals saved; only Satya may update rules/facts.md.
+test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... FAIL
+test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ERROR
+test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... FAIL
+test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit) ... FAIL
+test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... FAIL
+test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... FAIL
+test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... FAIL
+test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ERROR
+test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ERROR
+test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... FAIL
+test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... FAIL
+
+======================================================================
+ERROR: test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 32, in test_S16_deferred_languages
+    self.assertEqual(tomllib.loads((ROOT / 'hugo.toml').read_text())['disableLanguages'], ['or', 'hi'])
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'disableLanguages'
+
+======================================================================
+ERROR: test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 58, in test_privacy_and_http_disabled
+    self.assertEqual(config['security']['http']['urls'], ['none'])
+                     ~~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'http'
+
+======================================================================
+ERROR: test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 89, in test_redirect_to_http_refused
+    handler = fetch_text.HTTPSRedirectHandler()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'fetch_text' has no attribute 'HTTPSRedirectHandler'
+
+======================================================================
+FAIL: test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 27, in test_S14_card_label_under_opening
+    self.assertIn('Confirmed by TEST agency on 6 October 2026', html)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Confirmed by TEST agency on 6 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST card</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n<h1>TEST card</h1>\n\n\n<p data-confidence>Confirmed</p>\n\n<article data-reader><p>Read the test note.</p>\n</article>\n<aside>\n\n\n\n\n<span data-fact="TEST-ADVISORY-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-ADVISORY-01" aria-label="Evidence">[Evidence]</a>\n</aside>\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-ADVISORY-01" data-evidence-fact="TEST-ADVISORY-01">\n<summary>Evidence: TEST-ADVISORY-01</summary>\n<p><a href="https://rbi.org.in/test-advisory">TEST advisory</a> � TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 2026-10-06 � TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123">Build abcdef0123456789abcdef0123456789abcdef0123 � 2026-10-06</p>\n</footer>\n</body>\n</html>\n'
+
+======================================================================
+FAIL: test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 37, in test_S17_overdue_notice
+    self.assertIn('data-overdue', self.page('playbooks/test-signed'))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'data-overdue' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n<h1>TEST signed page</h1>\n\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123">Build abcdef0123456789abcdef0123456789abcdef0123 � 2026-10-06</p>\n</footer>\n</body>\n</html>\n'
+
+======================================================================
+FAIL: test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 41, in test_S18_readable_dates_short_commit
+    self.assertIn('Checked on 6 October 2026', html)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Checked on 6 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Test page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n<h1>Test page</h1>\n<p class="scope">This page covers a test.</p>\n<p class="scope">It does not cover real advice.</p>\n\n<aside class="clock">\n\n\n\n\n<span data-fact="TEST-DEADLINE-01">Read the test note within three days of this test under the test rule.</span><a class="evidence-link" href="#evidence-TEST-DEADLINE-01" aria-label="Evidence">[Evidence]</a>\n</aside>\n<article data-reader><h2 id="do-this-now">Do this now</h2>\n<ol>\n<li>\n\n\n\n\n<span data-fact="TEST-STEP-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-STEP-01" aria-label="Evidence">[Evidence]</a>\n\n \n \n <a data-contact="C99" href="https://example.invalid/test">https://example.invalid/test</a>\n</li>\n</ol>\n</article>\n\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-DEADLINE-01" data-evidence-fact="TEST-DEADLINE-01">\n<summary>Evidence: TEST-DEADLINE-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> � TEST paragraph</p>\n<blockquote>Read the test note within three days of this test under the test rule.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 2026-10-06 � TEST</p>\n</details>\n\n<details id="evidence-TEST-STEP-01" data-evidence-fact="TEST-STEP-01">\n<summary>Evidence: TEST-STEP-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> � TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 2026-10-06 � TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123">Build abcdef0123456789abcdef0123456789abcdef0123 � 2026-10-06</p>\n</footer>\n</body>\n</html>\n'
+
+======================================================================
+FAIL: test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 48, in test_S19_clock_heading_list_fact
+    self.assertRegex(html, r'(?s)<aside class="clock"[^>]*>\s*<h2>.*?</h2>\s*<ul>\s*<li>.*?data-fact="TEST-DEADLINE-01"')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Regex didn't match: '(?s)<aside class="clock"[^>]*>\\s*<h2>.*?</h2>\\s*<ul>\\s*<li>.*?data-fact="TEST-DEADLINE-01"' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Test page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n<h1>Test page</h1>\n<p class="scope">This page covers a test.</p>\n<p class="scope">It does not cover real advice.</p>\n\n<aside class="clock">\n\n\n\n\n<span data-fact="TEST-DEADLINE-01">Read the test note within three days of this test under the test rule.</span><a class="evidence-link" href="#evidence-TEST-DEADLINE-01" aria-label="Evidence">[Evidence]</a>\n</aside>\n<article data-reader><h2 id="do-this-now">Do this now</h2>\n<ol>\n<li>\n\n\n\n\n<span data-fact="TEST-STEP-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-STEP-01" aria-label="Evidence">[Evidence]</a>\n\n \n \n <a data-contact="C99" href="https://example.invalid/test">https://example.invalid/test</a>\n</li>\n</ol>\n</article>\n\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-DEADLINE-01" data-evidence-fact="TEST-DEADLINE-01">\n<summary>Evidence: TEST-DEADLINE-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> � TEST paragraph</p>\n<blockquote>Read the test note within three days of this test under the test rule.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 2026-10-06 � TEST</p>\n</details>\n\n<details id="evidence-TEST-STEP-01" data-evidence-fact="TEST-STEP-01">\n<summary>Evidence: TEST-STEP-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> � TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 2026-10-06 � TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123">Build abcdef0123456789abcdef0123456789abcdef0123 � 2026-10-06</p>\n</footer>\n</body>\n</html>\n'
+
+======================================================================
+FAIL: test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 83, in test_S21_snapshot_never_overwritten
+    with self.assertRaisesRegex(SystemExit, 'snapshot exists'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 64, in test_fixture_export_refuses_default_output
+    self.assertNotEqual(run.returncode, 0)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 53, in test_signed_fixture_exact_line_and_page_recheck
+    self.assertIn('Next check by 5 October 2026', html)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Next check by 5 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n<h1>TEST signed page</h1>\n\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123">Build abcdef0123456789abcdef0123456789abcdef0123 � 2026-10-06</p>\n</footer>\n</body>\n</html>\n'
+
+======================================================================
+FAIL: test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 71, in test_source_ids_closed_pattern
+    with self.assertRaisesRegex(ValueError, 'source id'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.132s
+
+FAILED (failures=8, errors=3)
+
+EXIT 1

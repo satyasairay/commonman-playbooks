@@ -33,3 +33,15 @@ other = 'Print sheet'
 other = 'WhatsApp'
 [playbooks]
 other = 'Help'
+# DRAFT: Satya approves.
+[confirmed_by]
+other = 'Confirmed by {{ .agency }} on {{ .date }}'
+# DRAFT: Satya approves.
+[clock]
+other = 'The clock'
+# DRAFT: Satya approves.
+[overdue]
+other = 'This page is past its check date.'
+# Satya writes this text before publication.
+[ai_line]
+other = ''

@@ -1,0 +1,47 @@
+test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) ... ok
+test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) ... ok
+test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) ... ok
+test_G11_lowercase_act_heading_allowed (test_gate_fix.FixGateTests.test_G11_lowercase_act_heading_allowed) ... ok
+test_G11_modal_may_is_not_a_month (test_gate_fix.FixGateTests.test_G11_modal_may_is_not_a_month) ... FAIL
+test_S10_production_rejects_draft_output (test_gate_fix.FixGateTests.test_S10_production_rejects_draft_output) ... ok
+test_S11_valid_build_identity_required (test_gate_fix.FixGateTests.test_S11_valid_build_identity_required) ... ok
+test_S12_call_short_phone_control (test_gate_fix.FixGateTests.test_S12_call_short_phone_control) ... ok
+test_S12_card_confidence_control (test_gate_fix.FixGateTests.test_S12_card_confidence_control) ... ok
+test_S12_internal_path_control (test_gate_fix.FixGateTests.test_S12_internal_path_control) ... ok
+test_S12_live_page_missing_control (test_gate_fix.FixGateTests.test_S12_live_page_missing_control) ... ok
+test_S12_live_signature_control (test_gate_fix.FixGateTests.test_S12_live_signature_control) ... ok
+test_S12_loop_id_control (test_gate_fix.FixGateTests.test_S12_loop_id_control) ... ok
+test_S12_primary_https_control (test_gate_fix.FixGateTests.test_S12_primary_https_control) ... ok
+test_S12_primary_username_control (test_gate_fix.FixGateTests.test_S12_primary_username_control) ... ok
+test_S12_recheck_boundary_control (test_gate_fix.FixGateTests.test_S12_recheck_boundary_control) ... ok
+test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) ... ok
+test_S1_hard_wrap_does_not_end_sentence (test_gate_fix.FixGateTests.test_S1_hard_wrap_does_not_end_sentence) ... ok
+test_S22_two_date_forms_only (test_gate_fix.FixGateTests.test_S22_two_date_forms_only) ... ok
+test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) ... ok
+test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) ... ok
+test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) ... ok
+test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) ... ok
+test_S6_non_md_content_fails (test_gate_fix.FixGateTests.test_S6_non_md_content_fails) ... ok
+test_S7_unknown_fact_kind_fails (test_gate_fix.FixGateTests.test_S7_unknown_fact_kind_fails) ... ok
+test_S8_quote_keeps_marker_contact_script_checks (test_gate_fix.FixGateTests.test_S8_quote_keeps_marker_contact_script_checks) ... ok
+test_S8_verified_by_is_checked (test_gate_fix.FixGateTests.test_S8_verified_by_is_checked) ... ok
+test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) ... ok
+test_fact_sentence_counts_in_G10 (test_gate_fix.FixGateTests.test_fact_sentence_counts_in_G10) ... ok
+test_footer_ai_line_required (test_gate_fix.FixGateTests.test_footer_ai_line_required) ... ok
+test_web_size_limit (test_gate_fix.FixGateTests.test_web_size_limit) ... ok
+
+======================================================================
+FAIL: test_G11_modal_may_is_not_a_month (test_gate_fix.FixGateTests.test_G11_modal_may_is_not_a_month)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 65, in test_G11_modal_may_is_not_a_month
+    self.assertFalse([e for e in self.source('You may read the note.') if e.gate == 'G11'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [Error(gate='G11', note='bare number, amount, time period or legal claim', location='')] is not false
+
+----------------------------------------------------------------------
+Ran 31 tests in 3.086s
+
+FAILED (failures=1)
+
+EXIT 1

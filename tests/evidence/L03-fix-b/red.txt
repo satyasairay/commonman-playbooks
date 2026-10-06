@@ -1,0 +1,966 @@
+test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) ... 
+  test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) (start=1930) ... FAIL
+  test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) (start=155260) ... FAIL
+  test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) (start=999999999) ... FAIL
+test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) ... 
+  test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) (body='1930. Call this number first if money left your account.') ... FAIL
+  test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) (body='155260) Call this number.') ... FAIL
+  test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) (body='999999999. Call this number.') ... FAIL
+  test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) (body='1. Read.\n3. Read.') ... FAIL
+test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) ... 
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='within a few days') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='in a week') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='for a year') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='golden hour') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='in a fortnight') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='fifty days') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='zero liability') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='fifty per cent') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='fifty rupees') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='half of the money') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='before the end of March') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='on the same day') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Code of Criminal Procedure') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Integrated Ombudsman Scheme') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Master Direction') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='RBI circulars') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='An RBI rule') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='SEBI Regulations') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Both Acts') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='the Sections') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='forty days') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='seventy days') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='eighty days') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='dozen days') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='several weeks') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='couple of hours') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Sanhita') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Adhiniyam') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Ordinances') ... FAIL
+  test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='notifications') ... FAIL
+test_G11_lowercase_act_heading_allowed (test_gate_fix.FixGateTests.test_G11_lowercase_act_heading_allowed) ... FAIL
+test_S10_production_rejects_draft_output (test_gate_fix.FixGateTests.test_S10_production_rejects_draft_output) ... ERROR
+test_S11_valid_build_identity_required (test_gate_fix.FixGateTests.test_S11_valid_build_identity_required) ... ok
+test_S12_call_short_phone_control (test_gate_fix.FixGateTests.test_S12_call_short_phone_control) ... ok
+test_S12_card_confidence_control (test_gate_fix.FixGateTests.test_S12_card_confidence_control) ... ok
+test_S12_internal_path_control (test_gate_fix.FixGateTests.test_S12_internal_path_control) ... ok
+test_S12_live_page_missing_control (test_gate_fix.FixGateTests.test_S12_live_page_missing_control) ... ERROR
+test_S12_live_signature_control (test_gate_fix.FixGateTests.test_S12_live_signature_control) ... ok
+test_S12_loop_id_control (test_gate_fix.FixGateTests.test_S12_loop_id_control) ... ok
+test_S12_primary_https_control (test_gate_fix.FixGateTests.test_S12_primary_https_control) ... ok
+test_S12_primary_username_control (test_gate_fix.FixGateTests.test_S12_primary_username_control) ... ok
+test_S12_recheck_boundary_control (test_gate_fix.FixGateTests.test_S12_recheck_boundary_control) ... ok
+test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) ... 
+  test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) (name='method/index.html') ... ERROR
+  test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) (name='corrections/index.html') ... ERROR
+  test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) (name='.well-known/security.txt') ... ERROR
+test_S1_hard_wrap_does_not_end_sentence (test_gate_fix.FixGateTests.test_S1_hard_wrap_does_not_end_sentence) ... FAIL
+test_S22_two_date_forms_only (test_gate_fix.FixGateTests.test_S22_two_date_forms_only) ... ERROR
+test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) ... 
+  test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='didi') ... FAIL
+  test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='saathi') ... FAIL
+  test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='nyaya') ... FAIL
+  test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='beta') ... FAIL
+  test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='bas') ... FAIL
+  test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='na') ... FAIL
+test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) ... 
+  test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='bank-refund.online') ... FAIL
+  test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='kyc-update.top') ... FAIL
+  test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='bank-help.app') ... FAIL
+  test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='help [at] bank [dot] co') ... FAIL
+  test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='help (at) bank (dot) co') ... FAIL
+test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) ... 
+  test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='[[ VERIFY') ... FAIL
+  test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='[[verify') ... FAIL
+  test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='[VERIFY') ... FAIL
+  test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='<!-- [[ VERIFY -->') ... FAIL
+  test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='facts.md') ... FAIL
+  test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='contacts.md') ... FAIL
+test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) ... 
+  test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) (kind=None) ... ERROR
+  test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) (kind='Playbook') ... ERROR
+  test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) (kind='scam-card') ... ERROR
+test_S6_non_md_content_fails (test_gate_fix.FixGateTests.test_S6_non_md_content_fails) ... ERROR
+test_S7_unknown_fact_kind_fails (test_gate_fix.FixGateTests.test_S7_unknown_fact_kind_fails) ... FAIL
+test_S8_quote_keeps_marker_contact_script_checks (test_gate_fix.FixGateTests.test_S8_quote_keeps_marker_contact_script_checks) ... FAIL
+test_S8_verified_by_is_checked (test_gate_fix.FixGateTests.test_S8_verified_by_is_checked) ... FAIL
+test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) ... 
+  test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<style>@import url(https://example.invalid/x)</style>') ... FAIL
+  test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<style>@font-face{src:url(https://example.invalid/x)}</style>') ... FAIL
+  test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<a href="/" ping="https://example.invalid/x">Read</a>') ... FAIL
+  test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<body background="https://example.invalid/x">') ... FAIL
+  test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<svg><image xlink:href="https://example.invalid/x"></svg>') ... FAIL
+test_fact_sentence_counts_in_G10 (test_gate_fix.FixGateTests.test_fact_sentence_counts_in_G10) ... ok
+test_footer_ai_line_required (test_gate_fix.FixGateTests.test_footer_ai_line_required) ... ok
+test_web_size_limit (test_gate_fix.FixGateTests.test_web_size_limit) ... FAIL
+
+======================================================================
+ERROR: test_S10_production_rejects_draft_output (test_gate_fix.FixGateTests.test_S10_production_rejects_draft_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 143, in test_S10_production_rejects_draft_output
+    self.assertGate('G3', self.run_site(production=True))
+                          ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+ERROR: test_S12_live_page_missing_control (test_gate_fix.FixGateTests.test_S12_live_page_missing_control)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 176, in test_S12_live_page_missing_control
+    self.assertTrue(any('live page missing' in e.note for e in self.run_site(live=True, omit='live')))
+                                                               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+ERROR: test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) (name='method/index.html')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 173, in test_S12_required_site_pages_control
+    self.assertTrue(any(name in e.note and e.gate == 'G3' for e in self.run_site(live=True, omit=name)))
+                                                                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+ERROR: test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) (name='corrections/index.html')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 173, in test_S12_required_site_pages_control
+    self.assertTrue(any(name in e.note and e.gate == 'G3' for e in self.run_site(live=True, omit=name)))
+                                                                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+ERROR: test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) (name='.well-known/security.txt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 173, in test_S12_required_site_pages_control
+    self.assertTrue(any(name in e.note and e.gate == 'G3' for e in self.run_site(live=True, omit=name)))
+                                                                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+ERROR: test_S22_two_date_forms_only (test_gate_fix.FixGateTests.test_S22_two_date_forms_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 188, in test_S22_two_date_forms_only
+    self.assertEqual(registry.parse_date('2026-10-06'), dt.date(2026, 10, 6))
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'registry' has no attribute 'parse_date'
+
+======================================================================
+ERROR: test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) (kind=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 90, in test_S5_kind_closed_in_sections
+    self.assertGate('G8', self.run_site(kind=kind))
+                          ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+ERROR: test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) (kind='Playbook')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 90, in test_S5_kind_closed_in_sections
+    self.assertGate('G8', self.run_site(kind=kind))
+                          ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+ERROR: test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) (kind='scam-card')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 90, in test_S5_kind_closed_in_sections
+    self.assertGate('G8', self.run_site(kind=kind))
+                          ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+ERROR: test_S6_non_md_content_fails (test_gate_fix.FixGateTests.test_S6_non_md_content_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 116, in test_S6_non_md_content_fails
+    self.assertGate('G2', self.run_site(suffix='.markdown', live=True))
+                          ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 113, in run_site
+    return run(content, public, self.ctx, production=production)
+TypeError: run() got an unexpected keyword argument 'production'
+
+======================================================================
+FAIL: test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) (start=1930)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 52, in test_B1_built_ol_start
+    self.assertGate('G1', errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) (start=155260)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 52, in test_B1_built_ol_start
+    self.assertGate('G1', errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) (start=999999999)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 52, in test_B1_built_ol_start
+    self.assertGate('G1', errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) (body='1930. Call this number first if money left your account.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 45, in test_B1_only_sequential_steps_exempt
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) (body='155260) Call this number.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 45, in test_B1_only_sequential_steps_exempt
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) (body='999999999. Call this number.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 45, in test_B1_only_sequential_steps_exempt
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) (body='1. Read.\n3. Read.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 45, in test_B1_only_sequential_steps_exempt
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='within a few days')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='in a week')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='for a year')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='golden hour')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='in a fortnight')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='fifty days')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='zero liability')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='fifty per cent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='fifty rupees')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='half of the money')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='before the end of March')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='on the same day')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Code of Criminal Procedure')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Integrated Ombudsman Scheme')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Master Direction')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='RBI circulars')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='An RBI rule')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='SEBI Regulations')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Both Acts')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='the Sections')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='forty days')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='seventy days')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='eighty days')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='dozen days')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='several weeks')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='couple of hours')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Sanhita')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in {'G10'} : G10 RED : word outside en_GB and allowed terms: Sanhita
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Adhiniyam')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in {'G10'} : G10 RED : word outside en_GB and allowed terms: Adhiniyam
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='Ordinances')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) (body='notifications')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 58, in test_B2_all_review_claims
+    self.assertGate('G11', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G11' not found in set() : 
+
+======================================================================
+FAIL: test_G11_lowercase_act_heading_allowed (test_gate_fix.FixGateTests.test_G11_lowercase_act_heading_allowed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 62, in test_G11_lowercase_act_heading_allowed
+    self.assertFalse([e for e in self.source("If they don't act") if e.gate == 'G11'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [Error(gate='G11', note='bare number, amount, time period or legal claim', location='')] is not false
+
+======================================================================
+FAIL: test_S1_hard_wrap_does_not_end_sentence (test_gate_fix.FixGateTests.test_S1_hard_wrap_does_not_end_sentence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 66, in test_S1_hard_wrap_does_not_end_sentence
+    self.assertTrue(any('sentence' in e for e in english_errors(text, self.ctx.allowed_words)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='didi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 71, in test_S2_deny_and_phrase_names
+    self.assertTrue(english_errors(word, self.ctx.allowed_words))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='saathi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 71, in test_S2_deny_and_phrase_names
+    self.assertTrue(english_errors(word, self.ctx.allowed_words))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='nyaya')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 71, in test_S2_deny_and_phrase_names
+    self.assertTrue(english_errors(word, self.ctx.allowed_words))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='beta')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 71, in test_S2_deny_and_phrase_names
+    self.assertTrue(english_errors(word, self.ctx.allowed_words))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='bas')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 71, in test_S2_deny_and_phrase_names
+    self.assertTrue(english_errors(word, self.ctx.allowed_words))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) (word='na')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 71, in test_S2_deny_and_phrase_names
+    self.assertTrue(english_errors(word, self.ctx.allowed_words))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='bank-refund.online')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 79, in test_S3_domains_and_obfuscated_email
+    self.assertGate('G1', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='kyc-update.top')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 79, in test_S3_domains_and_obfuscated_email
+    self.assertGate('G1', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='bank-help.app')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 79, in test_S3_domains_and_obfuscated_email
+    self.assertGate('G1', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='help [at] bank [dot] co')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 79, in test_S3_domains_and_obfuscated_email
+    self.assertGate('G1', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) (body='help (at) bank (dot) co')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 79, in test_S3_domains_and_obfuscated_email
+    self.assertGate('G1', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='[[ VERIFY')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 85, in test_S4_raw_internal_markers
+    self.assertGate('G7', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G7' not found in set() : 
+
+======================================================================
+FAIL: test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='[[verify')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 85, in test_S4_raw_internal_markers
+    self.assertGate('G7', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G7' not found in set() : 
+
+======================================================================
+FAIL: test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='[VERIFY')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 85, in test_S4_raw_internal_markers
+    self.assertGate('G7', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G7' not found in set() : 
+
+======================================================================
+FAIL: test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='<!-- [[ VERIFY -->')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 85, in test_S4_raw_internal_markers
+    self.assertGate('G7', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G7' not found in set() : 
+
+======================================================================
+FAIL: test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='facts.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 85, in test_S4_raw_internal_markers
+    self.assertGate('G7', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G7' not found in set() : 
+
+======================================================================
+FAIL: test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) (body='contacts.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 85, in test_S4_raw_internal_markers
+    self.assertGate('G7', self.source(body))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G7' not found in set() : 
+
+======================================================================
+FAIL: test_S7_unknown_fact_kind_fails (test_gate_fix.FixGateTests.test_S7_unknown_fact_kind_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 121, in test_S7_unknown_fact_kind_fails
+    self.assertGate('G9', self.document())
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G9' not found in set() : 
+
+======================================================================
+FAIL: test_S8_quote_keeps_marker_contact_script_checks (test_gate_fix.FixGateTests.test_S8_quote_keeps_marker_contact_script_checks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 126, in test_S8_quote_keeps_marker_contact_script_checks
+    self.assertGate(gate, check_document(html, self.ctx))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G7' not found in set() : 
+
+======================================================================
+FAIL: test_S8_verified_by_is_checked (test_gate_fix.FixGateTests.test_S8_verified_by_is_checked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 132, in test_S8_verified_by_is_checked
+    self.assertGate(gate, errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set() : 
+
+======================================================================
+FAIL: test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<style>@import url(https://example.invalid/x)</style>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 140, in test_S9_every_network_surface
+    self.assertGate('G4', self.document(markup))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G4' not found in set() : 
+
+======================================================================
+FAIL: test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<style>@font-face{src:url(https://example.invalid/x)}</style>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 140, in test_S9_every_network_surface
+    self.assertGate('G4', self.document(markup))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G4' not found in set() : 
+
+======================================================================
+FAIL: test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<a href="/" ping="https://example.invalid/x">Read</a>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 140, in test_S9_every_network_surface
+    self.assertGate('G4', self.document(markup))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G4' not found in set() : 
+
+======================================================================
+FAIL: test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<body background="https://example.invalid/x">')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 140, in test_S9_every_network_surface
+    self.assertGate('G4', self.document(markup))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G4' not found in set() : 
+
+======================================================================
+FAIL: test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) (markup='<svg><image xlink:href="https://example.invalid/x"></svg>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 140, in test_S9_every_network_surface
+    self.assertGate('G4', self.document(markup))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G4' not found in set() : 
+
+======================================================================
+FAIL: test_web_size_limit (test_gate_fix.FixGateTests.test_web_size_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_fix.py", line 204, in test_web_size_limit
+    self.assertGate('G12', check_document(self.html + '<!--' + 'x' * 50000 + '-->', self.ctx))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\tests\test_gate_fix.py", line 40, in assertGate
+    self.assertIn(gate, {e.gate for e in errors}, '\n'.join(map(str, errors)))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G12' not found in set() : 
+
+----------------------------------------------------------------------
+Ran 30 tests in 24.752s
+
+FAILED (failures=65, errors=10)
+
+EXIT 1

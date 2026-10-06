@@ -1,0 +1,19 @@
+test_S9_every_built_page_and_print_are_selected (test_browser_evidence.BrowserEvidenceTests.test_S9_every_built_page_and_print_are_selected) ... ERROR
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
+
+======================================================================
+ERROR: test_S9_every_built_page_and_print_are_selected (test_browser_evidence.BrowserEvidenceTests.test_S9_every_built_page_and_print_are_selected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_browser_evidence.py", line 21, in test_S9_every_built_page_and_print_are_selected
+    self.assertEqual(browser_evidence.built_pages(root), ['index.html', 'method/index.html', 'playbooks/test/index.html', 'playbooks/test/print.html'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'browser_evidence' has no attribute 'built_pages'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.011s
+
+FAILED (errors=1)
+
+EXIT 1

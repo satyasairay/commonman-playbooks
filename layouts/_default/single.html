@@ -1,10 +1,10 @@
 {{ define "main" }}
 {{ if in (slice "playbook" "card") .Params.kind }}<p class="opening" data-opening>{{ i18n "opening" }}</p>{{ end }}
+{{ if eq .Params.kind "card" }}{{ partial "confidence.html" . }}{{ end }}
 <h1>{{ .Title }}</h1>
 {{ with .Params.scope_covers }}<p class="scope">{{ i18n "covers" }} {{ . }}</p>{{ end }}
 {{ with .Params.scope_excludes }}<p class="scope">{{ i18n "excludes" }} {{ . }}</p>{{ end }}
-{{ if eq .Params.kind "card" }}<p data-confidence>{{ if eq .Params.confidence "watch" }}{{ i18n "watch" }}{{ else }}{{ i18n "confirmed" }}{{ end }}</p>{{ end }}
-{{ with .Params.clock }}<aside class="clock">{{ range . }}{{ partial "fact.html" (dict "id" . "page" $) }}{{ end }}</aside>{{ end }}
+{{ with .Params.clock }}<aside class="clock"><h2>{{ i18n "clock" }}</h2><ul>{{ range . }}<li>{{ partial "fact.html" (dict "id" . "page" $) }}</li>{{ end }}</ul></aside>{{ end }}
 <article data-reader>{{ .Content }}</article>
 {{ with .Params.warnings }}<aside>{{ range . }}{{ partial "fact.html" (dict "id" . "page" $) }}{{ end }}</aside>{{ end }}
 {{ partial "evidence.html" . }}

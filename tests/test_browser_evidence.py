@@ -6,9 +6,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts/gates'))
 from browser_evidence import check_page_requests
+import browser_evidence
+import tempfile
 
 
 class BrowserEvidenceTests(unittest.TestCase):
+    def test_S9_every_built_page_and_print_are_selected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for name in ('index.html', 'playbooks/test/index.html', 'playbooks/test/print.html', 'method/index.html'):
+                file = root / name
+                file.parent.mkdir(parents=True, exist_ok=True)
+                file.write_text('TEST', encoding='utf-8')
+            self.assertEqual(browser_evidence.built_pages(root), ['index.html', 'method/index.html', 'playbooks/test/index.html', 'playbooks/test/print.html'])
+
     def test_empty_trace_fails_closed(self):
         with self.assertRaises(ValueError):
             check_page_requests([])

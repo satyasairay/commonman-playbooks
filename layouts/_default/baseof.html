@@ -11,7 +11,8 @@
 <footer data-frame="footer">
   <p>{{ i18n "privacy" }}</p>
   <p><a href="{{ "corrections/" | relLangURL }}">{{ i18n "mistake" }}</a></p>
-  <p data-build-commit="{{ getenv "BUILD_COMMIT" }}">Build {{ getenv "BUILD_COMMIT" }} · {{ getenv "BUILD_DATE" }}</p>
+  <p data-ai-line>{{ i18n "ai_line" }}</p>
+  <p data-build-commit="{{ getenv "BUILD_COMMIT" }}" data-build-date="{{ getenv "BUILD_DATE" }}">Build {{ substr (getenv "BUILD_COMMIT") 0 7 }} · {{ with getenv "BUILD_DATE" }}{{ time.Format "2 January 2006" . }}{{ end }}</p>
 </footer>
 </body>
 </html>

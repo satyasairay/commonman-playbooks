@@ -1,8 +1,10 @@
 """Capture actual page-network events and pixels in an isolated CI browser."""
 import base64
+import argparse
 import functools
 import http.server
 import json
+import os
 import shutil
 import struct
 import subprocess
@@ -15,6 +17,14 @@ from urllib.parse import urlsplit
 from cdp import Client
 
 ROOT = Path(__file__).resolve().parents[2]
+sys_path = str(ROOT / 'tests')
+import sys
+sys.path.insert(0, sys_path)
+from record_run import redact
+
+
+def built_pages(public):
+    return sorted(path.relative_to(public).as_posix() for path in Path(public).rglob('*.html'))
 
 
 def check_page_requests(events):
@@ -34,7 +44,13 @@ def check_page_requests(events):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--public', type=Path, action='append')
+    args = parser.parse_args()
+    publics = args.public or [ROOT / 'public', ROOT / '.cache/preview-public', ROOT / '.cache/test-public']
     chrome = shutil.which('google-chrome') or shutil.which('google-chrome-stable') or shutil.which('chromium')
+    if not chrome and os.name == 'nt':
+        chrome = next((str(path) for path in (Path('C:/Program Files/Google/Chrome/Application/chrome.exe'), Path('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe')) if path.exists()), None)
     if not chrome:
         raise SystemExit('browser evidence unavailable: no Chrome/Chromium on this CI runner')
     evidence = ROOT / '.cache/evidence'
@@ -42,13 +58,13 @@ def main():
     server = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
     url = f'http://127.0.0.1:{server.server_address[1]}/playbooks/test-page/'
-    version = subprocess.check_output([chrome, '--version'], text=True).strip()
+    version = ''
     records = []
     client = None
     with tempfile.TemporaryDirectory(dir=ROOT / '.cache') as profile:
         assert Path(profile).resolve().is_relative_to(ROOT.resolve())
         diagnostic = (evidence / 'browser-driver.txt').open('w', encoding='utf-8')
-        process = subprocess.Popen([chrome, '--headless', '--no-sandbox', '--disable-gpu', '--no-first-run', '--disable-background-networking', '--disable-extensions', '--remote-debugging-address=127.0.0.1', '--remote-debugging-port=0', f'--user-data-dir={profile}', 'about:blank'], stdout=subprocess.DEVNULL, stderr=diagnostic)
+        process = subprocess.Popen([chrome, '--headless', '--no-sandbox', '--disable-gpu', '--no-first-run', '--disable-background-networking', '--disable-extensions', '--remote-debugging-address=127.0.0.1', '--remote-debugging-port=0', f'--user-data-dir={profile}', 'about:blank'], stdout=subprocess.DEVNULL, stderr=diagnostic, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
         try:
             active = Path(profile) / 'DevToolsActivePort'
             deadline = time.monotonic() + 20
@@ -61,10 +77,32 @@ def main():
                 targets = json.load(response)
             target = next(row for row in targets if row['type'] == 'page' and row['url'] == 'about:blank')
             client = Client(target['webSocketDebuggerUrl'])
+            version = client.command('Browser.getVersion')['product']
             client.command('Network.enable')
+            client.command('Network.setCacheDisabled', cacheDisabled=True)
             client.command('Page.enable')
             client.command('Page.setLifecycleEventsEnabled', enabled=True)
             client.command('Emulation.setDeviceMetricsOverride', width=320, height=1400, deviceScaleFactor=1, mobile=True)
+            all_pages = []
+            for public in publics:
+                public = public.resolve()
+                names = built_pages(public)
+                if not names:
+                    raise ValueError('build has no HTML pages: ' + redact(str(public)))
+                server.RequestHandlerClass = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(public))
+                for name in names:
+                    page_url = f'http://127.0.0.1:{server.server_address[1]}/{name}'
+                    start = len(client.events)
+                    navigation = client.command('Page.navigate', url=page_url)
+                    if navigation.get('errorText'):
+                        raise OSError(navigation['errorText'])
+                    client.wait_for('Page.lifecycleEvent', start, name='load', loaderId=navigation['loaderId'])
+                    requests = check_page_requests(client.events[start:])
+                    screenshot = 'page-' + public.name + '-' + name.replace('/', '-') + '.png'
+                    (evidence / screenshot).write_bytes(base64.b64decode(client.command('Page.captureScreenshot', format='png', fromSurface=True)['data']))
+                    all_pages.append({'build': public.name, 'page': name, 'requests': requests, 'outside_requests': [], 'screenshot': screenshot})
+            server.RequestHandlerClass = handler
+            (evidence / 'all-page-network.json').write_text(json.dumps(all_pages, indent=2), encoding='utf-8')
             start = len(client.events)
             navigation = client.command('Page.navigate', url=url)
             if navigation.get('errorText'):
@@ -113,6 +151,8 @@ def main():
                 process.kill()
                 process.wait()
             diagnostic.close()
+            diagnostic_path = evidence / 'browser-driver.txt'
+            diagnostic_path.write_text(redact(diagnostic_path.read_text(encoding='utf-8', errors='replace')), encoding='utf-8')
             server.shutdown()
             server.server_close()
 

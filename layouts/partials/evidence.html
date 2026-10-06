@@ -7,7 +7,7 @@
 <p>{{ $row.source_title }} · {{ $row.source_location }}</p>
 <blockquote>{{ $row.quote }}</blockquote>
 {{ with $row.conditions }}<p>{{ . }}</p>{{ end }}
-<p data-evidence-checked>{{ i18n "checked" }} {{ $row.verified_on }} · {{ $row.verified_by }}</p>
+<p data-evidence-checked>{{ i18n "checked" }} {{ time.Format "2 January 2006" $row.verified_on }} · {{ $row.verified_by }}</p>
 </details>
 {{ end }}
 </section>
