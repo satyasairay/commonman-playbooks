@@ -1,11 +1,14 @@
 """Concrete bypass sequences found during the local adversary pass."""
 import sys
+import hashlib
+import shutil
+import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts/gates'))
-from gates import Context, check_document
+from gates import Context, check_document, run
 
 
 class GateAdversaryTests(unittest.TestCase):
@@ -48,6 +51,30 @@ class GateAdversaryTests(unittest.TestCase):
 
     def test_only_quote_bypasses_evidence_prose_check(self):
         self.assertIn('G10', self.gates(self.html.replace('<summary>Evidence</summary>', '<summary>Evidence</summary><p>paisa</p>')))
+
+    def test_verified_share_base_retains_exact_encoded_text(self):
+        self.ctx.contacts['C99'].update(type='url-base', value='https://example.invalid/?text=')
+        digest = hashlib.sha256(b'Read the test note.').hexdigest()
+        text = self.html.replace('href="https://example.invalid/test"', 'data-share data-share-sha256="' + digest + '" href="https://example.invalid/?text=Read+the+test+note."').replace('>https://example.invalid/test</a>', '>WhatsApp</a>')
+        self.assertNotIn('G1', self.gates(text))
+        self.assertIn('G1', self.gates(text.replace('?text=Read+', '?text=Send+')))
+
+    def test_plain_email_and_unschemed_url_are_bare_contacts(self):
+        for value in ['person@example.invalid', 'www.example.invalid', 'example.invalid/test']:
+            with self.subTest(value=value):
+                self.assertIn('G1', self.gates(self.html.replace('</article>', '<p>' + value + '</p></article>')))
+
+    def test_generated_landing_page_runs_english_gate(self):
+        with tempfile.TemporaryDirectory(dir=ROOT / '.cache') as folder:
+            folder = Path(folder).resolve()
+            self.assertTrue(folder.is_relative_to(ROOT.resolve()))
+            public = folder / 'public'
+            shutil.copytree(ROOT / '.cache/test-public', public)
+            page = public / 'index.html'
+            page.write_text('<html lang="en"><body><h1>Test page</h1><p>We never call you, ask for money or file anything for you.</p></body></html>', encoding='utf-8')
+            self.assertEqual(run(ROOT / 'tests/fixtures/site', public, self.ctx), [])
+            page.write_text(page.read_text().replace('</body>', '<p>paisa</p></body>'), encoding='utf-8')
+            self.assertIn('G10', {e.gate for e in run(ROOT / 'tests/fixtures/site', public, self.ctx)})
 
 
 if __name__ == '__main__':

@@ -429,7 +429,7 @@ def run(content, public, ctx, production=False):
         doc = Document()
         doc.feed(text)
         redirect = any(tag == 'meta' and a.get('http-equiv', '').lower() == 'refresh' for tag, a, _ in doc.elements)
-        gates = {'G1', 'G4', 'G7'}
+        gates = {'G1', 'G2', 'G4', 'G7', 'G9', 'G10', 'G11', 'G12'}
         if doc.language in languages_with_pages and not redirect:
             gates.add('G6')
         out += [e for e in check_document(text, ctx, kind='') if e.gate in gates]

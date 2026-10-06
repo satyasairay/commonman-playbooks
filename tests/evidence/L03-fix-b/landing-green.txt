@@ -1,0 +1,20 @@
+test_contact_marker_cannot_change_target (test_gate_adversary.GateAdversaryTests.test_contact_marker_cannot_change_target) ... ok
+test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_empty_signature_element_fails) ... ok
+test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
+test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
+test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
+test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
+test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
+test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
+test_plain_email_and_unschemed_url_are_bare_contacts (test_gate_adversary.GateAdversaryTests.test_plain_email_and_unschemed_url_are_bare_contacts) ... ok
+test_redirect_cannot_request_external_host (test_gate_adversary.GateAdversaryTests.test_redirect_cannot_request_external_host) ... ok
+test_srcset_cannot_hide_second_external_resource (test_gate_adversary.GateAdversaryTests.test_srcset_cannot_hide_second_external_resource) ... ok
+test_verified_share_base_retains_exact_encoded_text (test_gate_adversary.GateAdversaryTests.test_verified_share_base_retains_exact_encoded_text) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 2.325s
+
+OK
+
+EXIT 0

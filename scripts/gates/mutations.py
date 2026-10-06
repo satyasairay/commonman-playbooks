@@ -51,6 +51,7 @@ CONTROLS = [
     ('source-script', '../sources/fetch_text.py', '"script", "style",', '"style",'),
     ('S12-share-parity', 'gates.py', "return [Error('G12', 'share link text differs from source page')] if any(text != canonical for text in shares) else []", 'return []'),
     ('page-address', 'gates.py', "return url.scheme == 'https' and url.hostname == ctx.site_host and not url.username and not url.query and not url.fragment and url.path.startswith('/') and url.path.endswith('/')", 'return True'),
+    ('generated-english', 'gates.py', "gates = {'G1', 'G2', 'G4', 'G7', 'G9', 'G10', 'G11', 'G12'}", "gates = {'G1', 'G2', 'G4', 'G7', 'G9', 'G11', 'G12'}"),
 ]
 
 def fixture_mutations():
