@@ -4,10 +4,10 @@
 {{ range $id, $row := . }}
 <details id="evidence-{{ $id }}" data-evidence-fact="{{ $id }}">
 <summary>{{ i18n "evidence" }}: {{ $id }}</summary>
-<p><a href="{{ $row.source_url }}">{{ $row.source_title }}</a> · {{ $row.source_location }}</p>
+<p>{{ $row.source_title }} · {{ $row.source_location }}</p>
 <blockquote>{{ $row.quote }}</blockquote>
 {{ with $row.conditions }}<p>{{ . }}</p>{{ end }}
-<p>{{ i18n "checked" }} {{ $row.verified_on }} · {{ $row.verified_by }}</p>
+<p data-evidence-checked>{{ i18n "checked" }} {{ $row.verified_on }} · {{ $row.verified_by }}</p>
 </details>
 {{ end }}
 </section>

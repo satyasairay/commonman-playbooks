@@ -1,5 +1,8 @@
 import importlib.util
 import sys
+import json
+import subprocess
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -9,10 +12,20 @@ from registry import read
 
 
 class RegistryTests(unittest.TestCase):
-    def test_real_registry_exports_nothing(self):
+    def test_real_registry_does_not_parse_format_example_as_fact(self):
         facts, contacts, _ = read(ROOT / 'rules/facts.md', ROOT / 'rules/contacts.md')
-        self.assertFalse([r for r in facts.values() if r['status'] == 'verified'])
-        self.assertFalse([r for r in contacts.values() if r['status'] == 'verified'])
+        self.assertNotIn('EXAMPLE-FORMAT-01', facts)
+
+    def test_export_filters_unverified_rows(self):
+        with tempfile.TemporaryDirectory() as folder:
+            folder = Path(folder)
+            facts = folder / 'facts.md'
+            contacts = folder / 'contacts.md'
+            facts.write_text((ROOT / 'tests/fixtures/registries/facts.md').read_text().replace('**status:** verified', '**status:** candidate'))
+            contacts.write_text((ROOT / 'tests/fixtures/registries/contacts.md').read_text().replace('| verified |', '| pending |'))
+            subprocess.run([sys.executable, str(ROOT / 'scripts/facts/export.py'), '--facts', str(facts), '--contacts', str(contacts), '--output', str(folder / 'output')], check=True, capture_output=True)
+            self.assertEqual(json.loads((folder / 'output/facts.json').read_text()), {})
+            self.assertEqual(json.loads((folder / 'output/contacts.json').read_text()), {})
 
     def test_fixture_has_one_fact_and_contact(self):
         facts, contacts, _ = read(ROOT / 'tests/fixtures/registries/facts.md', ROOT / 'tests/fixtures/registries/contacts.md')

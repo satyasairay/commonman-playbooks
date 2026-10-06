@@ -1,0 +1,1 @@
+LibreOffice/dictionaries commit 32b006a2c22a4ac7e8ed3f03346f7b3d85a970a4; en_GB dictionary and affixes unmodified; LGPL. Licence texts from gcc-mirror/gcc COPYING3 and COPYING3.LIB.

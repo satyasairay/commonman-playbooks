@@ -11,4 +11,4 @@ formats = ['web', 'whatsapp', 'print']
 
 ## Do this now
 
-1. {{< fact "TEST-STEP-01" >}} {{< contact "C99" >}}
+1. Read the test note.
