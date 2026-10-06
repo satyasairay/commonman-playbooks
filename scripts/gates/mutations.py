@@ -50,6 +50,7 @@ CONTROLS = [
     ('verified-only', '../facts/export.py', "if row['status'] == 'verified'", 'if True'),
     ('source-script', '../sources/fetch_text.py', '"script", "style",', '"style",'),
     ('S12-share-parity', 'gates.py', "return [Error('G12', 'share link text differs from source page')] if any(text != canonical for text in shares) else []", 'return []'),
+    ('page-address', 'gates.py', "return url.scheme == 'https' and url.hostname == ctx.site_host and not url.username and not url.query and not url.fragment and url.path.startswith('/') and url.path.endswith('/')", 'return True'),
 ]
 
 def fixture_mutations():
@@ -103,7 +104,7 @@ def main():
             backup = file.with_name(file.name + '.backup')
             shutil.copy2(file, backup)
             file.write_text(text.replace(old, new), encoding='utf-8')
-            pattern = 'test_share_control.py' if name == 'S12-share-parity' else 'test_browser_evidence.py' if name == 'network-pages' else 'test_registry.py' if name in {'verified-only', 'source-script'} else 'test_gate*.py'
+            pattern = 'test_share_control.py' if name in {'S12-share-parity', 'page-address'} else 'test_browser_evidence.py' if name == 'network-pages' else 'test_registry.py' if name in {'verified-only', 'source-script'} else 'test_gate*.py'
             command = [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', pattern, '-v']
             red = run(root, command)
             if red.returncode == 0 or 'FAIL:' not in red.stderr or 'ERROR:' in red.stderr:

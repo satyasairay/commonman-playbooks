@@ -34,16 +34,22 @@ def main():
     env['BUILD_COMMIT'] = env.get('GITHUB_SHA') or subprocess.check_output(['git', '-c', f'safe.directory={ROOT.as_posix()}', 'rev-parse', '--short', 'HEAD'], cwd=ROOT, text=True).strip()
     env['BUILD_DATE'] = dt.datetime.now(dt.timezone.utc).date().isoformat()
     command([sys.executable, 'scripts/facts/export.py'], 'real-export', env)
+    if (ROOT / 'scripts/facts/formats.py').exists():
+        command([sys.executable, 'scripts/facts/formats.py'], 'real-formats', env)
     command([args.hugo, '--cleanDestinationDir', '--panicOnWarning'], 'production-build', env)
     command([sys.executable, 'scripts/gates/gates.py', '--production'], 'production-gates', env)
     command([args.hugo, '--buildDrafts', '--cleanDestinationDir', '--destination', '.cache/preview-public', '--panicOnWarning'], 'real-preview-build', env)
     command([sys.executable, 'scripts/gates/gates.py', '--public', '.cache/preview-public'], 'real-gates', env)
     test_env = dict(env, BUILD_COMMIT='abcdef0123456789abcdef0123456789abcdef01', BUILD_DATE='2026-10-06')
     command([sys.executable, 'scripts/facts/export.py', '--facts', 'tests/fixtures/registries/facts.md', '--contacts', 'tests/fixtures/registries/contacts.md', '--output', '.cache/fixture-data/generated'], 'test-export', env)
+    if (ROOT / 'scripts/facts/formats.py').exists():
+        command([sys.executable, 'scripts/facts/formats.py', '--content', 'tests/fixtures/site', '--facts', 'tests/fixtures/registries/facts.md', '--contacts', 'tests/fixtures/registries/contacts.md', '--output', '.cache/fixture-data/generated'], 'test-formats', env)
     command([args.hugo, '--config', 'hugo.toml,tests/fixtures/hugo.toml', '--buildDrafts', '--cleanDestinationDir', '--destination', '.cache/test-public', '--panicOnWarning'], 'test-build', test_env)
     command([sys.executable, 'scripts/gates/gates.py', '--content', 'tests/fixtures/site', '--public', '.cache/test-public', '--facts', 'tests/fixtures/registries/facts.md', '--contacts', 'tests/fixtures/registries/contacts.md'], 'test-gates', env)
     command([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v'], 'tests', env)
     command([sys.executable, '-B', 'scripts/gates/mutations.py'], 'mutations', env)
+    if (ROOT / 'scripts/gates/format_mutations.py').exists():
+        command([sys.executable, '-B', 'scripts/gates/format_mutations.py', '--controls-only'], 'format-controls', env)
     formats = ROOT / 'scripts/gates/verify_formats.py'
     if formats.exists():
         try:
