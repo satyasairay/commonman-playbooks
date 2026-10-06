@@ -1,0 +1,51 @@
+test_S12_share_link_parity_control (test_share_control.ShareControlTests.test_S12_share_link_parity_control) ... ok
+test_canonical_print_address_frame (test_share_control.ShareControlTests.test_canonical_print_address_frame) ... FAIL
+test_hugo_share_space_encoding (test_share_control.ShareControlTests.test_hugo_share_space_encoding) ... FAIL
+test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label) ... ok
+
+======================================================================
+FAIL: test_canonical_print_address_frame (test_share_control.ShareControlTests.test_canonical_print_address_frame)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_share_control.py", line 37, in test_canonical_print_address_frame
+    self.assertEqual(gates.check_document(html, self.ctx), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [Error(gate='G1', note='bare URL or email:[211 chars]='')] != []
+
+First list contains 3 additional elements.
+First extra element 0:
+Error(gate='G1', note='bare URL or email: https://satsangee.org/test/', location='')
+
++ []
+- [Error(gate='G1',
+-        note='bare URL or email: https://satsangee.org/test/',
+-        location=''),
+-  Error(gate='G1',
+-        note='bare URL or email: https://satsangee.org/test/',
+-        location=''),
+-  Error(gate='G1',
+-        note='bare URL or email: https://satsangee.org/test/',
+-        location='')]
+
+======================================================================
+FAIL: test_hugo_share_space_encoding (test_share_control.ShareControlTests.test_hugo_share_space_encoding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_share_control.py", line 33, in test_hugo_share_space_encoding
+    self.assertEqual(gates.check_document(self.html.replace('</article>', share + '</article>'), self.ctx), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [Error(gate='G1', note='contact C18 share base or hash differs', location='')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Error(gate='G1', note='contact C18 share base or hash differs', location='')
+
+- [Error(gate='G1', note='contact C18 share base or hash differs', location='')]
++ []
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.070s
+
+FAILED (failures=2)
+
+EXIT 1

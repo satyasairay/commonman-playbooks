@@ -1,9 +1,25 @@
 """Read the repository's Markdown registries without third-party packages."""
 import re
+import datetime as dt
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE_ID = re.compile(r'src-[a-z0-9-]+\Z')
+KINDS = {'deadline', 'rule', 'right', 'amount', 'office', 'process', 'advisory'}
+MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+
+def parse_date(value):
+    value = str(value)
+    try:
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', value):
+            return dt.date.fromisoformat(value)
+        match = re.fullmatch(r'([1-9]|[12]\d|3[01]) (' + '|'.join(MONTHS) + r') (\d{4})', value)
+        if match:
+            return dt.date(int(match[3]), MONTHS.index(match[2]) + 1, int(match[1]))
+    except ValueError:
+        pass
+    raise ValueError('date must be YYYY-MM-DD or day full-month year (for example 6 October 2026)')
 
 
 def source_id(value):

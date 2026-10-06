@@ -1,0 +1,48 @@
+G1 handwritten: RED; backup baseline GREEN
+G1 Hugo-built: RED; backup baseline GREEN
+G2 handwritten: RED; backup baseline GREEN
+G2 Hugo-built: RED; backup baseline GREEN
+G3 handwritten: RED; backup baseline GREEN
+G3 Hugo-built: RED; backup baseline GREEN
+G4 handwritten: RED; backup baseline GREEN
+G4 Hugo-built: RED; backup baseline GREEN
+G4 handwritten: RED; backup baseline GREEN
+G4 Hugo-built: RED; backup baseline GREEN
+G6 handwritten: RED; backup baseline GREEN
+G6 Hugo-built: RED; backup baseline GREEN
+G7 handwritten: RED; backup baseline GREEN
+G7 Hugo-built: RED; backup baseline GREEN
+G8 handwritten: RED; backup baseline GREEN
+G8 Hugo-built: RED; backup baseline GREEN
+G9 handwritten: RED; backup baseline GREEN
+G9 Hugo-built: RED; backup baseline GREEN
+G10 handwritten: RED; backup baseline GREEN
+G10 Hugo-built: RED; backup baseline GREEN
+G10 handwritten: RED; backup baseline GREEN
+G10 Hugo-built: RED; backup baseline GREEN
+G11 handwritten: RED; backup baseline GREEN
+G11 Hugo-built: RED; backup baseline GREEN
+share-source disabled alone: RED exit 1
+test_S12_share_link_parity_control (test_share_control.ShareControlTests.test_S12_share_link_parity_control) ... ok
+test_canonical_print_address_frame (test_share_control.ShareControlTests.test_canonical_print_address_frame) ... ok
+test_hugo_share_space_encoding (test_share_control.ShareControlTests.test_hugo_share_space_encoding) ... ok
+test_invalid_share_source_returns_G12 (test_share_control.ShareControlTests.test_invalid_share_source_returns_G12) ... FAIL
+test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label) ... ok
+
+======================================================================
+FAIL: test_invalid_share_source_returns_G12 (test_share_control.ShareControlTests.test_invalid_share_source_returns_G12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>\tests\test_share_control.py", line 59, in test_invalid_share_source_returns_G12
+    self.assertTrue(any(e.gate == 'G12' and 'invalid share source' in e.note for e in errors))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.177s
+
+FAILED (failures=1)
+
+share-source backup restored: GREEN exit 0
+
+EXIT 0

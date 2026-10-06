@@ -1,0 +1,12 @@
+test_S12_share_link_parity_control (test_share_control.ShareControlTests.test_S12_share_link_parity_control) ... ok
+test_canonical_print_address_frame (test_share_control.ShareControlTests.test_canonical_print_address_frame) ... ok
+test_hugo_share_space_encoding (test_share_control.ShareControlTests.test_hugo_share_space_encoding) ... ok
+test_invalid_share_source_returns_G12 (test_share_control.ShareControlTests.test_invalid_share_source_returns_G12) ... ok
+test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.104s
+
+OK
+
+EXIT 0

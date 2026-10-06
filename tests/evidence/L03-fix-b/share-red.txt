@@ -1,0 +1,37 @@
+test_S12_share_link_parity_control (test_share_control.ShareControlTests.test_S12_share_link_parity_control) ... ERROR
+test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label) ... FAIL
+
+======================================================================
+ERROR: test_S12_share_link_parity_control (test_share_control.ShareControlTests.test_S12_share_link_parity_control)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_share_control.py", line 17, in test_S12_share_link_parity_control
+    self.assertEqual(gates.share_parity(['Read the note.'], 'Read the note.'), [])
+                     ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'gates' has no attribute 'share_parity'
+
+======================================================================
+FAIL: test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_share_control.py", line 25, in test_verified_share_base_hash_and_label
+    self.assertEqual(gates.check_document(html, self.ctx), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [Error(gate='G1', note='rendered contact C[103 chars]='')] != []
+
+First list contains 2 additional elements.
+First extra element 0:
+Error(gate='G1', note='rendered contact C18 differs from registry', location='')
+
++ []
+- [Error(gate='G1',
+-        note='rendered contact C18 differs from registry',
+-        location=''),
+-  Error(gate='G1', note='contact C18 points elsewhere', location='')]
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.048s
+
+FAILED (failures=1, errors=1)
+
+EXIT 1
