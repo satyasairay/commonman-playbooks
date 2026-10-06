@@ -21,7 +21,8 @@ MUTATIONS = [
     ('footer-ai', 'layouts/_default/baseof.html', 'data-ai-line', 'data-removed'),
     ('privacy', 'hugo.toml', "urls = ['none']", "urls = ['.*']"),
     ('human-dates', 'layouts/partials/date-value.html', '"October" "10"', '"October" "09"'),
-    ('list-label', 'layouts/_default/list.html', 'i18n "playbooks"', '.Title'),
+    ('list-label', 'layouts/_default/list.html', '<h1>{{ i18n "playbooks" }}</h1>', '<h1>{{ .Title }}</h1>'),
+    ('section-label', 'layouts/_default/list.html', '{{ if eq .Kind "section" }}{{ i18n "playbooks" }}{{ else }}{{ .Title }}{{ end }}', '{{ .Title }}'),
 ]
 
 def copy_repo(target):
