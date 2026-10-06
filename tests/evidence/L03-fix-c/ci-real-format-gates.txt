@@ -1,0 +1,2 @@
+G12: no enabled formats in this build
+G12: GREEN

@@ -1,0 +1,91 @@
+[
+  {
+    "state": "closed",
+    "width": 320,
+    "height": 1400,
+    "dpr": 1,
+    "mobile_viewport": true,
+    "browser": "Chrome/154.0.8037.98",
+    "url": "http://127.0.0.1:54615/playbooks/test-page/",
+    "requests": [
+      "http://127.0.0.1:54615/cards/index.html",
+      "http://127.0.0.1:54615/cards/test-card/index.html",
+      "http://127.0.0.1:54615/corrections/index.html",
+      "http://127.0.0.1:54615/favicon.ico",
+      "http://127.0.0.1:54615/index.html",
+      "http://127.0.0.1:54615/method/index.html",
+      "http://127.0.0.1:54615/playbooks/index.html",
+      "http://127.0.0.1:54615/playbooks/test-page/",
+      "http://127.0.0.1:54615/playbooks/test-page/index.html",
+      "http://127.0.0.1:54615/playbooks/test-page/print.html",
+      "http://127.0.0.1:54615/playbooks/test-signed/index.html",
+      "http://127.0.0.1:54615/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "web-320-closed.png",
+    "ready": "page load lifecycle event and loaded CSS"
+  },
+  {
+    "state": "expanded",
+    "width": 320,
+    "height": 1400,
+    "dpr": 1,
+    "mobile_viewport": true,
+    "browser": "Chrome/154.0.8037.98",
+    "url": "http://127.0.0.1:54615/playbooks/test-page/",
+    "requests": [
+      "http://127.0.0.1:54615/cards/index.html",
+      "http://127.0.0.1:54615/cards/test-card/index.html",
+      "http://127.0.0.1:54615/corrections/index.html",
+      "http://127.0.0.1:54615/favicon.ico",
+      "http://127.0.0.1:54615/index.html",
+      "http://127.0.0.1:54615/method/index.html",
+      "http://127.0.0.1:54615/playbooks/index.html",
+      "http://127.0.0.1:54615/playbooks/test-page/",
+      "http://127.0.0.1:54615/playbooks/test-page/index.html",
+      "http://127.0.0.1:54615/playbooks/test-page/print.html",
+      "http://127.0.0.1:54615/playbooks/test-signed/index.html",
+      "http://127.0.0.1:54615/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "web-320-expanded.png",
+    "ready": "page load lifecycle event and loaded CSS"
+  }
+]
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] code 404, message File not found
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /playbooks/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /corrections/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /method/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /playbooks/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /playbooks/test-page/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /cards/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /cards/test-card/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /corrections/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /method/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:32] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /playbooks/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /playbooks/test-page/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /playbooks/test-page/print.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /playbooks/test-signed/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /site.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /playbooks/test-page/ HTTP/1.1" 200 -
+127.0.0.1 - - [06/Oct/2026 22:27:33] "GET /site.css HTTP/1.1" 200 -
+
+EXIT 0

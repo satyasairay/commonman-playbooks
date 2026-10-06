@@ -1,0 +1,862 @@
+G12 WhatsApp limit disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... FAIL
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 36, in test_canonical_overlong_page_fails_length_alone
+    self.assertIn('G12', {e.gate for e in check_format('whatsapp', record['whatsapp'], record, self.ctx)})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.413s
+
+FAILED (failures=1)
+
+G12 WhatsApp limit backup restored: GREEN exit 0
+G12 PDF page limit disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... FAIL
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... FAIL
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 47, in test_missing_pdf_count_fails_closed
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx)})
+AssertionError: 'G12' not found in set()
+
+======================================================================
+FAIL: test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 44, in test_two_page_sheet_mutation
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx, pages=2)})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.433s
+
+FAILED (failures=2)
+
+G12 PDF page limit backup restored: GREEN exit 0
+G12 WhatsApp parity disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... FAIL
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 40, in test_added_step_mutation
+    self.assertIn('G12', {e.gate for e in check_format('whatsapp', text, self.record, self.ctx)})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.376s
+
+FAILED (failures=1)
+
+G12 WhatsApp parity backup restored: GREEN exit 0
+G12 whole print parity disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... FAIL
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... FAIL
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... FAIL
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 32, in test_S15_scope_and_clock_are_projected
+    self.assertTrue(any('whole visible' in e.note for e in self.errors(self.print.replace(old, ''))))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 60, in test_print_whole_visible_sheet
+    self.assertTrue(any('whole visible' in e.note for e in self.errors(changed)))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 50, in test_print_added_step_fails_parity
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print.replace('Read the test note.', 'Send the test note.'), self.record, self.ctx, pages=1)})
+AssertionError: 'G12' not found in {'G2'}
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.349s
+
+FAILED (failures=3)
+
+G12 whole print parity backup restored: GREEN exit 0
+G12 font minimum disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... FAIL
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 54, in test_small_print_override_fails
+    self.assertIn('G12', {e.gate for e in check_format('print', text, self.record, self.ctx, pages=1)})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.377s
+
+FAILED (failures=1)
+
+G12 font minimum backup restored: GREEN exit 0
+G12 PDF text parity disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... FAIL
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... FAIL
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 64, in test_pdf_generated_list_marker_is_exempt
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text=text + '2.\n')})
+AssertionError: 'G12' not found in set()
+
+======================================================================
+FAIL: test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 57, in test_pdf_text_replacement_fails
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text='Send the test note.')})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.364s
+
+FAILED (failures=2)
+
+G12 PDF text parity backup restored: GREEN exit 0
+G12 C01 required disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... FAIL
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 51, in test_whatsapp_missing_C01_even_if_canonical
+    self.assertTrue(any('C01' in e.note for e in check_format('whatsapp', text, record, self.ctx)))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.361s
+
+FAILED (failures=1)
+
+G12 C01 required backup restored: GREEN exit 0
+G12 capital words disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... FAIL
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 56, in test_whatsapp_capitals_even_if_canonical
+    self.assertTrue(any('capital' in e.note for e in check_format('whatsapp', text, record, self.ctx)))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.366s
+
+FAILED (failures=1)
+
+G12 capital words backup restored: GREEN exit 0
+G12 print address disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... FAIL
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 68, in test_S12_print_address_control
+    self.assertTrue(any('address' in e.note for e in self.errors(self.print.replace(self.record['page_url'], ''))))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.365s
+
+FAILED (failures=1)
+
+G12 print address backup restored: GREEN exit 0
+G12 print status disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... FAIL
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 71, in test_S12_print_status_control
+    self.assertTrue(any('check status' in e.note for e in self.errors(self.print.replace(self.record['checked'], ''))))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.372s
+
+FAILED (failures=1)
+
+G12 print status backup restored: GREEN exit 0
+G12 print shrink disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... FAIL
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 64, in test_print_rejects_scaling_and_small
+    self.assertTrue(any('shrink' in e.note for e in self.errors(self.print.replace('</style>', addition + '</style>'))))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.351s
+
+FAILED (failures=1)
+
+G12 print shrink backup restored: GREEN exit 0
+G12 address size disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... FAIL
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 74, in test_address_is_large
+    self.assertTrue(any('18pt' in e.note for e in self.errors(self.print.replace('font-size: 18pt', 'font-size: 14pt'))))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.376s
+
+FAILED (failures=1)
+
+G12 address size backup restored: GREEN exit 0
+G12 scope projection disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... FAIL
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... FAIL
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... FAIL
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... FAIL
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 29, in test_S15_scope_and_clock_are_projected
+    self.assertEqual([s['text'] for s in self.record['scope']], ['This page covers a test.', 'It does not cover real advice.'])
+AssertionError: Lists differ: ['Read the test note. https://example.invalid/test'] != ['This page covers a test.', 'It does not cover real advice.']
+
+First differing element 0:
+'Read the test note. https://example.invalid/test'
+'This page covers a test.'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'It does not cover real advice.'
+
+- ['Read the test note. https://example.invalid/test']
++ ['This page covers a test.', 'It does not cover real advice.']
+
+======================================================================
+FAIL: test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 86, in test_built_print_has_whole_source_frame
+    self.assertEqual(self.errors(html), [])
+AssertionError: Lists differ: [Error(gate='G12', note='whole visible pri[39 chars]='')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Error(gate='G12', note='whole visible print sheet differs from source', location='')
+
++ []
+- [Error(gate='G12',
+-        note='whole visible print sheet differs from source',
+-        location='')]
+
+======================================================================
+FAIL: test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 63, in test_pdf_generated_list_marker_is_exempt
+    self.assertEqual(check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text=text), [])
+AssertionError: Lists differ: [Error(gate='G12', note='whole visible pri[39 chars]='')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Error(gate='G12', note='whole visible print sheet differs from source', location='')
+
++ []
+- [Error(gate='G12',
+-        note='whole visible print sheet differs from source',
+-        location='')]
+
+======================================================================
+FAIL: test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 43, in test_two_page_sheet_mutation
+    self.assertEqual(check_format('print', self.print, self.record, self.ctx, pages=1), [])
+AssertionError: Lists differ: [Error(gate='G12', note='whole visible pri[39 chars]='')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Error(gate='G12', note='whole visible print sheet differs from source', location='')
+
++ []
+- [Error(gate='G12',
+-        note='whole visible print sheet differs from source',
+-        location='')]
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.344s
+
+FAILED (failures=4)
+
+G12 scope projection backup restored: GREEN exit 0
+G12 clock projection disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... FAIL
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... FAIL
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... FAIL
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... FAIL
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 30, in test_S15_scope_and_clock_are_projected
+    self.assertIn('three days', self.record['clock'][0]['text'])
+AssertionError: 'three days' not found in 'Read the test note. https://example.invalid/test'
+
+======================================================================
+FAIL: test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 86, in test_built_print_has_whole_source_frame
+    self.assertEqual(self.errors(html), [])
+AssertionError: Lists differ: [Error(gate='G12', note='whole visible pri[39 chars]='')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Error(gate='G12', note='whole visible print sheet differs from source', location='')
+
++ []
+- [Error(gate='G12',
+-        note='whole visible print sheet differs from source',
+-        location='')]
+
+======================================================================
+FAIL: test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 63, in test_pdf_generated_list_marker_is_exempt
+    self.assertEqual(check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text=text), [])
+AssertionError: Lists differ: [Error(gate='G12', note='whole visible pri[39 chars]='')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Error(gate='G12', note='whole visible print sheet differs from source', location='')
+
++ []
+- [Error(gate='G12',
+-        note='whole visible print sheet differs from source',
+-        location='')]
+
+======================================================================
+FAIL: test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_formats.py", line 43, in test_two_page_sheet_mutation
+    self.assertEqual(check_format('print', self.print, self.record, self.ctx, pages=1), [])
+AssertionError: Lists differ: [Error(gate='G12', note='whole visible pri[39 chars]='')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+Error(gate='G12', note='whole visible print sheet differs from source', location='')
+
++ []
+- [Error(gate='G12',
+-        note='whole visible print sheet differs from source',
+-        location='')]
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.346s
+
+FAILED (failures=4)
+
+G12 clock projection backup restored: GREEN exit 0
+G12 unsigned i18n disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... FAIL
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 37, in test_S20_status_uses_i18n
+    self.assertEqual(record['checked'], 'TEST unsigned label')
+AssertionError: 'Draft awaiting review' != 'TEST unsigned label'
+- Draft awaiting review
++ TEST unsigned label
+
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.359s
+
+FAILED (failures=1)
+
+G12 unsigned i18n backup restored: GREEN exit 0
+G12 checked i18n disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... FAIL
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 40, in test_S20_status_uses_i18n
+    self.assertEqual(project(meta, self.body, self.ctx, 'en', '/playbooks/test-page/')['checked'], 'TEST checked label 6 October 2026')
+AssertionError: 'Checked on 6 October 2026' != 'TEST checked label 6 October 2026'
+- Checked on 6 October 2026
+? ^       ^^
++ TEST checked label 6 October 2026
+? ^^^^^^       ^^^^^
+
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.362s
+
+FAILED (failures=1)
+
+G12 checked i18n backup restored: GREEN exit 0
+G12 project verified C01 disabled alone: RED exit 1
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_built_print_has_whole_source_frame (test_format_fix.FixFormatTests.test_built_print_has_whole_source_frame) ... ok
+test_built_share_is_exact_and_G12_checks_source (test_format_fix.FixFormatTests.test_built_share_is_exact_and_G12_checks_source) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... FAIL
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>/tests/test_format_fix.py", line 45, in test_whatsapp_requires_C01
+    with self.assertRaisesRegex(ValueError, 'C01'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.390s
+
+FAILED (failures=1)
+
+G12 project verified C01 backup restored: GREEN exit 0
+G12 overlong WhatsApp: RED (expected)
+G12 RED : WhatsApp has 1092 characters; limit 700
+G12 RED : WhatsApp differs from source steps or frame
+G12 overlong WhatsApp: GREEN after backup restore
+G12 two-page sheet: RED (expected)
+G12 RED : whole visible print sheet differs from source
+G12 RED : print has 2 pages; exactly one required
+G12 two-page sheet: GREEN after backup restore
+G12 step absent from page: RED (expected)
+G12 RED : WhatsApp differs from source steps or frame
+G12 step absent from page: GREEN after backup restore

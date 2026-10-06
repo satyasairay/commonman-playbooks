@@ -1,6 +1,9 @@
 No enabled print formats in this build.
 test_S9_every_built_page_and_print_are_selected (test_browser_evidence.BrowserEvidenceTests.test_S9_every_built_page_and_print_are_selected) ... ok
 test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_idle_connection_uses_current_build_directory (test_browser_evidence.BrowserEvidenceTests.test_idle_connection_uses_current_build_directory) ... 127.0.0.1 - - [06/Oct/2026 22:33:25] "GET /index.html HTTP/1.0" 200 -
+ok
+test_missing_page_or_stylesheet_fails (test_browser_evidence.BrowserEvidenceTests.test_missing_page_or_stylesheet_fails) ... ok
 test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -103,7 +106,7 @@ test_invalid_share_source_returns_G12 (test_share_control.ShareControlTests.test
 test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label) ... ok
 
 ----------------------------------------------------------------------
-Ran 102 tests in 5.663s
+Ran 104 tests in 6.267s
 
 OK
 
