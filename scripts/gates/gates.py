@@ -417,7 +417,12 @@ def run(content, public, ctx, production=False):
             if shares:
                 from formats import project
                 permalink = ('/' if language == 'en' else '/' + language + '/') + slug.as_posix() + '/'
-                errors += share_parity(shares, project(meta, body, ctx, language, permalink)['whatsapp'])
+                try:
+                    canonical = project(meta, body, ctx, language, permalink)['whatsapp']
+                except (ValueError, KeyError) as exc:
+                    errors.append(Error('G12', f'invalid share source: {exc}'))
+                else:
+                    errors += share_parity(shares, canonical)
         elif meta.get('draft') is False:
             errors.append(Error('G3', 'live page missing from build'))
         for error in errors:
