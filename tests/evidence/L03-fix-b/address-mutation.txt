@@ -1,0 +1,47 @@
+G1 handwritten: RED; backup baseline GREEN
+G1 Hugo-built: RED; backup baseline GREEN
+G2 handwritten: RED; backup baseline GREEN
+G2 Hugo-built: RED; backup baseline GREEN
+G3 handwritten: RED; backup baseline GREEN
+G3 Hugo-built: RED; backup baseline GREEN
+G4 handwritten: RED; backup baseline GREEN
+G4 Hugo-built: RED; backup baseline GREEN
+G4 handwritten: RED; backup baseline GREEN
+G4 Hugo-built: RED; backup baseline GREEN
+G6 handwritten: RED; backup baseline GREEN
+G6 Hugo-built: RED; backup baseline GREEN
+G7 handwritten: RED; backup baseline GREEN
+G7 Hugo-built: RED; backup baseline GREEN
+G8 handwritten: RED; backup baseline GREEN
+G8 Hugo-built: RED; backup baseline GREEN
+G9 handwritten: RED; backup baseline GREEN
+G9 Hugo-built: RED; backup baseline GREEN
+G10 handwritten: RED; backup baseline GREEN
+G10 Hugo-built: RED; backup baseline GREEN
+G10 handwritten: RED; backup baseline GREEN
+G10 Hugo-built: RED; backup baseline GREEN
+G11 handwritten: RED; backup baseline GREEN
+G11 Hugo-built: RED; backup baseline GREEN
+page-address disabled alone: RED exit 1
+test_S12_share_link_parity_control (test_share_control.ShareControlTests.test_S12_share_link_parity_control) ... ok
+test_canonical_print_address_frame (test_share_control.ShareControlTests.test_canonical_print_address_frame) ... FAIL
+test_hugo_share_space_encoding (test_share_control.ShareControlTests.test_hugo_share_space_encoding) ... ok
+test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label) ... ok
+
+======================================================================
+FAIL: test_canonical_print_address_frame (test_share_control.ShareControlTests.test_canonical_print_address_frame)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>\tests\test_share_control.py", line 38, in test_canonical_print_address_frame
+    self.assertIn('G1', {e.gate for e in gates.check_document(html.replace('https://satsangee.org/test/', 'https://example.invalid/test/'), self.ctx)})
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' not found in set()
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.148s
+
+FAILED (failures=1)
+
+page-address backup restored: GREEN exit 0
+
+EXIT 0

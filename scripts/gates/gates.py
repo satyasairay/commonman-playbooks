@@ -10,7 +10,7 @@ import tomllib
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit, unquote
+from urllib.parse import urlsplit, unquote_plus
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'facts'))
 from registry import ROOT, read, parse_date, KINDS
@@ -255,6 +255,11 @@ def norm(text):
     return re.sub(r'\s+', ' ', text).strip()
 
 
+def page_address(text, ctx):
+    url = urlsplit(text)
+    return url.scheme == 'https' and url.hostname == ctx.site_host and not url.username and not url.query and not url.fragment and url.path.startswith('/') and url.path.endswith('/')
+
+
 def share_parity(shares, canonical):
     return [Error('G12', 'share link text differs from source page')] if any(text != canonical for text in shares) else []
 
@@ -337,6 +342,8 @@ def check_document(text, ctx, kind='playbook', require_trust=False):
                 clean = re.sub(r'\b[A-Z]+(?:-[A-Z0-9]+)+\b', '', content)
                 out += public_text(clean, ctx, doc.language, claims=False, contacts=False)
         elif 'data-frame' in attrs:
+            if attrs.get('data-frame') == 'trust' and 'data-page-url' in attrs and page_address(content, ctx):
+                continue
             out += bare_contact(content, ctx)
             if 'data-verified-by' in attrs:
                 out += public_text(content, ctx, doc.language, claims=False)
@@ -356,14 +363,14 @@ def check_document(text, ctx, kind='playbook', require_trust=False):
     for cid, parts in contacts.items():
         row = ctx.contacts.get(cid, {})
         shares = [a for _, a, _ in doc.elements if a.get('data-contact') == cid and 'data-share' in a]
-        expected_label = ctx.labels.get(doc.language, {}).get('whatsapp', {}).get('other', 'WhatsApp')
+        expected_label = ctx.labels.get(doc.language, {}).get('share', {}).get('other', 'WhatsApp')
         if any(p != (expected_label if shares else row.get('value')) for p in parts):
             out.append(Error('G1', f'rendered contact {cid} differs from registry'))
         for _, attrs, _ in doc.elements:
             if attrs.get('data-contact') == cid:
                 if 'data-share' in attrs:
                     base, target = row.get('value', ''), attrs.get('href', '')
-                    decoded = unquote(target[len(base):])
+                    decoded = unquote_plus(target[len(base):])
                     if row.get('type') != 'url-base' or not base or not target.startswith(base) or hashlib.sha256(decoded.encode()).hexdigest() != attrs.get('data-share-sha256'):
                         out.append(Error('G1', f'contact {cid} share base or hash differs'))
                     continue
@@ -406,7 +413,7 @@ def run(content, public, ctx, production=False):
             for _, attrs, _ in doc.elements:
                 if 'data-share' in attrs:
                     base = ctx.contacts.get(attrs.get('data-contact'), {}).get('value', '')
-                    shares.append(unquote(attrs.get('href', '')[len(base):]))
+                    shares.append(unquote_plus(attrs.get('href', '')[len(base):]))
             if shares:
                 from formats import project
                 permalink = ('/' if language == 'en' else '/' + language + '/') + slug.as_posix() + '/'
