@@ -94,6 +94,9 @@ def main():
     built = ROOT / '.cache/test-public/playbooks/test-page/index.html'
     original = built.read_text(encoding='utf-8')
     prove_control(built, folder / 'built.html.backup', original.replace('</head>', '<script src="https://example.invalid/x.js"></script></head>'), 'test_build.py', 'built resource test')
+    browser = ROOT / 'scripts/gates/browser_evidence.py'
+    original = browser.read_text(encoding='utf-8')
+    prove_control(browser, folder / 'browser_evidence.py.backup', original.replace('if not requests or outside:', 'if False:'), 'test_browser_evidence.py', 'page network origin check')
 
 
 if __name__ == '__main__':

@@ -38,10 +38,13 @@ G11 fixture 12: RED (expected)
 G11 RED : bare number, amount, time period or legal claim
 G11 fixture 12: GREEN after backup restore
 G1 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -54,6 +57,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... FAIL
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -77,7 +81,7 @@ test_real_registry_does_not_parse_format_example_as_fact (test_registry.Registry
 FAIL: test_contact_marker_cannot_change_target (test_gate_adversary.GateAdversaryTests.test_contact_marker_cannot_change_target)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 33, in test_contact_marker_cannot_change_target
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 35, in test_contact_marker_cannot_change_target
     self.assertIn('G1', self.gates(self.html.replace('href="https://example.invalid/test"', 'href="https://example.invalid/other"')))
 AssertionError: 'G1' not found in set()
 
@@ -85,7 +89,7 @@ AssertionError: 'G1' not found in set()
 FAIL: test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 47, in test_evidence_does_not_exempt_unreferenced_links
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 49, in test_evidence_does_not_exempt_unreferenced_links
     self.assertIn('G1', self.gates(self.html.replace('<summary>Evidence</summary>', '<summary>Evidence</summary><a href="https://example.invalid/other">Read</a>')))
 AssertionError: 'G1' not found in set()
 
@@ -93,7 +97,7 @@ AssertionError: 'G1' not found in set()
 FAIL: test_plain_email_and_unschemed_url_are_bare_contacts (test_gate_adversary.GateAdversaryTests.test_plain_email_and_unschemed_url_are_bare_contacts) (value='person@example.invalid')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 61, in test_plain_email_and_unschemed_url_are_bare_contacts
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 63, in test_plain_email_and_unschemed_url_are_bare_contacts
     self.assertIn('G1', self.gates(self.html.replace('</article>', '<p>' + value + '</p></article>')))
 AssertionError: 'G1' not found in set()
 
@@ -101,7 +105,7 @@ AssertionError: 'G1' not found in set()
 FAIL: test_plain_email_and_unschemed_url_are_bare_contacts (test_gate_adversary.GateAdversaryTests.test_plain_email_and_unschemed_url_are_bare_contacts) (value='www.example.invalid')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 61, in test_plain_email_and_unschemed_url_are_bare_contacts
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 63, in test_plain_email_and_unschemed_url_are_bare_contacts
     self.assertIn('G1', self.gates(self.html.replace('</article>', '<p>' + value + '</p></article>')))
 AssertionError: 'G1' not found in set()
 
@@ -109,7 +113,7 @@ AssertionError: 'G1' not found in set()
 FAIL: test_plain_email_and_unschemed_url_are_bare_contacts (test_gate_adversary.GateAdversaryTests.test_plain_email_and_unschemed_url_are_bare_contacts) (value='example.invalid/test')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 61, in test_plain_email_and_unschemed_url_are_bare_contacts
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 63, in test_plain_email_and_unschemed_url_are_bare_contacts
     self.assertIn('G1', self.gates(self.html.replace('</article>', '<p>' + value + '</p></article>')))
 AssertionError: 'G1' not found in set()
 
@@ -117,7 +121,7 @@ AssertionError: 'G1' not found in set()
 FAIL: test_verified_share_base_retains_exact_encoded_text (test_gate_adversary.GateAdversaryTests.test_verified_share_base_retains_exact_encoded_text)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 56, in test_verified_share_base_retains_exact_encoded_text
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 58, in test_verified_share_base_retains_exact_encoded_text
     self.assertIn('G1', self.gates(text.replace('?text=Read+', '?text=Send+')))
 AssertionError: 'G1' not found in set()
 
@@ -138,15 +142,18 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.254s
+Ran 34 tests in 1.504s
 
 FAILED (failures=8)
 
 G1 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -159,6 +166,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -175,15 +183,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.259s
+Ran 34 tests in 1.522s
 
 OK
 
 G2 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -196,6 +207,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... FAIL
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -216,7 +228,7 @@ test_real_registry_does_not_parse_format_example_as_fact (test_registry.Registry
 FAIL: test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 37, in test_expired_fact_fails
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 39, in test_expired_fact_fails
     self.assertIn('G2', self.gates(self.html))
 AssertionError: 'G2' not found in set()
 
@@ -229,15 +241,18 @@ Traceback (most recent call last):
 AssertionError: 'G2' not found in set()
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.256s
+Ran 34 tests in 1.489s
 
 FAILED (failures=2)
 
 G2 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -250,6 +265,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -266,15 +282,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.266s
+Ran 34 tests in 1.498s
 
 OK
 
 G3 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -287,6 +306,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -307,7 +327,7 @@ test_real_registry_does_not_parse_format_example_as_fact (test_registry.Registry
 FAIL: test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_empty_signature_element_fails)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 24, in test_empty_signature_element_fails
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 26, in test_empty_signature_element_fails
     self.assertIn('G3', self.gates(self.html.replace('Verified by TEST.', '')))
 AssertionError: 'G3' not found in set()
 
@@ -320,15 +340,18 @@ Traceback (most recent call last):
 AssertionError: 'G3' not found in set()
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.254s
+Ran 34 tests in 1.507s
 
 FAILED (failures=2)
 
 G3 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -341,6 +364,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -357,15 +381,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.281s
+Ran 34 tests in 1.508s
 
 OK
 
 G4 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -378,6 +405,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -399,7 +427,7 @@ test_real_registry_does_not_parse_format_example_as_fact (test_registry.Registry
 FAIL: test_redirect_cannot_request_external_host (test_gate_adversary.GateAdversaryTests.test_redirect_cannot_request_external_host)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 30, in test_redirect_cannot_request_external_host
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 32, in test_redirect_cannot_request_external_host
     self.assertIn('G4', self.gates(self.html.replace('</head>', '<meta http-equiv="refresh" content="0; url=https://example.invalid"></head>')))
 AssertionError: 'G4' not found in set()
 
@@ -407,7 +435,7 @@ AssertionError: 'G4' not found in set()
 FAIL: test_srcset_cannot_hide_second_external_resource (test_gate_adversary.GateAdversaryTests.test_srcset_cannot_hide_second_external_resource)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 27, in test_srcset_cannot_hide_second_external_resource
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 29, in test_srcset_cannot_hide_second_external_resource
     self.assertIn('G4', self.gates(self.html.replace('</article>', '<img srcset="/a.png 1x, https://example.invalid/b.png 2x"></article>')))
 AssertionError: 'G4' not found in set()
 
@@ -436,15 +464,18 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.306s
+Ran 34 tests in 1.490s
 
 FAILED (failures=5)
 
 G4 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -457,6 +488,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -473,15 +505,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.283s
+Ran 34 tests in 1.506s
 
 OK
 
 G6 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -494,6 +529,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -519,15 +555,18 @@ Traceback (most recent call last):
 AssertionError: 'G6' not found in set()
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.349s
+Ran 34 tests in 1.499s
 
 FAILED (failures=1)
 
 G6 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -540,6 +579,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -556,15 +596,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.378s
+Ran 34 tests in 1.505s
 
 OK
 
 G7 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -577,6 +620,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -602,15 +646,18 @@ Traceback (most recent call last):
 AssertionError: 'G7' not found in set()
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.261s
+Ran 34 tests in 1.501s
 
 FAILED (failures=1)
 
 G7 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -623,6 +670,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -639,15 +687,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.455s
+Ran 34 tests in 1.494s
 
 OK
 
 G8 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -660,6 +711,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -685,15 +737,18 @@ Traceback (most recent call last):
 AssertionError: 'G8' not found in set()
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.416s
+Ran 34 tests in 1.508s
 
 FAILED (failures=1)
 
 G8 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -706,6 +761,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -722,15 +778,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.274s
+Ran 34 tests in 1.501s
 
 OK
 
 G9 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -743,6 +802,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... FAIL
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -763,7 +823,7 @@ test_real_registry_does_not_parse_format_example_as_fact (test_registry.Registry
 FAIL: test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 41, in test_lookalike_primary_domain_fails
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 43, in test_lookalike_primary_domain_fails
     self.assertIn('G9', self.gates(self.html))
 AssertionError: 'G9' not found in set()
 
@@ -776,15 +836,18 @@ Traceback (most recent call last):
 AssertionError: 'G9' not found in set()
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.326s
+Ran 34 tests in 1.496s
 
 FAILED (failures=2)
 
 G9 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -797,6 +860,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -813,15 +877,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.266s
+Ran 34 tests in 1.503s
 
 OK
 
 G10 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -834,6 +901,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... FAIL
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... FAIL
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... FAIL
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... FAIL
@@ -855,15 +923,23 @@ test_real_registry_does_not_parse_format_example_as_fact (test_registry.Registry
 FAIL: test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 44, in test_frame_privacy_prose_is_checked
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 46, in test_frame_privacy_prose_is_checked
     self.assertIn('G10', self.gates(self.html.replace('<p data-build-commit', '<p>paisa</p><p data-build-commit')))
+AssertionError: 'G10' not found in set()
+
+======================================================================
+FAIL: test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 75, in test_generated_landing_page_runs_english_gate
+    self.assertIn('G10', {e.gate for e in run(ROOT / 'tests/fixtures/site', public, self.ctx)})
 AssertionError: 'G10' not found in set()
 
 ======================================================================
 FAIL: test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 21, in test_inline_tags_do_not_reset_sentence_limit
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 23, in test_inline_tags_do_not_reset_sentence_limit
     self.assertIn('G10', self.gates(self.html.replace('</article>', sentence + '</article>')))
 AssertionError: 'G10' not found in set()
 
@@ -871,7 +947,7 @@ AssertionError: 'G10' not found in set()
 FAIL: test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 50, in test_only_quote_bypasses_evidence_prose_check
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gate_adversary.py", line 52, in test_only_quote_bypasses_evidence_prose_check
     self.assertIn('G10', self.gates(self.html.replace('<summary>Evidence</summary>', '<summary>Evidence</summary><p>paisa</p>')))
 AssertionError: 'G10' not found in set()
 
@@ -892,15 +968,18 @@ Traceback (most recent call last):
 AssertionError: 'G10' not found in {'G11'}
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.257s
+Ran 34 tests in 1.496s
 
-FAILED (failures=5)
+FAILED (failures=6)
 
 G10 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -913,6 +992,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -929,15 +1009,18 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.342s
+Ran 34 tests in 1.499s
 
 OK
 
 G11 disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -950,6 +1033,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -970,7 +1054,7 @@ test_real_registry_does_not_parse_format_example_as_fact (test_registry.Registry
 FAIL: test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_formats.py", line 61, in test_source_claim_blocks_projection
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_formats.py", line 68, in test_source_claim_blocks_projection
     with self.assertRaises(ValueError):
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -992,15 +1076,18 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.580s
+Ran 34 tests in 1.501s
 
 FAILED (failures=3)
 
 G11 restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -1013,6 +1100,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -1029,7 +1117,7 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.338s
+Ran 34 tests in 1.491s
 
 OK
 
@@ -1049,7 +1137,7 @@ AssertionError: {'TEST-STEP-01': {'status': 'candidate', '[362 chars]ll'}} != {}
 Diff is 657 characters long. Set self.maxDiff to None to see it.
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.149s
+Ran 4 tests in 0.153s
 
 FAILED (failures=1)
 
@@ -1060,7 +1148,7 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.148s
+Ran 4 tests in 0.143s
 
 OK
 
@@ -1083,7 +1171,7 @@ AssertionError: 'A quote.\nhidden\nNext line.\n' != 'A quote.\nNext line.\n'
 
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.150s
+Ran 4 tests in 0.146s
 
 FAILED (failures=1)
 
@@ -1094,7 +1182,7 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.150s
+Ran 4 tests in 0.152s
 
 OK
 
@@ -1126,6 +1214,42 @@ test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evi
 
 ----------------------------------------------------------------------
 Ran 1 test in 0.001s
+
+OK
+
+page network origin check disabled control: TESTS RED (expected)
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... FAIL
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... FAIL
+
+======================================================================
+FAIL: test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_browser_evidence.py", line 13, in test_empty_trace_fails_closed
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_browser_evidence.py", line 20, in test_page_origin_control
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=2)
+
+page network origin check restored control: TESTS GREEN
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
 
 OK
 

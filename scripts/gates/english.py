@@ -72,11 +72,11 @@ def errors(text, allowed_words):
     errors = []
     if re.search(r'[\u0900-\u097f\u0b00-\u0b7f]', text):
         errors.append('non-English script')
-    dictionary = words() | allowed_words
+    dictionary = words()
     for word in re.findall(r"[^\W\d_]+(?:['’][^\W\d_]+)*", text, re.UNICODE):
         normal = word.lower().replace('’', "'")
         # Common Hinglish must fail even when a dictionary includes it as a name.
-        if normal in {'paisa', 'karein', 'jaldi', 'ji'} or normal not in dictionary:
+        if normal in {'paisa', 'karein', 'jaldi', 'ji'} or (normal not in dictionary and normal not in allowed_words):
             errors.append(f'word outside en_GB and allowed terms: {word}')
     for sentence in re.split(r'[.!?]+(?:\s|$)|\n+', text):
         count = len(re.findall(r"[^\W\d_]+(?:['’][^\W\d_]+)*", sentence))

@@ -15,7 +15,7 @@ def command(args, name, env):
     output = result.stdout + result.stderr
     (ROOT / '.cache/evidence' / (name + '.txt')).write_text(output, encoding='utf-8')
     if name in {'mutations', 'format-controls', 'format-mutations'}:
-        print('\n'.join(line for line in output.splitlines() if line.startswith(('G1', 'G2', 'G3', 'G4', 'G6', 'G7', 'G8', 'G9', 'verified-only', 'source script', 'built resource'))))
+        print('\n'.join(line for line in output.splitlines() if line.startswith(('G1', 'G2', 'G3', 'G4', 'G6', 'G7', 'G8', 'G9', 'verified-only', 'source script', 'built resource', 'page network'))))
     else:
         print(output, end='')
     if result.returncode:

@@ -1,3 +1,5 @@
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
 test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
@@ -15,6 +17,7 @@ test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_
 test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
 test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
 test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
 test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
 test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
 test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
@@ -31,6 +34,6 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 31 tests in 7.639s
+Ran 34 tests in 1.518s
 
 OK

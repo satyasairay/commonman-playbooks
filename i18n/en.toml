@@ -31,3 +31,5 @@ other = 'WhatsApp text'
 other = 'Print sheet'
 [share]
 other = 'WhatsApp'
+[playbooks]
+other = 'Help'

@@ -1,11 +1,13 @@
 """Concrete bypass sequences found during the local adversary pass."""
 import sys
+import shutil
+import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts/gates'))
-from gates import Context, check_document
+from gates import Context, check_document, run
 
 
 class GateAdversaryTests(unittest.TestCase):
@@ -59,6 +61,18 @@ class GateAdversaryTests(unittest.TestCase):
         for value in ['person@example.invalid', 'www.example.invalid', 'example.invalid/test']:
             with self.subTest(value=value):
                 self.assertIn('G1', self.gates(self.html.replace('</article>', '<p>' + value + '</p></article>')))
+
+    def test_generated_landing_page_runs_english_gate(self):
+        with tempfile.TemporaryDirectory(dir=ROOT / '.cache') as folder:
+            folder = Path(folder).resolve()
+            self.assertTrue(folder.is_relative_to(ROOT.resolve()))
+            public = folder / 'public'
+            shutil.copytree(ROOT / '.cache/test-public', public)
+            page = public / 'index.html'
+            page.write_text('<html lang="en"><body><h1>Test page</h1><p>We never call you, ask for money or file anything for you.</p></body></html>', encoding='utf-8')
+            self.assertEqual(run(ROOT / 'tests/fixtures/site', public, self.ctx), [])
+            page.write_text(page.read_text().replace('</body>', '<p>paisa</p></body>'), encoding='utf-8')
+            self.assertIn('G10', {e.gate for e in run(ROOT / 'tests/fixtures/site', public, self.ctx)})
 
 
 if __name__ == '__main__':

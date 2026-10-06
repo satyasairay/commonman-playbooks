@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }}</title>
+  <title>{{ if or .IsHome (eq .Kind "section") }}{{ i18n "playbooks" }}{{ else }}{{ .Title }}{{ end }}</title>
   <link rel="stylesheet" href="{{ "site.css" | relURL }}">
 </head>
 <body>

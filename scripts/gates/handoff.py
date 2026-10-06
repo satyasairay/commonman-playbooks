@@ -30,7 +30,7 @@ def main():
         shutil.copyfile(path, folder / path.name)
         output = load(path)
         if 'mutations' in name or 'controls' in name:
-            output = '\n'.join(line for line in output.splitlines() if re.match(r'^(?:G\d+|verified-only|source script|built resource|format)', line))
+            output = '\n'.join(line for line in output.splitlines() if re.match(r'^(?:G\d+|verified-only|source script|built resource|page network|format)', line))
             output += f'\nFull output: tests/evidence/{args.loop}/{name}.txt'
         sections.append(f'## {name}\n\n```text\n{output}\n```')
     html_path = ROOT / '.cache/test-public/playbooks/test-page/index.html'
@@ -40,7 +40,7 @@ def main():
         path = ROOT / '.cache/test-public/playbooks/test-page' / name
         if path.exists():
             shutil.copyfile(path, folder / name)
-    for name in ['print-1.png', 'web-320-closed.png', 'web-320-expanded.png', 'browser-evidence.json']:
+    for name in ['print-1.png', 'web-320-closed.png', 'web-320-expanded.png', 'browser-evidence.json', 'browser-page-network.json']:
         path = ROOT / '.cache/evidence' / name
         if path.exists():
             shutil.copyfile(path, folder / name)
