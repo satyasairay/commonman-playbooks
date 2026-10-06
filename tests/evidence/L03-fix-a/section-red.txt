@@ -1,0 +1,29 @@
+test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
+test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ok
+test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... ok
+test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit) ... ok
+test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
+test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
+test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
+test_list_heading_uses_draft_label (test_fix_site.FixSiteTests.test_list_heading_uses_draft_label) ... FAIL
+test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
+test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
+test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
+test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
+
+======================================================================
+FAIL: test_list_heading_uses_draft_label (test_fix_site.FixSiteTests.test_list_heading_uses_draft_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 118, in test_list_heading_uses_draft_label
+    self.assertIn('<a href="/playbooks/">Help</a>', home)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '<a href="/playbooks/">Help</a>' not found in '<!doctype html>\n<html lang="en">\n<head>\n\t<meta name="generator" content="Hugo 0.167.0">\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Commonman Playbooks</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<h1>Help</h1>\n<ul><li><a href="/cards/">Cards</a></li><li><a href="/corrections/">Corrections</a></li><li><a href="/method/">Method</a></li><li><a href="/playbooks/">Playbooks</a></li></ul>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.081s
+
+FAILED (failures=1)
+
+EXIT 1

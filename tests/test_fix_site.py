@@ -114,6 +114,8 @@ class FixSiteTests(unittest.TestCase):
             build(root)
             html = (root / '.cache/test-public/playbooks/index.html').read_text(encoding='utf-8')
             self.assertIn('<h1>Help</h1>', html)
+            home = (root / '.cache/test-public/index.html').read_text(encoding='utf-8')
+            self.assertIn('<a href="/playbooks/">Help</a>', home)
 
 
 if __name__ == '__main__':

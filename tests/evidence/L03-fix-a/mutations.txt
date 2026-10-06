@@ -23,7 +23,7 @@ Traceback (most recent call last):
 AssertionError: 'Confirmed by TEST agency on 6 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST card</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n<p data-confidence>Confirmed</p>\n\n<h1>TEST card</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n<aside>\n\n\n\n\n<span data-fact="TEST-ADVISORY-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-ADVISORY-01" aria-label="Evidence">[Evidence]</a>\n</aside>\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-ADVISORY-01" data-evidence-fact="TEST-ADVISORY-01">\n<summary>Evidence: TEST-ADVISORY-01</summary>\n<p><a href="https://rbi.org.in/test-advisory">TEST advisory</a> · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.050s
+Ran 13 tests in 1.092s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -41,7 +41,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.040s
+Ran 13 tests in 1.064s
 
 OK
 
@@ -77,7 +77,7 @@ First extra element 0:
 + ['or', 'hi']
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.080s
+Ran 13 tests in 1.110s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -95,7 +95,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.035s
+Ran 13 tests in 1.078s
 
 OK
 
@@ -124,7 +124,7 @@ Traceback (most recent call last):
 AssertionError: 'data-overdue' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n<p data-next-check>Next check by 5 October 2026</p>\n<p data-removed>This page is past its check date.</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.044s
+Ran 13 tests in 1.058s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -142,7 +142,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.059s
+Ran 13 tests in 1.070s
 
 OK
 
@@ -171,7 +171,7 @@ Traceback (most recent call last):
 AssertionError: 'Build abcdef0123456789' unexpectedly found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Test page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>Test page</h1>\n<p class="scope">This page covers a test.</p>\n<p class="scope">It does not cover real advice.</p>\n<aside class="clock"><h2>The clock</h2><ul><li>\n\n\n\n\n<span data-fact="TEST-DEADLINE-01">Read the test note within three days of this test under the test rule.</span><a class="evidence-link" href="#evidence-TEST-DEADLINE-01" aria-label="Evidence">[Evidence]</a>\n</li></ul></aside>\n<article data-reader><h2 id="do-this-now">Do this now</h2>\n<ol>\n<li>\n\n\n\n\n<span data-fact="TEST-STEP-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-STEP-01" aria-label="Evidence">[Evidence]</a>\n\n \n \n <a data-contact="C99" href="https://example.invalid/test">https://example.invalid/test</a>\n</li>\n</ol>\n</article>\n\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-DEADLINE-01" data-evidence-fact="TEST-DEADLINE-01">\n<summary>Evidence: TEST-DEADLINE-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> · TEST paragraph</p>\n<blockquote>Read the test note within three days of this test under the test rule.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n<details id="evidence-TEST-STEP-01" data-evidence-fact="TEST-STEP-01">\n<summary>Evidence: TEST-STEP-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0123456789abcdef0123456789abcdef0123 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.081s
+Ran 13 tests in 1.062s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -189,7 +189,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.080s
+Ran 13 tests in 1.065s
 
 OK
 
@@ -218,7 +218,7 @@ Traceback (most recent call last):
 AssertionError: Regex didn't match: '(?s)<aside class="clock"[^>]*>\\s*<h2>.*?</h2>\\s*<ul>\\s*<li>.*?data-fact="TEST-DEADLINE-01"' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Test page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>Test page</h1>\n<p class="scope">This page covers a test.</p>\n<p class="scope">It does not cover real advice.</p>\n<aside class="clock"><ul><li>\n\n\n\n\n<span data-fact="TEST-DEADLINE-01">Read the test note within three days of this test under the test rule.</span><a class="evidence-link" href="#evidence-TEST-DEADLINE-01" aria-label="Evidence">[Evidence]</a>\n</li></ul></aside>\n<article data-reader><h2 id="do-this-now">Do this now</h2>\n<ol>\n<li>\n\n\n\n\n<span data-fact="TEST-STEP-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-STEP-01" aria-label="Evidence">[Evidence]</a>\n\n \n \n <a data-contact="C99" href="https://example.invalid/test">https://example.invalid/test</a>\n</li>\n</ol>\n</article>\n\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-DEADLINE-01" data-evidence-fact="TEST-DEADLINE-01">\n<summary>Evidence: TEST-DEADLINE-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> · TEST paragraph</p>\n<blockquote>Read the test note within three days of this test under the test rule.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n<details id="evidence-TEST-STEP-01" data-evidence-fact="TEST-STEP-01">\n<summary>Evidence: TEST-STEP-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.077s
+Ran 13 tests in 1.070s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -236,7 +236,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.100s
+Ran 13 tests in 1.077s
 
 OK
 
@@ -268,10 +268,10 @@ Traceback (most recent call last):
   File "<home>\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 771, in open
     return io.open(self, mode, buffering, encoding, errors, newline)
            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileExistsError: [Errno 17] File exists: 'C:\\Users\\USER\\AppData\\Local\\Temp\\tmpwcxkhaeu\\.cache\\sources\\src-test.txt'
+FileExistsError: [Errno 17] File exists: 'C:\\Users\\USER\\AppData\\Local\\Temp\\tmpbsbg8and\\.cache\\sources\\src-test.txt'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.092s
+Ran 13 tests in 1.067s
 
 FAILED (errors=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -289,7 +289,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.044s
+Ran 13 tests in 1.086s
 
 OK
 
@@ -318,7 +318,7 @@ Traceback (most recent call last):
 AssertionError: 0 == 0
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.081s
+Ran 13 tests in 1.070s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -336,7 +336,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.070s
+Ran 13 tests in 1.077s
 
 OK
 
@@ -365,7 +365,7 @@ Traceback (most recent call last):
 AssertionError: ValueError not raised
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.076s
+Ran 13 tests in 1.088s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -383,7 +383,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.083s
+Ran 13 tests in 1.080s
 
 OK
 
@@ -412,7 +412,7 @@ Traceback (most recent call last):
 AssertionError: ValueError not raised
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.074s
+Ran 13 tests in 1.069s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -430,7 +430,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.085s
+Ran 13 tests in 1.072s
 
 OK
 
@@ -477,7 +477,7 @@ Traceback (most recent call last):
 AssertionError: 'Next check by 5 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.067s
+Ran 13 tests in 1.098s
 
 FAILED (failures=3)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -495,7 +495,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.080s
+Ran 13 tests in 1.073s
 
 OK
 
@@ -524,7 +524,7 @@ Traceback (most recent call last):
 AssertionError: 'data-ai-line' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n<p data-next-check>Next check by 5 October 2026</p>\n<p data-overdue>This page is past its check date.</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-removed></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.078s
+Ran 13 tests in 1.053s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -542,7 +542,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.069s
+Ran 13 tests in 1.087s
 
 OK
 
@@ -578,7 +578,7 @@ First differing element 0:
 + ['none']
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.063s
+Ran 13 tests in 1.072s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -596,7 +596,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.076s
+Ran 13 tests in 1.071s
 
 OK
 
@@ -625,7 +625,7 @@ Traceback (most recent call last):
 AssertionError: 'Verified by Satyasai Ray on 6 October 2026.' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 September 2026.</p>\n<p data-checked-on>Checked on 6 September 2026</p>\n\n<p data-next-check>Next check by 5 September 2026</p>\n<p data-overdue>This page is past its check date.</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.074s
+Ran 13 tests in 1.098s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -643,7 +643,7 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.058s
+Ran 13 tests in 1.069s
 
 OK
 
@@ -672,7 +672,7 @@ Traceback (most recent call last):
 AssertionError: '<h1>Help</h1>' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Playbooks</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<h1>Playbooks</h1>\n<ul><li><a href="/playbooks/test-page/">Test page</a></li><li><a href="/playbooks/test-signed/">TEST signed page</a></li></ul>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.074s
+Ran 13 tests in 1.092s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -690,6 +690,53 @@ test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 1.076s
+Ran 13 tests in 1.081s
+
+OK
+
+section-label: disabled RED exit 1; backup restored GREEN exit 0
+test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
+test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ok
+test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... ok
+test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit) ... ok
+test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
+test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
+test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
+test_list_heading_uses_draft_label (test_fix_site.FixSiteTests.test_list_heading_uses_draft_label) ... FAIL
+test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
+test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
+test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
+test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
+
+======================================================================
+FAIL: test_list_heading_uses_draft_label (test_fix_site.FixSiteTests.test_list_heading_uses_draft_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>\tests\test_fix_site.py", line 118, in test_list_heading_uses_draft_label
+    self.assertIn('<a href="/playbooks/">Help</a>', home)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '<a href="/playbooks/">Help</a>' not found in '<!doctype html>\n<html lang="en">\n<head>\n\t<meta name="generator" content="Hugo 0.167.0">\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Commonman Playbooks</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<h1>Help</h1>\n<ul><li><a href="/cards/">Cards</a></li><li><a href="/corrections/">Corrections</a></li><li><a href="/method/">Method</a></li><li><a href="/playbooks/">Playbooks</a></li></ul>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.075s
+
+FAILED (failures=1)
+test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
+test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ok
+test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... ok
+test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit) ... ok
+test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
+test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
+test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
+test_list_heading_uses_draft_label (test_fix_site.FixSiteTests.test_list_heading_uses_draft_label) ... ok
+test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
+test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
+test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
+test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.078s
 
 OK
