@@ -35,4 +35,38 @@ jobs:
           path: |
             .cache/evidence/
             .cache/test-public/
+            public/
+          include-hidden-files: true
+  formats:
+    needs: gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF tools for this CI job only
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install WeasyPrint==66.0
+      - uses: actions/download-artifact@v4
+        with:
+          name: gate-evidence
+          path: .
+      - name: Build PDFs, run G12 and mutation-check every format control
+        run: python scripts/gates/verify_formats.py
+      - name: Render print evidence for visual review
+        run: pdftoppm -png -r 110 .cache/test-public/playbooks/test-page/print.pdf .cache/evidence/print
+      - name: Capture phone-width browser and network evidence
+        run: python scripts/gates/browser_evidence.py
+      - name: Retain all format evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: format-evidence
+          path: |
+            .cache/evidence/
+            .cache/test-public/
+            public/
           include-hidden-files: true

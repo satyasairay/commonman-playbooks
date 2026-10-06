@@ -20,7 +20,7 @@ def main():
     folder.mkdir(parents=True, exist_ok=True)
     names = ['real-export', 'real-preview-build', 'real-gates', 'test-export', 'test-build', 'test-gates', 'tests', 'mutations']
     if args.loop == 'L03c':
-        names += ['formats', 'format-gates', 'format-mutations']
+        names += ['real-formats', 'test-formats', 'format-controls', 'formats', 'format-gates', 'real-format-gates', 'format-mutations']
     sections = [load(ROOT / f'tests/evidence/{args.loop}.md'), '## Filled loop card\n\n' + load(ROOT / 'loops/L03-cx.md')]
     for name in names:
         path = ROOT / '.cache/evidence' / (name + '.txt')
@@ -29,7 +29,7 @@ def main():
             continue
         shutil.copyfile(path, folder / path.name)
         output = load(path)
-        if 'mutations' in name:
+        if 'mutations' in name or 'controls' in name:
             output = '\n'.join(line for line in output.splitlines() if re.match(r'^(?:G\d+|verified-only|source script|built resource|format)', line))
             output += f'\nFull output: tests/evidence/{args.loop}/{name}.txt'
         sections.append(f'## {name}\n\n```text\n{output}\n```')
@@ -38,6 +38,10 @@ def main():
     sections.append('## TEST HTML\n\n```html\n' + load(html_path) + '\n```')
     for name in ['whatsapp.txt', 'print.html', 'print.pdf', 'format-manifest.json']:
         path = ROOT / '.cache/test-public/playbooks/test-page' / name
+        if path.exists():
+            shutil.copyfile(path, folder / name)
+    for name in ['print-1.png', 'web-320-closed.png', 'web-320-expanded.png', 'browser-evidence.json']:
+        path = ROOT / '.cache/evidence' / name
         if path.exists():
             shutil.copyfile(path, folder / name)
     for name in ['L03b-tests-first.txt', 'L03c-tests-first.txt']:

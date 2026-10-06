@@ -7,6 +7,7 @@ scope_excludes = 'real advice.'
 clock = []
 first_steps = 1
 formats = ['web', 'whatsapp', 'print']
+outputs = ['HTML', 'WhatsApp', 'Print']
 +++
 
 ## Do this now

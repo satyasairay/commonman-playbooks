@@ -74,12 +74,12 @@ def main():
             original = control_backup.read_text(encoding='utf-8')
             wrapper = f'''\n# Temporary control mutation; restored from backup by mutations.py.\n_original_document = check_document\n_original_source = source_checks\ndef check_document(*args, **kwargs):\n    return [e for e in _original_document(*args, **kwargs) if e.gate != {gate!r}]\ndef source_checks(*args, **kwargs):\n    return [e for e in _original_source(*args, **kwargs) if e.gate != {gate!r}]\n'''
             control.write_text(original + wrapper, encoding='utf-8')
-            result = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_gate*.py', '-v'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+            result = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test*.py', '-v'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
             assert result.returncode != 0, f'{gate} disabled control survived tests'
             print(f'{gate} disabled control: TESTS RED (expected)')
             print(result.stdout + result.stderr)
             shutil.copyfile(control_backup, control)
-            result = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_gate*.py', '-v'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+            result = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test*.py', '-v'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
             assert result.returncode == 0, result.stdout + result.stderr
             print(f'{gate} restored control: TESTS GREEN')
             print(result.stdout + result.stderr)

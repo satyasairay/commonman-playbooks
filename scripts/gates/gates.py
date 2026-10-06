@@ -9,7 +9,7 @@ import tomllib
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, unquote_plus
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'facts'))
 from registry import ROOT, read
@@ -18,7 +18,7 @@ from english import allowed, errors as english_errors
 GATES = ('G1', 'G2', 'G3', 'G4', 'G6', 'G7', 'G8', 'G9', 'G10', 'G11')
 PRIMARY = {'indiacode.nic.in', 'egazette.gov.in', 'rbi.org.in', 'sebi.gov.in', 'uidai.gov.in', 'dot.gov.in', 'i4c.mha.gov.in'}
 REF = re.compile(r'{{[<%]\s*(fact|contact)\s+["\']?([A-Z][A-Z0-9-]*)["\']?\s*[>%]}}')
-LINK = re.compile(r'(?:https?://|www\.|//)[^\s<>"\']+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}')
+LINK = re.compile(r'(?:https?://|www\.|//)[^\s<>"\']+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b(?:[A-Za-z0-9-]+\.)+(?:in|com|org|net|gov|nic|io|invalid)\b(?:/[^\s<>"\']*)?')
 PHONE = re.compile(r'(?<!\w)(?:\+?\d[\d ()-]{5,}\d)(?!\w)|\b(?:call|dial|helpline|phone)\s+\d{3,5}\b', re.I)
 NUMBER = r'(?:\d+(?:[.,]\d+)*|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|sixty|ninety|hundred|thousand|lakh|crore)'
 BARE = re.compile(r'\d|[₹%]|\b' + NUMBER + r'\b|\b(?:within|after|before|by|per|every|each|working|business|calendar)\s+(?:(?:a|an|the|next)\s+)?(?:day|week|month|year|hour|minute)s?\b|\b(?:Act|Rules|Circular|section)\b', re.I)
@@ -63,6 +63,10 @@ class Context:
 
 
 def same_host(url, ctx):
+    if '@' in url and not url.startswith(('http://', 'https://', '//')):
+        return False
+    if url.startswith('www.') or re.match(r'^(?:[A-Za-z0-9-]+\.)+(?:in|com|org|net|gov|nic|io|invalid)(?:/|$)', url):
+        url = 'https://' + url
     parsed = urlsplit(url)
     return not parsed.netloc and not parsed.scheme or parsed.hostname == ctx.site_host and parsed.scheme in {'http', 'https'}
 
@@ -292,10 +296,16 @@ def check_document(text, ctx, kind='playbook', require_trust=False):
             out.append(Error('G2', f'rendered fact {fid} differs from registry'))
     for cid, parts in contacts.items():
         row = ctx.contacts.get(cid, {})
-        if any(p != row.get('value') for p in parts):
+        share_elements = [a for _, a, _ in doc.elements if a.get('data-contact') == cid and 'data-share-text' in a]
+        if not share_elements and any(p != row.get('value') for p in parts):
             out.append(Error('G1', f'rendered contact {cid} differs from registry'))
         for _, attrs, _ in doc.elements:
             if attrs.get('data-contact') == cid:
+                if 'data-share-text' in attrs:
+                    base, target = row.get('value', ''), attrs.get('href', '')
+                    if row.get('type') != 'url-base' or not base or not target.startswith(base) or unquote_plus(target[len(base):]) != attrs['data-share-text']:
+                        out.append(Error('G1', f'contact {cid} share target or text differs from its verified base'))
+                    continue
                 expected = ('tel:' if row.get('type') in {'phone', 'whatsapp'} else 'mailto:' if row.get('type') == 'email' else '') + row.get('value', '')
                 if attrs.get('href') != expected:
                     out.append(Error('G1', f'contact {cid} points elsewhere'))
@@ -315,7 +325,17 @@ def run(content, public, ctx):
         slug = path.relative_to(Path(content) / language).with_suffix('')
         built = Path(public) / ('' if language == 'en' else language) / slug / 'index.html'
         if built.exists():
-            errors += check_document(built.read_text(encoding='utf-8'), ctx, meta.get('kind', ''), meta.get('draft') is False)
+            built_text = built.read_text(encoding='utf-8')
+            errors += check_document(built_text, ctx, meta.get('kind', ''), meta.get('draft') is False)
+            doc = Document()
+            doc.feed(built_text)
+            shares = [a['data-share-text'] for _, a, _ in doc.elements if 'data-share-text' in a]
+            if shares:
+                from formats import project
+                permalink = ('/' if language == 'en' else '/' + language + '/') + slug.as_posix() + '/'
+                canonical = project(meta, body, ctx, language, permalink)['whatsapp']
+                if any(text != canonical for text in shares):
+                    errors.append(Error('G12', 'share link text differs from source page'))
         elif meta.get('draft') is False:
             errors.append(Error('G3', 'live page missing from build'))
         for error in errors:

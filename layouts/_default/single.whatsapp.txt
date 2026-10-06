@@ -1,0 +1,1 @@
+{{- with index hugo.Data.generated.formats .RelPermalink -}}{{- .whatsapp -}}{{- end -}}

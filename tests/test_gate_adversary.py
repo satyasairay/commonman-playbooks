@@ -49,6 +49,17 @@ class GateAdversaryTests(unittest.TestCase):
     def test_only_quote_bypasses_evidence_prose_check(self):
         self.assertIn('G10', self.gates(self.html.replace('<summary>Evidence</summary>', '<summary>Evidence</summary><p>paisa</p>')))
 
+    def test_verified_share_base_retains_exact_encoded_text(self):
+        self.ctx.contacts['C99'].update(type='url-base', value='https://example.invalid/?text=')
+        text = self.html.replace('href="https://example.invalid/test"', 'data-share-text="Read the test note." href="https://example.invalid/?text=Read+the+test+note."').replace('>https://example.invalid/test</a>', '>WhatsApp</a>')
+        self.assertNotIn('G1', self.gates(text))
+        self.assertIn('G1', self.gates(text.replace('?text=Read+', '?text=Send+')))
+
+    def test_plain_email_and_unschemed_url_are_bare_contacts(self):
+        for value in ['person@example.invalid', 'www.example.invalid', 'example.invalid/test']:
+            with self.subTest(value=value):
+                self.assertIn('G1', self.gates(self.html.replace('</article>', '<p>' + value + '</p></article>')))
+
 
 if __name__ == '__main__':
     unittest.main()

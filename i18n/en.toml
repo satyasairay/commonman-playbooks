@@ -25,3 +25,9 @@ other = 'It does not cover'
 other = 'Watch: reported, not yet confirmed'
 [confirmed]
 other = 'Confirmed'
+[whatsapp_text]
+other = 'WhatsApp text'
+[print_sheet]
+other = 'Print sheet'
+[share]
+other = 'WhatsApp'
