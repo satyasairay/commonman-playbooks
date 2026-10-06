@@ -1,0 +1,5 @@
+[
+  {"name":"overlong WhatsApp", "target":"whatsapp", "new":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", "repeat":8},
+  {"name":"two-page sheet", "target":"print", "pages":2},
+  {"name":"step absent from page", "target":"step", "old":"Read the test note.", "new":"Send the test note."}
+]
