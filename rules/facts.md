@@ -882,8 +882,8 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 ### I4C-ADV-2026-08-01
 
 - **kind:** advisory
-- **statement.en:** I4C has seen a rise in financial fraud through harmful Android apps that pretend to be pornography apps. They spread through advertisements on Facebook and Instagram.
-- **conditions:** Android apps only. Observed by I4C's National Cybercrime Threat Analytics Unit.
+- **statement.en:** The National Cybercrime Threat Analytics Unit has seen a rise in financial fraud through harmful Android apps that pretend to be pornography apps. They spread through advertisements on Facebook and Instagram.
+- **conditions:** The unit is part of I4C, Ministry of Home Affairs (page footer). Android apps installed from outside the Google Play Store ("Side Loaded" in the title; page 2, item 2). "Primarily" and "majorly" on Facebook and Instagram (page 1, second paragraph; page 2, item 1), so other routes are possible.
 - **applies to:** all
 - **source:** src-i4c-01, page 1, first paragraph
 - **quote:** "The National Cybercrime Threat Analytics Unit (NCTAU) has observed a rise in financial frauds perpetrated through malicious Android applications masquerading as pornography apps, circulated through Facebook and Instagram ads"
@@ -922,8 +922,8 @@ Nothing is verified yet. The blocks below are `candidate` (L02, 30 Sep 2026). Ea
 ### I4C-ADV-2026-08-04
 
 - **kind:** advisory
-- **statement.en:** After it is installed, the app asks for permissions that let it install more apps. By misusing the Accessibility permission, it takes control of your phone, which may lead to financial fraud.
-- **conditions:** "May". The modus operandi (page 2, item 4) adds that once the permissions are given, the malware keeps running in the background.
+- **statement.en:** After it is installed, the app asks for permissions that would let it install more apps and, by misusing the Accessibility permission, take control of your phone. This may lead to financial fraud.
+- **conditions:** "May". Control depends on the user giving the permissions: "Once enabled, the malware gains control of the device and continues to run in the background" (page 2, item 4).
 - **applies to:** all
 - **source:** src-i4c-01, page 1, second paragraph
 - **quote:** "After installation, the app requests permissions that allow it to install additional applications and by abusing accessibility permission, take control of the users’ device, which may result in financial fraud."
