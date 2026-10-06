@@ -1,0 +1,28 @@
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.263s
+
+OK
+
+EXIT 0

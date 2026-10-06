@@ -8,7 +8,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'gates'))
-from gates import Context, REF, ROOT, frontmatter, source_checks
+from gates import Context, REF, ROOT, frontmatter, source_checks, contact_checks
+from registry import parse_date, MONTHS
 
 
 def render_step(source, ctx, language):
@@ -68,16 +69,22 @@ def project(meta, body, ctx, language, permalink):
     title = str(meta['title'])
     url = 'https://' + ctx.site_host + permalink
     checked = str(meta.get('verified_on', ''))
-    status = 'Draft awaiting review'
+    labels = ctx.labels[language]
+    status = labels['unsigned']['other']
     if checked:
-        import datetime as dt
-        date = dt.date.fromisoformat(checked)
-        status = f'Checked on {date.day} {date.strftime("%B")} {date.year}'
+        date = parse_date(checked)
+        status = f'{labels["checked"]["other"]} {date.day} {MONTHS[date.month-1]} {date.year}'
     records = [render_step(s, ctx, language) for s in steps[:count]]
     no_contact = ctx.no_contact[language]
-    parts = [opening, '*' + title + '*'] + [f'{i}. {row["text"]}' for i, row in enumerate(records, 1)] + [status, url, no_contact]
+    if contact_checks(['C01'], ctx):
+        raise ValueError('WhatsApp requires verified contact C01')
+    emergency = render_step('{{< contact "C01" >}}', ctx, language)
+    emergency_line = labels['call_emergency']['other'] + ' ' + emergency['text']
+    scope = [render_step(labels[label]['other'] + ' ' + str(meta[key]), ctx, language) for key, label in [('scope_covers', 'covers'), ('scope_excludes', 'excludes')] if meta.get(key)]
+    clock = [render_step('{{< fact "' + fid + '" >}}', ctx, language) for fid in meta.get('clock', [])]
+    parts = [opening, '*' + title + '*'] + [f'{i}. {row["text"]}' for i, row in enumerate(records, 1)] + [emergency_line, status, url, no_contact]
     text = '\n\n'.join(parts) + '\n'
-    return {'opening': opening, 'title': title, 'steps': records, 'checked': status, 'no_contact': no_contact, 'page_url': url, 'language': language, 'kind': meta['kind'], 'whatsapp': text, 'source_sha256': hashlib.sha256(body.encode()).hexdigest()}
+    return {'opening': opening, 'title': title, 'scope': scope, 'clock': clock, 'clock_label': labels['clock']['other'], 'emergency': emergency, 'steps': records, 'checked': status, 'no_contact': no_contact, 'page_url': url, 'language': language, 'kind': meta['kind'], 'whatsapp': text, 'source_sha256': hashlib.sha256(body.encode()).hexdigest()}
 
 
 def main():
@@ -88,6 +95,8 @@ def main():
     parser.add_argument('--output', type=Path, default=ROOT / 'data/generated')
     args = parser.parse_args()
     ctx = Context.load(args.facts, args.contacts)
+    if any(p.is_file() and p.suffix != '.md' for p in args.content.rglob('*')):
+        parser.error('content files must use .md')
     records = {}
     for path in args.content.rglob('*.md'):
         meta, body = frontmatter(path)

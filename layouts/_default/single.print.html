@@ -9,13 +9,15 @@ h1 { font-size: 20pt; line-height: 1.2; }
 .opening { font-weight: bold; }
 li { margin: 0 0 5mm; }
 a { color: black; }
-.address { font-size: 14pt; font-weight: bold; }
+.address { font-size: 18pt; font-weight: bold; }
 .trust { margin-top: 8mm; border-top: 1pt solid black; padding-top: 3mm; }
 </style></head><body><main>
 <p data-opening class="opening">{{ $record.opening }}</p>
 <h1>{{ $record.title }}</h1>
+{{ range $record.scope }}<p class="scope">{{ .html | safeHTML }}</p>{{ end }}
+{{ with $record.clock }}<aside class="clock"><h2>{{ $record.clock_label }}</h2><ul>{{ range . }}<li>{{ .html | safeHTML }}</li>{{ end }}</ul></aside>{{ end }}
 <article data-reader><ol>{{ range $record.steps }}<li>{{ .html | safeHTML }}</li>{{ end }}</ol></article>
 <section class="trust" data-frame="trust"><p data-format-checked>{{ $record.checked }}</p>
-<p class="address"><a href="{{ $record.page_url }}">{{ $record.page_url }}</a></p>
+<p class="address" data-page-url>{{ $record.page_url }}</p>
 <p data-no-contact>{{ $record.no_contact }}</p></section>
 </main></body></html>

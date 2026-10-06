@@ -6,8 +6,8 @@ scope_covers = 'a test.'
 scope_excludes = 'real advice.'
 clock = []
 first_steps = 1
-formats = ['web', 'whatsapp', 'print']
-outputs = ['HTML', 'WhatsApp', 'Print']
+formats = ['web']
+outputs = ['HTML']
 +++
 
 ## Do this now

@@ -19,7 +19,8 @@ def build(public):
         print(f'{output}: {pages} page(s)')
         count += 1
     if not count:
-        raise SystemExit('no print pages found')
+        print('No enabled print formats in this build.')
+    return count
 
 
 def main():

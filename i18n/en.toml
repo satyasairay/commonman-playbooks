@@ -31,6 +31,7 @@ other = 'WhatsApp text'
 other = 'Print sheet'
 [share]
 other = 'WhatsApp'
+# DRAFT: Satya approves. Existing L03c label, shared with lower branches.
 [playbooks]
 other = 'Help'
 # DRAFT: Satya approves.
@@ -45,6 +46,6 @@ other = 'This page is past its check date.'
 # DRAFT: Satya approves. Satya writes this text before publication.
 [ai_line]
 other = ''
-# DRAFT: Satya approves. Existing L03c label, shared with lower branches.
-[playbooks]
-other = 'Help'
+# DRAFT: Satya approves.
+[call_emergency]
+other = 'Call'

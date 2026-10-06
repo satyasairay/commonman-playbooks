@@ -12,6 +12,11 @@ from formats import project
 def check_format(kind, text, record, ctx, pages=None, pdf_text=None):
     out = []
     if kind == 'whatsapp':
+        phone = ctx.contacts.get('C01', {})
+        if phone.get('status') != 'verified' or not phone.get('value') or not re.search(r'(?<!\d)' + re.escape(phone['value']) + r'(?!\d)', text):
+            out.append(Error('G12', 'WhatsApp requires verified contact C01'))
+        if re.search(r'\b[A-Z]{2,}\b', text):
+            out.append(Error('G12', 'WhatsApp words in capital letters'))
         if len(text) > 700:
             out.append(Error('G12', f'WhatsApp has {len(text)} characters; limit 700'))
         if text != record['whatsapp']:
@@ -32,10 +37,16 @@ def check_format(kind, text, record, ctx, pages=None, pdf_text=None):
         out += check_document(text, ctx, record['kind'])
         doc = Document()
         doc.feed(text)
-        actual = norm(' '.join(t for t, a, _ in doc.segments if 'data-reader' in a))
-        expected = norm(' '.join(row['text'] for row in record['steps']))
+        actual = norm(' '.join(t for t, _, _ in doc.segments))
+        expected = norm(' '.join([record['opening'], record['title']] + [row['text'] for row in record['scope']] + ([record['clock_label']] if record['clock'] else []) + [row['text'] for row in record['clock']] + [row['text'] for row in record['steps']] + [record['checked'], record['page_url'], record['no_contact']]))
         if actual != expected:
-            out.append(Error('G12', 'print steps differ from source prefix'))
+            out.append(Error('G12', 'whole visible print sheet differs from source'))
+        if re.search(r'\b(?:transform|zoom)\s*:|<small\b', text, re.I):
+            out.append(Error('G12', 'print must not shrink text with transform, zoom or small'))
+        address_sizes = re.findall(r'\.address[^{}]*\{[^}]*font-size:\s*(\d+(?:\.\d+)?)pt', text, re.I)
+        address_sizes += [size for _, attrs, _ in doc.elements if 'data-page-url' in attrs for size in re.findall(r'font-size:\s*(\d+(?:\.\d+)?)pt', attrs.get('style', ''), re.I)]
+        if not address_sizes or any(float(size) < 18 for size in address_sizes):
+            out.append(Error('G12', 'print address must be 18pt or larger'))
         if pages != 1:
             out.append(Error('G12', f'print has {pages if pages is not None else "unknown"} pages; exactly one required'))
         if not re.search(r'font-size:\s*12pt', text):
@@ -43,14 +54,17 @@ def check_format(kind, text, record, ctx, pages=None, pdf_text=None):
         sizes = re.findall(r'font-size\s*:\s*([^;}]+)', text, re.I)
         if any(not re.fullmatch(r'(?:\d+(?:\.\d+)?)pt', size.strip()) or float(size.strip()[:-2]) < 12 for size in sizes) or re.search(r'\bfont\s*:', text, re.I):
             out.append(Error('G12', 'print font override below 12pt or unsupported font sizing'))
-        if record['page_url'] not in text or record['checked'] not in text:
-            out.append(Error('G12', 'print lacks source page address or check status'))
+        if record['page_url'] not in actual:
+            out.append(Error('G12', 'print lacks source page address'))
+        if record['checked'] not in actual:
+            out.append(Error('G12', 'print lacks check status'))
         visible = ''.join(t for t, _, _ in doc.segments)
         normalized_pdf = pdf_text or ''
         # CSS-generated list labels are visible in PDF text but not HTML text nodes.
         # Remove at most one expected label per step; never strip arbitrary numbers.
         for ordinal in range(1, len(record['steps']) + 1):
             normalized_pdf = re.sub(rf'(?m)^[ \t]*{ordinal}\.(?=[ \t\r\n]|$)[ \t]*', '', normalized_pdf, count=1)
+        normalized_pdf = re.sub(r'(?m)^[ \t]*[•][ \t]*', '', normalized_pdf, count=len(record['clock']))
         if pdf_text is not None and re.sub(r'\s+', '', normalized_pdf) != re.sub(r'\s+', '', visible):
             out.append(Error('G12', 'PDF text differs from print HTML'))
     else:
@@ -81,11 +95,16 @@ def main():
     parser.add_argument('--public', type=Path, default=ROOT / '.cache/test-public')
     parser.add_argument('--facts', type=Path, default=ROOT / 'tests/fixtures/registries/facts.md')
     parser.add_argument('--contacts', type=Path, default=ROOT / 'tests/fixtures/registries/contacts.md')
+    parser.add_argument('--production', action='store_true')
     args = parser.parse_args()
     ctx, errors, count = Context.load(args.facts, args.contacts), [], 0
+    if any(p.is_file() and p.suffix != '.md' for p in args.content.rglob('*')):
+        parser.error('content files must use .md')
     for path in args.content.rglob('*.md'):
         meta, body = frontmatter(path)
-        if meta.get('kind') not in {'playbook', 'card'}:
+        if args.production and meta.get('draft') is True:
+            continue
+        if meta.get('kind') not in {'playbook', 'card'} or not set(meta.get('formats', [])) & {'whatsapp', 'print'}:
             continue
         relative = path.relative_to(args.content)
         language = relative.parts[0]
@@ -104,8 +123,8 @@ def main():
             errors += check_format(kind, text, record, ctx, pages, pdf_text)
             count += 1
             print(f'{file}: {len(text)} characters' if kind == 'whatsapp' else f'{file}: PDF {pages} page(s)')
-    if not count:
-        errors.append(Error('G12', 'no formats checked'))
+    if not count and not errors:
+        print('G12: no enabled formats in this build')
     for error in errors:
         print(error)
     print('G12: ' + ('RED' if errors else 'GREEN'))

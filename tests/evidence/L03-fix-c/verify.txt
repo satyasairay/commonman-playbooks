@@ -1,0 +1,208 @@
+facts: exported 0 verified rows
+contacts: exported 0 verified rows
+formats: projected 0 source pages
+Start building sites … 
+hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8+extended windows/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio
+
+
+                  │ EN 
+──────────────────┼────
+ Pages            │  2 
+ Paginator pages  │  0 
+ Non-page files   │  0 
+ Static files     │  2 
+ Processed images │  0 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Total in 33 ms
+G1: GREEN
+G2: GREEN
+G3: GREEN
+G4: GREEN
+G6: GREEN
+G7: GREEN
+G8: GREEN
+G9: GREEN
+G10: GREEN
+G11: GREEN
+G12: GREEN
+Start building sites … 
+hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8+extended windows/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio
+
+
+                  │ EN 
+──────────────────┼────
+ Pages            │  5 
+ Paginator pages  │  0 
+ Non-page files   │  0 
+ Static files     │  2 
+ Processed images │  0 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Total in 37 ms
+G1: GREEN
+G2: GREEN
+G3: GREEN
+G4: GREEN
+G6: GREEN
+G7: GREEN
+G8: GREEN
+G9: GREEN
+G10: GREEN
+G11: GREEN
+G12: GREEN
+facts: exported 3 verified rows
+contacts: exported 2 verified rows
+formats: projected 1 source pages
+Start building sites … 
+hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8+extended windows/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio
+
+
+                  │ EN 
+──────────────────┼────
+ Pages            │ 10 
+ Paginator pages  │  0 
+ Non-page files   │  0 
+ Static files     │  2 
+ Processed images │  0 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Total in 41 ms
+G1: GREEN
+G2: GREEN
+G3: GREEN
+G4: GREEN
+G6: GREEN
+G7: GREEN
+G8: GREEN
+G9: GREEN
+G10: GREEN
+G11: GREEN
+G12: GREEN
+No enabled print formats in this build.
+test_S9_every_built_page_and_print_are_selected (test_browser_evidence.BrowserEvidenceTests.test_S9_every_built_page_and_print_are_selected) ... ok
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
+test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
+test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
+test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ok
+test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... ok
+test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit) ... ok
+test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
+test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
+test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
+test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
+test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
+test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ok
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... ok
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... ok
+test_empty_production_has_no_pdf_to_build (test_format_fix.FixFormatTests.test_empty_production_has_no_pdf_to_build) ... ok
+test_formats_nav_precedes_trust (test_format_fix.FixFormatTests.test_formats_nav_precedes_trust) ... ok
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... ok
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... ok
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... ok
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... ok
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+test_contact_marker_cannot_change_target (test_gate_adversary.GateAdversaryTests.test_contact_marker_cannot_change_target) ... ok
+test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_empty_signature_element_fails) ... ok
+test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
+test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
+test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... FAIL
+test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
+test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
+test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
+test_plain_email_and_unschemed_url_are_bare_contacts (test_gate_adversary.GateAdversaryTests.test_plain_email_and_unschemed_url_are_bare_contacts) ... ok
+test_redirect_cannot_request_external_host (test_gate_adversary.GateAdversaryTests.test_redirect_cannot_request_external_host) ... ok
+test_srcset_cannot_hide_second_external_resource (test_gate_adversary.GateAdversaryTests.test_srcset_cannot_hide_second_external_resource) ... ok
+test_verified_share_base_retains_exact_encoded_text (test_gate_adversary.GateAdversaryTests.test_verified_share_base_retains_exact_encoded_text) ... FAIL
+test_B1_built_ol_start (test_gate_fix.FixGateTests.test_B1_built_ol_start) ... ok
+test_B1_only_sequential_steps_exempt (test_gate_fix.FixGateTests.test_B1_only_sequential_steps_exempt) ... ok
+test_B2_all_review_claims (test_gate_fix.FixGateTests.test_B2_all_review_claims) ... ok
+test_G11_lowercase_act_heading_allowed (test_gate_fix.FixGateTests.test_G11_lowercase_act_heading_allowed) ... ok
+test_G11_modal_may_is_not_a_month (test_gate_fix.FixGateTests.test_G11_modal_may_is_not_a_month) ... ok
+test_S10_production_rejects_draft_output (test_gate_fix.FixGateTests.test_S10_production_rejects_draft_output) ... ok
+test_S11_valid_build_identity_required (test_gate_fix.FixGateTests.test_S11_valid_build_identity_required) ... ok
+test_S12_call_short_phone_control (test_gate_fix.FixGateTests.test_S12_call_short_phone_control) ... ok
+test_S12_card_confidence_control (test_gate_fix.FixGateTests.test_S12_card_confidence_control) ... ok
+test_S12_internal_path_control (test_gate_fix.FixGateTests.test_S12_internal_path_control) ... ok
+test_S12_live_page_missing_control (test_gate_fix.FixGateTests.test_S12_live_page_missing_control) ... ok
+test_S12_live_signature_control (test_gate_fix.FixGateTests.test_S12_live_signature_control) ... ok
+test_S12_loop_id_control (test_gate_fix.FixGateTests.test_S12_loop_id_control) ... ok
+test_S12_primary_https_control (test_gate_fix.FixGateTests.test_S12_primary_https_control) ... ok
+test_S12_primary_username_control (test_gate_fix.FixGateTests.test_S12_primary_username_control) ... ok
+test_S12_recheck_boundary_control (test_gate_fix.FixGateTests.test_S12_recheck_boundary_control) ... ok
+test_S12_required_site_pages_control (test_gate_fix.FixGateTests.test_S12_required_site_pages_control) ... ok
+test_S1_hard_wrap_does_not_end_sentence (test_gate_fix.FixGateTests.test_S1_hard_wrap_does_not_end_sentence) ... ok
+test_S22_two_date_forms_only (test_gate_fix.FixGateTests.test_S22_two_date_forms_only) ... ok
+test_S2_deny_and_phrase_names (test_gate_fix.FixGateTests.test_S2_deny_and_phrase_names) ... ok
+test_S3_domains_and_obfuscated_email (test_gate_fix.FixGateTests.test_S3_domains_and_obfuscated_email) ... ok
+test_S4_raw_internal_markers (test_gate_fix.FixGateTests.test_S4_raw_internal_markers) ... ok
+test_S5_kind_closed_in_sections (test_gate_fix.FixGateTests.test_S5_kind_closed_in_sections) ... ok
+test_S6_non_md_content_fails (test_gate_fix.FixGateTests.test_S6_non_md_content_fails) ... ok
+test_S7_unknown_fact_kind_fails (test_gate_fix.FixGateTests.test_S7_unknown_fact_kind_fails) ... ok
+test_S8_quote_keeps_marker_contact_script_checks (test_gate_fix.FixGateTests.test_S8_quote_keeps_marker_contact_script_checks) ... ok
+test_S8_verified_by_is_checked (test_gate_fix.FixGateTests.test_S8_verified_by_is_checked) ... ok
+test_S9_every_network_surface (test_gate_fix.FixGateTests.test_S9_every_network_surface) ... ok
+test_fact_sentence_counts_in_G10 (test_gate_fix.FixGateTests.test_fact_sentence_counts_in_G10) ... ok
+test_footer_ai_line_required (test_gate_fix.FixGateTests.test_footer_ai_line_required) ... ok
+test_web_size_limit (test_gate_fix.FixGateTests.test_web_size_limit) ... ok
+test_baseline (test_gates.GateTests.test_baseline) ... ok
+test_each_failing_fixture (test_gates.GateTests.test_each_failing_fixture) ... ok
+test_raw_source_claim_is_checked_even_when_hugo_omits_html (test_gates.GateTests.test_raw_source_claim_is_checked_even_when_hugo_omits_html) ... ok
+test_S10_clean_production_and_separate_preview (test_pipeline_fix.PipelineFixTests.test_S10_clean_production_and_separate_preview) ... ok
+test_S13_mutations_only_in_copies (test_pipeline_fix.PipelineFixTests.test_S13_mutations_only_in_copies) ... ok
+test_ci_immutable_dependencies (test_pipeline_fix.PipelineFixTests.test_ci_immutable_dependencies) ... ok
+test_local_format_check_is_explicit (test_pipeline_fix.PipelineFixTests.test_local_format_check_is_explicit) ... ok
+test_export_filters_unverified_rows (test_registry.RegistryTests.test_export_filters_unverified_rows) ... ok
+test_fixture_has_one_fact_and_contact (test_registry.RegistryTests.test_fixture_has_one_fact_and_contact) ... ok
+test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_text_normalisation) ... ok
+test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
+test_S12_share_link_parity_control (test_share_control.ShareControlTests.test_S12_share_link_parity_control) ... ok
+test_canonical_print_address_frame (test_share_control.ShareControlTests.test_canonical_print_address_frame) ... ok
+test_hugo_share_space_encoding (test_share_control.ShareControlTests.test_hugo_share_space_encoding) ... ok
+test_verified_share_base_hash_and_label (test_share_control.ShareControlTests.test_verified_share_base_hash_and_label) ... ok
+
+======================================================================
+FAIL: test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_adversary.py", line 75, in test_generated_landing_page_runs_english_gate
+    self.assertIn('G10', {e.gate for e in run(ROOT / 'tests/fixtures/site', public, self.ctx)})
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G10' not found in set()
+
+======================================================================
+FAIL: test_verified_share_base_retains_exact_encoded_text (test_gate_adversary.GateAdversaryTests.test_verified_share_base_retains_exact_encoded_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_gate_adversary.py", line 57, in test_verified_share_base_retains_exact_encoded_text
+    self.assertNotIn('G1', self.gates(text))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'G1' unexpectedly found in {'G1'}
+
+----------------------------------------------------------------------
+Ran 97 tests in 4.185s
+
+FAILED (failures=2)
+tests: command failed with exit 1
+
+EXIT 1

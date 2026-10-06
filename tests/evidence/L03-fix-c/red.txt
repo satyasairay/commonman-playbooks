@@ -1,0 +1,92 @@
+test_S12_print_address_control (test_format_fix.FixFormatTests.test_S12_print_address_control) ... ok
+test_S12_print_status_control (test_format_fix.FixFormatTests.test_S12_print_status_control) ... ok
+test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected) ... ERROR
+test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n) ... FAIL
+test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large) ... FAIL
+test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small) ... FAIL
+test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet) ... FAIL
+test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical) ... FAIL
+test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical) ... FAIL
+test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01) ... FAIL
+
+======================================================================
+ERROR: test_S15_scope_and_clock_are_projected (test_format_fix.FixFormatTests.test_S15_scope_and_clock_are_projected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_format_fix.py", line 23, in test_S15_scope_and_clock_are_projected
+    self.assertEqual([s['text'] for s in self.record['scope']], ['This page covers a test.', 'It does not cover real advice.'])
+                                         ~~~~~~~~~~~^^^^^^^^^
+KeyError: 'scope'
+
+======================================================================
+FAIL: test_S20_status_uses_i18n (test_format_fix.FixFormatTests.test_S20_status_uses_i18n)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_format_fix.py", line 31, in test_S20_status_uses_i18n
+    self.assertEqual(record['checked'], 'TEST unsigned label')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Draft awaiting review' != 'TEST unsigned label'
+- Draft awaiting review
++ TEST unsigned label
+
+
+======================================================================
+FAIL: test_address_is_large (test_format_fix.FixFormatTests.test_address_is_large)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_format_fix.py", line 68, in test_address_is_large
+    self.assertTrue(any('18pt' in e.note for e in self.errors(self.print.replace('font-size: 18pt', 'font-size: 14pt'))))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_print_rejects_scaling_and_small (test_format_fix.FixFormatTests.test_print_rejects_scaling_and_small)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_format_fix.py", line 58, in test_print_rejects_scaling_and_small
+    self.assertTrue(any('shrink' in e.note for e in self.errors(self.print.replace('</style>', addition + '</style>'))))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_print_whole_visible_sheet (test_format_fix.FixFormatTests.test_print_whole_visible_sheet)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_format_fix.py", line 54, in test_print_whole_visible_sheet
+    self.assertTrue(any('whole visible' in e.note for e in self.errors(changed)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_whatsapp_capitals_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_capitals_even_if_canonical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_format_fix.py", line 50, in test_whatsapp_capitals_even_if_canonical
+    self.assertTrue(any('capital' in e.note for e in check_format('whatsapp', text, record, self.ctx)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_whatsapp_missing_C01_even_if_canonical (test_format_fix.FixFormatTests.test_whatsapp_missing_C01_even_if_canonical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_format_fix.py", line 45, in test_whatsapp_missing_C01_even_if_canonical
+    self.assertTrue(any('C01' in e.note for e in check_format('whatsapp', text, record, self.ctx)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_whatsapp_requires_C01 (test_format_fix.FixFormatTests.test_whatsapp_requires_C01)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_format_fix.py", line 37, in test_whatsapp_requires_C01
+    self.assertIn(self.ctx.contacts['C01']['value'], self.record['whatsapp'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '1930' not found in "Don't worry. What happened is not in your hands now. What you do next is in your hands.\n\n*Test page*\n\n1. Read the test note. https://example.invalid/test\n\nDraft awaiting review\n\nhttps://satsangee.org/playbooks/test-page/\n\nWe never call you, ask for money or file anything for you.\n"
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.108s
+
+FAILED (failures=7, errors=1)
+
+EXIT 1
