@@ -1,0 +1,14 @@
+[
+  {"gate":"G1", "target":"html", "old":"</article>", "new":"<p>Call 9876543210.</p></article>"},
+  {"gate":"G2", "target":"fact", "field":"status", "new":"candidate"},
+  {"gate":"G3", "target":"html", "old":"<p data-verified-by>Verified by TEST.</p>", "new":""},
+  {"gate":"G4", "target":"html", "old":"</head>", "new":"<script src=\"https://example.invalid/track.js\"></script></head>"},
+  {"gate":"G4", "target":"html", "old":"</head>", "new":"<link rel=\"stylesheet\" href=\"https://example.invalid/style.css\"></head>"},
+  {"gate":"G6", "target":"html", "old":"<p data-no-contact>We never call you, ask for money or file anything for you.</p>", "new":""},
+  {"gate":"G7", "target":"html", "old":"</article>", "new":"<p>[[VERIFY: check this]]</p></article>"},
+  {"gate":"G8", "target":"html", "old":"<p data-opening>Don't worry. What happened is not in your hands now. What you do next is in your hands.</p>", "new":""},
+  {"gate":"G9", "target":"fact", "field":"source_url", "new":"https://news.example.invalid/rule", "kind":"rule"},
+  {"gate":"G10", "target":"html", "old":"</article>", "new":"<p>paisa</p></article>"},
+  {"gate":"G10", "target":"html", "old":"</article>", "new":"<p>one one one one one one one one one one one one one one one one one one one one one one one one one one.</p></article>"},
+  {"gate":"G11", "target":"html", "old":"</article>", "new":"<p>Reply within 3 days.</p></article>"}
+]
