@@ -1,0 +1,30 @@
+test_S9_every_built_page_and_print_are_selected (test_browser_evidence.BrowserEvidenceTests.test_S9_every_built_page_and_print_are_selected) ... ok
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_idle_connection_uses_current_build_directory (test_browser_evidence.BrowserEvidenceTests.test_idle_connection_uses_current_build_directory) ... ERROR
+test_missing_page_or_stylesheet_fails (test_browser_evidence.BrowserEvidenceTests.test_missing_page_or_stylesheet_fails) ... FAIL
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
+
+======================================================================
+ERROR: test_idle_connection_uses_current_build_directory (test_browser_evidence.BrowserEvidenceTests.test_idle_connection_uses_current_build_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_browser_evidence.py", line 24, in test_idle_connection_uses_current_build_directory
+    server = browser_evidence.build_server(first)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'browser_evidence' has no attribute 'build_server'
+
+======================================================================
+FAIL: test_missing_page_or_stylesheet_fails (test_browser_evidence.BrowserEvidenceTests.test_missing_page_or_stylesheet_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_browser_evidence.py", line 46, in test_missing_page_or_stylesheet_fails
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.020s
+
+FAILED (failures=1, errors=1)
+
+EXIT 1

@@ -1,7 +1,6 @@
 """Capture actual page-network events and pixels in an isolated CI browser."""
 import base64
 import argparse
-import functools
 import http.server
 import json
 import os
@@ -27,8 +26,19 @@ def built_pages(public):
     return sorted(path.relative_to(public).as_posix() for path in Path(public).rglob('*.html'))
 
 
+def build_server(public):
+    class BuildHandler(http.server.SimpleHTTPRequestHandler):
+        def translate_path(self, path):
+            self.directory = self.server.build_directory
+            return super().translate_path(path)
+    server = http.server.ThreadingHTTPServer(('127.0.0.1', 0), BuildHandler)
+    server.build_directory = str(public)
+    return server
+
+
 def check_page_requests(events):
     requests = []
+    failed = []
     for event in events:
         method = event.get('method', '')
         params = event.get('params', {})
@@ -36,10 +46,14 @@ def check_page_requests(events):
             requests.append(params['request']['url'])
         elif method in {'Network.webSocketCreated', 'Network.webTransportCreated'}:
             requests.append(params['url'])
+        elif method == 'Network.responseReceived':
+            response = params['response']
+            if response['status'] >= 400 and urlsplit(response['url']).path != '/favicon.ico':
+                failed.append(response['url'])
     requests = sorted(set(requests))
     outside = [url for url in requests if urlsplit(url).hostname not in {'127.0.0.1', 'localhost'}]
-    if not requests or outside:
-        raise ValueError('empty page trace or external requests: ' + repr(outside))
+    if not requests or outside or failed:
+        raise ValueError('empty page trace, external requests or failed resources: ' + repr(outside + failed))
     return requests
 
 
@@ -54,8 +68,7 @@ def main():
     if not chrome:
         raise SystemExit('browser evidence unavailable: no Chrome/Chromium on this CI runner')
     evidence = ROOT / '.cache/evidence'
-    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT / '.cache/test-public'))
-    server = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
+    server = build_server(ROOT / '.cache/test-public')
     threading.Thread(target=server.serve_forever, daemon=True).start()
     url = f'http://127.0.0.1:{server.server_address[1]}/playbooks/test-page/'
     version = ''
@@ -89,7 +102,7 @@ def main():
                 names = built_pages(public)
                 if not names:
                     raise ValueError('build has no HTML pages: ' + redact(str(public)))
-                server.RequestHandlerClass = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(public))
+                server.build_directory = str(public)
                 for name in names:
                     page_url = f'http://127.0.0.1:{server.server_address[1]}/{name}'
                     start = len(client.events)
@@ -101,7 +114,7 @@ def main():
                     screenshot = 'page-' + public.name + '-' + name.replace('/', '-') + '.png'
                     (evidence / screenshot).write_bytes(base64.b64decode(client.command('Page.captureScreenshot', format='png', fromSurface=True)['data']))
                     all_pages.append({'build': public.name, 'page': name, 'requests': requests, 'outside_requests': [], 'screenshot': screenshot})
-            server.RequestHandlerClass = handler
+            server.build_directory = str(ROOT / '.cache/test-public')
             (evidence / 'all-page-network.json').write_text(json.dumps(all_pages, indent=2), encoding='utf-8')
             start = len(client.events)
             navigation = client.command('Page.navigate', url=url)
