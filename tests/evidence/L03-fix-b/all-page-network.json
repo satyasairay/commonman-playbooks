@@ -1,0 +1,152 @@
+[
+  {
+    "build": "public",
+    "page": "index.html",
+    "requests": [
+      "http://127.0.0.1:53064/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-public-index.html.png"
+  },
+  {
+    "build": "public",
+    "page": "playbooks/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/playbooks/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-public-playbooks-index.html.png"
+  },
+  {
+    "build": "preview-public",
+    "page": "corrections/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/corrections/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-preview-public-corrections-index.html.png"
+  },
+  {
+    "build": "preview-public",
+    "page": "index.html",
+    "requests": [
+      "http://127.0.0.1:53064/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-preview-public-index.html.png"
+  },
+  {
+    "build": "preview-public",
+    "page": "method/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/method/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-preview-public-method-index.html.png"
+  },
+  {
+    "build": "preview-public",
+    "page": "playbooks/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/playbooks/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-preview-public-playbooks-index.html.png"
+  },
+  {
+    "build": "preview-public",
+    "page": "playbooks/test-page/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/playbooks/test-page/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-preview-public-playbooks-test-page-index.html.png"
+  },
+  {
+    "build": "test-public",
+    "page": "cards/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/cards/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-test-public-cards-index.html.png"
+  },
+  {
+    "build": "test-public",
+    "page": "cards/test-card/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/cards/test-card/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-test-public-cards-test-card-index.html.png"
+  },
+  {
+    "build": "test-public",
+    "page": "corrections/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/corrections/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-test-public-corrections-index.html.png"
+  },
+  {
+    "build": "test-public",
+    "page": "index.html",
+    "requests": [
+      "http://127.0.0.1:53064/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-test-public-index.html.png"
+  },
+  {
+    "build": "test-public",
+    "page": "method/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/method/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-test-public-method-index.html.png"
+  },
+  {
+    "build": "test-public",
+    "page": "playbooks/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/playbooks/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-test-public-playbooks-index.html.png"
+  },
+  {
+    "build": "test-public",
+    "page": "playbooks/test-page/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/playbooks/test-page/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-test-public-playbooks-test-page-index.html.png"
+  },
+  {
+    "build": "test-public",
+    "page": "playbooks/test-signed/index.html",
+    "requests": [
+      "http://127.0.0.1:53064/playbooks/test-signed/index.html",
+      "http://127.0.0.1:53064/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "page-test-public-playbooks-test-signed-index.html.png"
+  }
+]

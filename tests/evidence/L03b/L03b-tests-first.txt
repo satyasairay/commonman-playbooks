@@ -1,6 +1,6 @@
 python.exe : test_gates (unittest.loader._FailedTest.test_gates) ... ERROR
 At line:2 char:1
-+ & C:/Users/USER/.cache/codex-runtimes/codex-primary-runtime/dependenc ...
++ & <home>/.cache/codex-runtimes/codex-primary-runtime/dependenc ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (test_gates (uni...ates) ... ERROR:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
@@ -11,14 +11,14 @@ ERROR: test_gates (unittest.loader._FailedTest.test_gates)
 ----------------------------------------------------------------------
 ImportError: Failed to import test module: test_gates
 Traceback (most recent call last):
-  File "C:\Users\USER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\loader.py", line 
+  File "<home>\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\loader.py", line 
 396, in _find_test_path
     module = self._get_module_from_name(name)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\USER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\loader.py", line 
+  File "<home>\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\loader.py", line 
 339, in _get_module_from_name
     __import__(name)
-  File "C:\Users\USER\Desktop\commonman-playbooks-cx\tests\test_gates.py", line 10, in <module>
+  File "<repo>\tests\test_gates.py", line 10, in <module>
     from gates import Context, check_document, source_checks
 ModuleNotFoundError: No module named 'gates'
 

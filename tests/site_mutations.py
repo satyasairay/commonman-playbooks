@@ -28,7 +28,7 @@ def copy_repo(target):
     shutil.copy2(ROOT / 'hugo.toml', target / 'hugo.toml')
 
 def run(root, args):
-    env = dict(os.environ, PYTHONUTF8='1', BUILD_COMMIT='abcdef0123456789abcdef0123456789abcdef0123', BUILD_DATE='2026-10-06')
+    env = dict(os.environ, PYTHONUTF8='1', BUILD_COMMIT='abcdef0123456789abcdef0123456789abcdef01', BUILD_DATE='2026-10-06')
     return subprocess.run(args, cwd=root, env=env, capture_output=True, text=True, encoding='utf-8')
 
 def build(root):

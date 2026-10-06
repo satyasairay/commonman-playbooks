@@ -1,0 +1,10 @@
+test_S9_every_built_page_and_print_are_selected (test_browser_evidence.BrowserEvidenceTests.test_S9_every_built_page_and_print_are_selected) ... ok
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.011s
+
+OK
+
+EXIT 0

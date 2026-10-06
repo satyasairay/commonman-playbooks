@@ -2,7 +2,7 @@
 import argparse
 import json
 from pathlib import Path
-from registry import ROOT, read
+from registry import ROOT, read, parse_date, KINDS
 
 
 def main():
@@ -17,6 +17,12 @@ def main():
     args.output.mkdir(parents=True, exist_ok=True)
     for name, rows in [('facts', facts), ('contacts', contacts)]:
         verified = {key: row for key, row in rows.items() if row['status'] == 'verified'}
+        for key, row in verified.items():
+            if name == 'facts' and row['kind'] not in KINDS:
+                parser.error(f'{key}: unknown fact kind')
+            row['verified_on'] = parse_date(row['verified_on']).isoformat()
+            if name == 'facts':
+                row['recheck_by'] = parse_date(row['recheck_by']).isoformat()
         (args.output / (name + '.json')).write_text(json.dumps(verified, ensure_ascii=False, indent=2), encoding='utf-8')
         print(f'{name}: exported {len(verified)} verified rows')
 

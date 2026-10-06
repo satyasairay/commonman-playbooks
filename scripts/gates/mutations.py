@@ -1,100 +1,120 @@
-"""Prove fixture failures and kill disabled controls; restore from byte backups."""
+"""Independent control mutations in TemporaryDirectory copies only."""
 import copy
+import argparse
 import json
+import re
 import shutil
-import subprocess
 import sys
+import tempfile
 from pathlib import Path
-from gates import Context, GATES, ROOT, check_document
+from gates import Context, ROOT, check_document
+sys.path.insert(0, str(ROOT / 'tests'))
+from site_mutations import copy_repo, build, run
 
+CONTROLS = [
+    ('B1-source', 'gates.py', 'if step and int(step[1]) == expected:', 'if step:'),
+    ('B1-built', 'gates.py', "if tag == 'ol' and str(attrs.get('start', '1')) != '1':", 'if False:'),
+    ('B2', 'gates.py', 'if claims and (BARE.search(text) or LEGAL_CAPITAL.search(text)):', 'if False:'),
+    ('S1', 'english.py', "blocks = re.split(r'\\n\\s*\\n', text)", "blocks = text.splitlines()"),
+    ('S2-deny', 'english.py', "if normal in {'paisa', 'karein', 'jaldi', 'ji', 'didi', 'saathi', 'nyaya', 'beta', 'bas', 'na'} or normal not in dictionary:", 'if normal not in dictionary:'),
+    ('S2-phrases', 'english.py', "out.update(term.strip().lower() for term in cells[0].split(','))", "out.update(w.lower() for w in re.findall(r'[A-Za-z]+', cells[0]))"),
+    ('S3', 'gates.py', 'for value in LINK.findall(text):', 'for value in []:'),
+    ('S4-raw', 'gates.py', 'if INTERNAL.search(body):', 'if False:'),
+    ('S5', 'gates.py', "if section in {'playbooks', 'cards'} and meta.get('kind') != {'playbooks': 'playbook', 'cards': 'card'}[section]:", 'if False:'),
+    ('S6', 'gates.py', "if path.suffix != '.md':", 'if False:'),
+    ('S7', 'gates.py', "if row['kind'] not in KINDS:", 'if False:'),
+    ('S8-script', 'gates.py', "if doc.language == 'en' and re.search(r'[\\u0900-\\u097f\\u0b00-\\u0b7f]', content):", 'if False:'),
+    ('S8-verifier', 'gates.py', "['title', 'scope_covers', 'scope_excludes', 'verified_by']", "['title', 'scope_covers', 'scope_excludes']"),
+    ('S9-style', 'gates.py', "if re.search(r'url\\s*\\(|@import|@font-face', ''.join(doc.styles), re.I):", 'if False:'),
+    ('S9-attributes', 'gates.py', "if re.search(r'(?:https?:)?//', value, re.I) and not (key == 'href' and 'data-contact' in attrs):", 'if False:'),
+    ('S10', 'gates.py', "if production and meta.get('draft') is True:", 'if False:'),
+    ('S11-sha', 'gates.py', "if not re.fullmatch(r'[0-9a-fA-F]{7,40}', identity.get('data-build-commit') or ''):", 'if False:'),
+    ('S11-date', 'gates.py', "parse_date(identity.get('data-build-date', ''))", "parse_date('2026-10-06')"),
+    ('S12-https', 'gates.py', "url.scheme != 'https' or url.username or", 'url.username or'),
+    ('S12-username', 'gates.py', "url.scheme != 'https' or url.username or", "url.scheme != 'https' or"),
+    ('S12-signature', 'gates.py', "    if meta.get('draft') is False:\n        try:", '    if False:\n        try:'),
+    ('S12-recheck-boundary', 'gates.py', "parse_date(row['recheck_by']) <= ctx.today", "parse_date(row['recheck_by']) < ctx.today"),
+    ('S12-confidence', 'gates.py', "if meta.get('kind') == 'card' and meta.get('confidence') not in {'watch', 'confirmed'}:", 'if False:'),
+    ('S12-required-pages', 'gates.py', "if not (Path(public) / path).exists():", 'if False:'),
+    ('S12-live-build', 'gates.py', "elif meta.get('draft') is False:", 'elif False:'),
+    ('S12-loop-id', 'gates.py', r'\bL\d\d[a-z]?(?:-cx)?\b|', ''),
+    ('S12-internal-path', 'gates.py', r'(?:rules|content|scripts|loops)[/\\]|', ''),
+    ('S12-call-short', 'gates.py', r'|\b(?:call|dial|helpline|phone)\s+\d{3,5}\b', ''),
+    ('G6', 'gates.py', "if not ctx.no_contact.get(doc.language) or ctx.no_contact[doc.language] not in lines:", 'if False:'),
+    ('G8', 'gates.py', 'if not expected or not visible or norm(visible[0]) != expected:', 'if False:'),
+    ('fact-sentence', 'gates.py', "prose.setdefault(attrs.get('_block', line), []).append(content)\n        elif 'data-contact'", "pass\n        elif 'data-contact'"),
+    ('footer-ai', 'gates.py', "if not any('data-ai-line' in a and a.get('data-frame') == 'footer' for a in doc.attrs):", 'if False:'),
+    ('web-size', 'gates.py', "if len(text.encode('utf-8')) >= 50000:", 'if False:'),
+    ('S22', '../facts/registry.py', "raise ValueError('date must be YYYY-MM-DD or day full-month year (for example 6 October 2026)')", 'return dt.date(2026, 10, 6)'),
+    ('network-pages', 'browser_evidence.py', "return sorted(path.relative_to(public).as_posix() for path in Path(public).rglob('*.html'))", "return ['index.html']"),
+    ('verified-only', '../facts/export.py', "if row['status'] == 'verified'", 'if True'),
+    ('source-script', '../sources/fetch_text.py', '"script", "style",', '"style",'),
+    ('S12-share-parity', 'gates.py', "return [Error('G12', 'share link text differs from source page')] if any(text != canonical for text in shares) else []", 'return []'),
+]
 
-def prove_control(path, backup, changed, pattern, label):
-    shutil.copyfile(path, backup)
-    try:
-        path.write_text(changed, encoding='utf-8')
-        command = [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', pattern, '-v']
-        result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
-        assert result.returncode != 0, f'{label} disabled control survived'
-        print(f'{label} disabled control: TESTS RED (expected)')
-        print(result.stdout + result.stderr)
-    finally:
-        shutil.copyfile(backup, path)
-    result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
-    assert result.returncode == 0, result.stdout + result.stderr
-    print(f'{label} restored control: TESTS GREEN')
-    print(result.stdout + result.stderr)
-
+def fixture_mutations():
+    ctx = Context.fixture()
+    handwritten = (ROOT / 'tests/fixtures/gates/page.html').read_text(encoding='utf-8')
+    built = (ROOT / '.cache/test-public/playbooks/test-page/index.html').read_text(encoding='utf-8')
+    signed = (ROOT / '.cache/test-public/playbooks/test-signed/index.html').read_text(encoding='utf-8')
+    for item in json.loads((ROOT / 'tests/fixtures/gates/mutations.json').read_text(encoding='utf-8')):
+        for surface in ('handwritten', 'Hugo-built'):
+            baseline = handwritten if surface == 'handwritten' else signed if item['gate'] == 'G3' else built
+            changed, context = baseline, copy.deepcopy(ctx)
+            if item['target'] == 'fact':
+                context.facts['TEST-STEP-01'][item['field']] = item['new']
+                if 'kind' in item:
+                    context.facts['TEST-STEP-01']['kind'] = item['kind']
+            elif surface == 'handwritten':
+                changed = baseline.replace(item['old'], item['new'])
+            elif item['gate'] == 'G3':
+                changed = re.sub(r'<p data-verified-by>.*?</p>', '', baseline)
+            elif item['gate'] in {'G6', 'G8'}:
+                marker = 'data-no-contact' if item['gate'] == 'G6' else 'data-opening'
+                changed = re.sub(r'<p[^>]*' + marker + r'[^>]*>.*?</p>', '', baseline)
+            else:
+                changed = baseline.replace(item['old'], item['new'])
+            errors = check_document(changed, context, require_trust=surface == 'handwritten' or item['gate'] == 'G3')
+            if item['gate'] not in {e.gate for e in errors}:
+                raise RuntimeError(f'{surface} {item}: mutation survived')
+            restored = check_document(baseline, ctx, require_trust=surface == 'handwritten' or item['gate'] == 'G3')
+            if restored:
+                raise RuntimeError(f'{surface}: baseline not green: {restored}')
+            print(f'{item["gate"]} {surface}: RED; backup baseline GREEN')
 
 def main():
-    folder = ROOT / '.cache/mutations'
-    folder.mkdir(parents=True, exist_ok=True)
-    source = ROOT / 'tests/fixtures/gates/page.html'
-    active = folder / 'page.html'
-    backup = folder / 'page.html.backup'
-    shutil.copyfile(source, active)
-    shutil.copyfile(active, backup)
-    baseline = Context.fixture()
-    mutations = json.loads((ROOT / 'tests/fixtures/gates/mutations.json').read_text(encoding='utf-8'))
-    for index, item in enumerate(mutations, 1):
-        ctx = copy.deepcopy(baseline)
-        try:
-            if item['target'] == 'html':
-                original = active.read_text(encoding='utf-8')
-                assert item['old'] in original
-                active.write_text(original.replace(item['old'], item['new']), encoding='utf-8')
-            else:
-                registry = folder / 'facts.json'
-                registry.write_text(json.dumps(ctx.facts), encoding='utf-8')
-                shutil.copyfile(registry, folder / 'facts.json.backup')
-                ctx.facts['TEST-STEP-01'][item['field']] = item['new']
-                if 'kind' in item:
-                    ctx.facts['TEST-STEP-01']['kind'] = item['kind']
-                registry.write_text(json.dumps(ctx.facts), encoding='utf-8')
-                ctx.facts = json.loads(registry.read_text(encoding='utf-8'))
-            errors = check_document(active.read_text(encoding='utf-8'), ctx, require_trust=True)
-            hits = [e for e in errors if e.gate == item['gate']]
-            assert hits, f'mutation {index} survived'
-            print(f'{item["gate"]} fixture {index}: RED (expected)')
-            for error in hits:
-                print(error)
-        finally:
-            shutil.copyfile(backup, active)
-            if item['target'] == 'fact':
-                shutil.copyfile(folder / 'facts.json.backup', folder / 'facts.json')
-                ctx.facts = json.loads((folder / 'facts.json').read_text(encoding='utf-8'))
-        restored = check_document(active.read_text(encoding='utf-8'), ctx, require_trust=True)
-        assert not restored, restored
-        print(f'{item["gate"]} fixture {index}: GREEN after backup restore')
-
-    control = ROOT / 'scripts/gates/gates.py'
-    control_backup = folder / 'gates.py.backup'
-    shutil.copyfile(control, control_backup)
-    try:
-        for gate in GATES:
-            original = control_backup.read_text(encoding='utf-8')
-            wrapper = f'''\n# Temporary control mutation; restored from backup by mutations.py.\n_original_document = check_document\n_original_source = source_checks\ndef check_document(*args, **kwargs):\n    return [e for e in _original_document(*args, **kwargs) if e.gate != {gate!r}]\ndef source_checks(*args, **kwargs):\n    return [e for e in _original_source(*args, **kwargs) if e.gate != {gate!r}]\n'''
-            control.write_text(original + wrapper, encoding='utf-8')
-            result = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_gate*.py', '-v'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
-            assert result.returncode != 0, f'{gate} disabled control survived tests'
-            print(f'{gate} disabled control: TESTS RED (expected)')
-            print(result.stdout + result.stderr)
-            shutil.copyfile(control_backup, control)
-            result = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_gate*.py', '-v'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
-            assert result.returncode == 0, result.stdout + result.stderr
-            print(f'{gate} restored control: TESTS GREEN')
-            print(result.stdout + result.stderr)
-    finally:
-        shutil.copyfile(control_backup, control)
-    export = ROOT / 'scripts/facts/export.py'
-    original = export.read_text(encoding='utf-8')
-    prove_control(export, folder / 'export.py.backup', original.replace("if row['status'] == 'verified'", 'if True'), 'test_registry.py', 'verified-only export')
-    text_helper = ROOT / 'scripts/sources/fetch_text.py'
-    original = text_helper.read_text(encoding='utf-8')
-    prove_control(text_helper, folder / 'fetch_text.py.backup', original.replace('"script", ', ''), 'test_registry.py', 'source script exclusion')
-    built = ROOT / '.cache/test-public/playbooks/test-page/index.html'
-    original = built.read_text(encoding='utf-8')
-    prove_control(built, folder / 'built.html.backup', original.replace('</head>', '<script src="https://example.invalid/x.js"></script></head>'), 'test_build.py', 'built resource test')
-
+    sys.stdout.reconfigure(encoding='utf-8')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--only')
+    args = parser.parse_args()
+    fixture_mutations()
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp) / 'repo'
+        root.mkdir()
+        copy_repo(root)
+        build(root)
+        for name, path, old, new in CONTROLS:
+            if args.only and name != args.only:
+                continue
+            file = root / 'scripts/gates' / path
+            text = file.read_text(encoding='utf-8')
+            if text.count(old) != 1:
+                raise RuntimeError(f'{name}: target count {text.count(old)}')
+            backup = file.with_name(file.name + '.backup')
+            shutil.copy2(file, backup)
+            file.write_text(text.replace(old, new), encoding='utf-8')
+            pattern = 'test_share_control.py' if name == 'S12-share-parity' else 'test_browser_evidence.py' if name == 'network-pages' else 'test_registry.py' if name in {'verified-only', 'source-script'} else 'test_gate*.py'
+            command = [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', pattern, '-v']
+            red = run(root, command)
+            if red.returncode == 0 or 'FAIL:' not in red.stderr or 'ERROR:' in red.stderr:
+                raise RuntimeError(f'{name}: mutation not killed by an assertion\n{red.stderr}')
+            print(f'{name} disabled alone: RED exit {red.returncode}', flush=True)
+            print(red.stderr.replace(str(root), '<temp-repo>'))
+            shutil.copy2(backup, file)
+            green = run(root, command)
+            if green.returncode:
+                raise RuntimeError(f'{name}: backup restore not green\n{green.stderr}')
+            print(f'{name} backup restored: GREEN exit {green.returncode}', flush=True)
 
 if __name__ == '__main__':
     main()

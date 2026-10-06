@@ -63,8 +63,7 @@ def allowed(path):
             continue
         cells = [c.strip() for c in line.strip('|').split('|')]
         if len(cells) == 4 and cells[3].startswith('approved'):
-            out.update(w.lower() for w in re.findall(r"[A-Za-z]+(?:[-'][A-Za-z]+)*", cells[0]))
-            out.update(w.lower() for w in re.findall(r'[A-Za-z]+', cells[0]))
+            out.update(term.strip().lower() for term in cells[0].split(','))
     return out
 
 
@@ -72,13 +71,18 @@ def errors(text, allowed_words):
     errors = []
     if re.search(r'[\u0900-\u097f\u0b00-\u0b7f]', text):
         errors.append('non-English script')
-    dictionary = words() | allowed_words
-    for word in re.findall(r"[^\W\d_]+(?:['’][^\W\d_]+)*", text, re.UNICODE):
+    dictionary = words()
+    checked = text
+    for name in sorted(allowed_words, key=len, reverse=True):
+        checked = re.sub(r'(?<!\w)' + re.escape(name) + r'(?!\w)', lambda m: ' ' * len(m[0]), checked, flags=re.I)
+    for word in re.findall(r"[^\W\d_]+(?:['’][^\W\d_]+)*", checked, re.UNICODE):
         normal = word.lower().replace('’', "'")
         # Common Hinglish must fail even when a dictionary includes it as a name.
-        if normal in {'paisa', 'karein', 'jaldi', 'ji'} or normal not in dictionary:
+        if normal in {'paisa', 'karein', 'jaldi', 'ji', 'didi', 'saathi', 'nyaya', 'beta', 'bas', 'na'} or normal not in dictionary:
             errors.append(f'word outside en_GB and allowed terms: {word}')
-    for sentence in re.split(r'[.!?]+(?:\s|$)|\n+', text):
+    blocks = re.split(r'\n\s*\n', text)
+    joined = '\n\n'.join(re.sub(r'\s*\n\s*', ' ', block) for block in blocks)
+    for sentence in re.split(r'[.!?]+(?:\s|$)|\n\s*\n', joined):
         count = len(re.findall(r"[^\W\d_]+(?:['’][^\W\d_]+)*", sentence))
         if count > 25:
             errors.append(f'sentence has {count} words (limit 25)')
