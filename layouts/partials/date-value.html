@@ -1,0 +1,11 @@
+{{- $value := . | default "" -}}
+{{- if $value -}}
+  {{- $text := printf "%v" $value -}}
+  {{- if findRE `^[0-9]+ (January|February|March|April|May|June|July|August|September|October|November|December) [0-9]{4}$` $text -}}
+    {{- $parts := split $text " " -}}
+    {{- $months := dict "January" "01" "February" "02" "March" "03" "April" "04" "May" "05" "June" "06" "July" "07" "August" "08" "September" "09" "October" "10" "November" "11" "December" "12" -}}
+    {{- $value = printf "%s-%s-%02d" (index $parts 2) (index $months (index $parts 1)) (int (index $parts 0)) -}}
+  {{- end -}}
+  {{- $value = time.Format "2006-01-02" $value -}}
+{{- end -}}
+{{- return $value -}}

@@ -1,0 +1,36 @@
+baseURL = 'https://satsangee.org/'
+title = 'Commonman Playbooks'
+defaultContentLanguage = 'en'
+disableLanguages = ['or', 'hi']
+disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
+enableRobotsTXT = false
+[languages.en]
+locale = 'en-GB'
+contentDir = 'content/en'
+weight = 1
+[languages.or]
+locale = 'or'
+contentDir = 'content/or'
+weight = 2
+[languages.hi]
+locale = 'hi'
+contentDir = 'content/hi'
+weight = 3
+[markup.goldmark.renderer]
+unsafe = false
+[security.funcs]
+getenv = ['^HUGO_', '^CI$', '^BUILD_COMMIT$', '^BUILD_DATE$']
+[security.http]
+urls = ['none']
+[privacy.disqus]
+disable = true
+[privacy.googleAnalytics]
+disable = true
+[privacy.instagram]
+disable = true
+[privacy.vimeo]
+disable = true
+[privacy.x]
+disable = true
+[privacy.youTube]
+disable = true

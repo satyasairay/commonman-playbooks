@@ -1,0 +1,3 @@
+{{ $id := .Get 0 }}{{ $row := index hugo.Data.generated.contacts $id }}
+{{ if not $row }}{{ errorf "Contact %s is missing or not verified" $id }}{{ end }}
+{{ if in (slice "phone" "whatsapp") $row.type }}<a data-contact="{{ $id }}" href="tel:{{ $row.value }}">{{ $row.value }}</a>{{ else if eq $row.type "email" }}<a data-contact="{{ $id }}" href="mailto:{{ $row.value }}">{{ $row.value }}</a>{{ else }}<a data-contact="{{ $id }}" href="{{ $row.value }}">{{ $row.value }}</a>{{ end }}

@@ -1,0 +1,5 @@
+{{ define "main" }}
+<h1>{{ i18n "playbooks" }}</h1>
+<ul>{{ range .Pages }}<li><a href="{{ .RelPermalink }}">{{ if eq .Kind "section" }}{{ i18n "playbooks" }}{{ else }}{{ .Title }}{{ end }}</a></li>{{ end }}</ul>
+<p data-no-contact>{{ i18n "no_contact" }}</p>
+{{ end }}

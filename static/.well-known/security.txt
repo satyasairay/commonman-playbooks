@@ -1,0 +1,3 @@
+Contact: https://github.com/satyasairay/commonman-playbooks/security/advisories/new
+Expires: 2027-10-01T00:00:00Z
+Preferred-Languages: en

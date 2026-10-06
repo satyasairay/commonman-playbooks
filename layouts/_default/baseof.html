@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ .Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="{{ "site.css" | relURL }}">
+</head>
+<body>
+<main>{{ block "main" . }}{{ end }}</main>
+<footer data-frame="footer">
+  <p>{{ i18n "privacy" }}</p>
+  <p><a href="{{ "corrections/" | relLangURL }}">{{ i18n "mistake" }}</a></p>
+  <p data-ai-line>{{ i18n "ai_line" }}</p>
+  <p data-build-commit="{{ getenv "BUILD_COMMIT" }}" data-build-date="{{ getenv "BUILD_DATE" }}">Build {{ substr (getenv "BUILD_COMMIT") 0 7 }} · {{ with getenv "BUILD_DATE" }}{{ time.Format "2 January 2006" . }}{{ end }}</p>
+</footer>
+</body>
+</html>
