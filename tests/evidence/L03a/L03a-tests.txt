@@ -1,6 +1,6 @@
 python.exe : test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
 At line:2 char:1
-+ & C:/Users/USER/.cache/codex-runtimes/codex-primary-runtime/dependenc ...
++ & <home>/.cache/codex-runtimes/codex-primary-runtime/dependenc ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (test_reference_..._render) ... ok:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
