@@ -88,11 +88,21 @@ def to_text(path, raw):
     return html_to_text(raw)
 
 
+class HTTPSRedirectHandler(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        if not newurl.lower().startswith('https://'):
+            raise ValueError('source redirects must stay on HTTPS')
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
 def fetch(url):
+    if not url.lower().startswith('https://'):
+        raise ValueError('sources require HTTPS')
     req = urllib.request.Request(url, headers={"User-Agent": UA,
                                                "Accept": "*/*"})
     ctx = ssl.create_default_context()
-    with urllib.request.urlopen(req, timeout=60, context=ctx) as r:
+    opener = urllib.request.build_opener(HTTPSRedirectHandler(), urllib.request.HTTPSHandler(context=ctx))
+    with opener.open(req, timeout=60) as r:
         return r.read(), r.headers.get("Content-Type", ""), r.geturl()
 
 
