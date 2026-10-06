@@ -95,6 +95,10 @@ def main():
         root = Path(tmp) / 'repo'
         root.mkdir()
         copy_repo(root)
+        if (root / 'scripts/facts/formats.py').exists():
+            result = run(root, [sys.executable, 'scripts/facts/formats.py', '--content', 'tests/fixtures/site', '--facts', 'tests/fixtures/registries/facts.md', '--contacts', 'tests/fixtures/registries/contacts.md', '--output', '.cache/fixture-data/generated'])
+            if result.returncode:
+                raise RuntimeError(result.stdout + result.stderr)
         build(root)
         for name, path, old, new in CONTROLS:
             if args.only and name != args.only:
