@@ -1,0 +1,4 @@
+/home/runner/work/commonman-playbooks/commonman-playbooks/.cache/test-public/playbooks/test-page/whatsapp.txt: 281 characters
+/home/runner/work/commonman-playbooks/commonman-playbooks/.cache/test-public/playbooks/test-page/print.html: PDF 1 page(s)
+G12 RED : PDF text differs from print HTML
+G12: RED

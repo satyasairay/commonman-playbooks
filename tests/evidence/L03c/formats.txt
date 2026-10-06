@@ -1,0 +1,2 @@
+.cache/test-public/playbooks/test-page/print.pdf: 1 page(s)
+public/playbooks/test-page/print.pdf: 1 page(s)

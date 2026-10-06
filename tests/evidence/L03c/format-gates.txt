@@ -1,0 +1,3 @@
+/home/runner/work/commonman-playbooks/commonman-playbooks/.cache/test-public/playbooks/test-page/print.html: PDF 1 page(s)
+/home/runner/work/commonman-playbooks/commonman-playbooks/.cache/test-public/playbooks/test-page/whatsapp.txt: 281 characters
+G12: GREEN

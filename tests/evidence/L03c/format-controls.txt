@@ -1,0 +1,280 @@
+G12 WhatsApp limit disabled control: TESTS RED (expected)
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... FAIL
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/commonman-playbooks/commonman-playbooks/tests/test_formats.py", line 36, in test_canonical_overlong_page_fails_length_alone
+    self.assertIn('G12', {e.gate for e in check_format('whatsapp', record['whatsapp'], record, self.ctx)})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.564s
+
+FAILED (failures=1)
+
+G12 WhatsApp limit restored control: TESTS GREEN
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.540s
+
+OK
+
+G12 PDF page limit disabled control: TESTS RED (expected)
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... FAIL
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... FAIL
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/commonman-playbooks/commonman-playbooks/tests/test_formats.py", line 47, in test_missing_pdf_count_fails_closed
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx)})
+AssertionError: 'G12' not found in set()
+
+======================================================================
+FAIL: test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/commonman-playbooks/commonman-playbooks/tests/test_formats.py", line 44, in test_two_page_sheet_mutation
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx, pages=2)})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.564s
+
+FAILED (failures=2)
+
+G12 PDF page limit restored control: TESTS GREEN
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.568s
+
+OK
+
+G12 WhatsApp step parity disabled control: TESTS RED (expected)
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... FAIL
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/commonman-playbooks/commonman-playbooks/tests/test_formats.py", line 40, in test_added_step_mutation
+    self.assertIn('G12', {e.gate for e in check_format('whatsapp', text, self.record, self.ctx)})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.522s
+
+FAILED (failures=1)
+
+G12 WhatsApp step parity restored control: TESTS GREEN
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.535s
+
+OK
+
+G12 print step parity disabled control: TESTS RED (expected)
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... FAIL
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/commonman-playbooks/commonman-playbooks/tests/test_formats.py", line 50, in test_print_added_step_fails_parity
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print.replace('Read the test note.', 'Send the test note.'), self.record, self.ctx, pages=1)})
+AssertionError: 'G12' not found in {'G2'}
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.549s
+
+FAILED (failures=1)
+
+G12 print step parity restored control: TESTS GREEN
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.540s
+
+OK
+
+G12 print font minimum disabled control: TESTS RED (expected)
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... FAIL
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/commonman-playbooks/commonman-playbooks/tests/test_formats.py", line 54, in test_small_print_override_fails
+    self.assertIn('G12', {e.gate for e in check_format('print', text, self.record, self.ctx, pages=1)})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.529s
+
+FAILED (failures=1)
+
+G12 print font minimum restored control: TESTS GREEN
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.524s
+
+OK
+
+G12 PDF text parity disabled control: TESTS RED (expected)
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... FAIL
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... FAIL
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+======================================================================
+FAIL: test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/commonman-playbooks/commonman-playbooks/tests/test_formats.py", line 64, in test_pdf_generated_list_marker_is_exempt
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text=text + '2.\n')})
+AssertionError: 'G12' not found in set()
+
+======================================================================
+FAIL: test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/commonman-playbooks/commonman-playbooks/tests/test_formats.py", line 57, in test_pdf_text_replacement_fails
+    self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text='Send the test note.')})
+AssertionError: 'G12' not found in set()
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.534s
+
+FAILED (failures=2)
+
+G12 PDF text parity restored control: TESTS GREEN
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.528s
+
+OK
+

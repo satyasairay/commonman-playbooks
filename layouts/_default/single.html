@@ -8,5 +8,6 @@
 <article data-reader>{{ .Content }}</article>
 {{ with .Params.warnings }}<aside>{{ range . }}{{ partial "fact.html" (dict "id" . "page" $) }}{{ end }}</aside>{{ end }}
 {{ partial "evidence.html" . }}
+{{ partial "formats.html" . }}
 {{ partial "trust.html" . }}
 {{ end }}

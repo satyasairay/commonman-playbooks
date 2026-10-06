@@ -1,0 +1,6 @@
+{{ $record := index hugo.Data.generated.formats .RelPermalink }}
+{{ with $record }}<nav data-frame="formats">
+<p><a href="{{ $.RelPermalink }}whatsapp.txt">{{ i18n "whatsapp_text" }}</a> · <a href="{{ $.RelPermalink }}print.html">{{ i18n "print_sheet" }}</a></p>
+{{ $share := index hugo.Data.generated.contacts "C18" }}
+{{ if and $share (eq $share.status "verified") }}<p><a data-contact="C18" data-share data-share-sha256="{{ sha256 .whatsapp }}" href="{{ printf "%s%s" $share.value (.whatsapp | urlquery) }}">{{ i18n "share" }}</a></p>{{ end }}
+</nav>{{ end }}

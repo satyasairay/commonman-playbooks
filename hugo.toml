@@ -4,6 +4,15 @@ defaultContentLanguage = 'en'
 disableLanguages = ['or', 'hi']
 disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
 enableRobotsTXT = false
+[outputFormats.WhatsApp]
+mediaType = 'text/plain'
+baseName = 'whatsapp'
+isPlainText = true
+isAlternative = false
+[outputFormats.Print]
+mediaType = 'text/html'
+baseName = 'print'
+isAlternative = false
 [languages.en]
 locale = 'en-GB'
 contentDir = 'content/en'

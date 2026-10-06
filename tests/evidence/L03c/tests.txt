@@ -1,0 +1,39 @@
+test_empty_trace_fails_closed (test_browser_evidence.BrowserEvidenceTests.test_empty_trace_fails_closed) ... ok
+test_page_origin_control (test_browser_evidence.BrowserEvidenceTests.test_page_origin_control) ... ok
+test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evidence_render) ... ok
+test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
+test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
+test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
+test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
+test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
+test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
+test_source_claim_blocks_projection (test_formats.FormatTests.test_source_claim_blocks_projection) ... ok
+test_two_page_sheet_mutation (test_formats.FormatTests.test_two_page_sheet_mutation) ... ok
+test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
+test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
+test_contact_marker_cannot_change_target (test_gate_adversary.GateAdversaryTests.test_contact_marker_cannot_change_target) ... ok
+test_empty_signature_element_fails (test_gate_adversary.GateAdversaryTests.test_empty_signature_element_fails) ... ok
+test_evidence_does_not_exempt_unreferenced_links (test_gate_adversary.GateAdversaryTests.test_evidence_does_not_exempt_unreferenced_links) ... ok
+test_expired_fact_fails (test_gate_adversary.GateAdversaryTests.test_expired_fact_fails) ... ok
+test_frame_privacy_prose_is_checked (test_gate_adversary.GateAdversaryTests.test_frame_privacy_prose_is_checked) ... ok
+test_generated_landing_page_runs_english_gate (test_gate_adversary.GateAdversaryTests.test_generated_landing_page_runs_english_gate) ... ok
+test_inline_tags_do_not_reset_sentence_limit (test_gate_adversary.GateAdversaryTests.test_inline_tags_do_not_reset_sentence_limit) ... ok
+test_lookalike_primary_domain_fails (test_gate_adversary.GateAdversaryTests.test_lookalike_primary_domain_fails) ... ok
+test_only_quote_bypasses_evidence_prose_check (test_gate_adversary.GateAdversaryTests.test_only_quote_bypasses_evidence_prose_check) ... ok
+test_plain_email_and_unschemed_url_are_bare_contacts (test_gate_adversary.GateAdversaryTests.test_plain_email_and_unschemed_url_are_bare_contacts) ... ok
+test_redirect_cannot_request_external_host (test_gate_adversary.GateAdversaryTests.test_redirect_cannot_request_external_host) ... ok
+test_srcset_cannot_hide_second_external_resource (test_gate_adversary.GateAdversaryTests.test_srcset_cannot_hide_second_external_resource) ... ok
+test_verified_share_base_retains_exact_encoded_text (test_gate_adversary.GateAdversaryTests.test_verified_share_base_retains_exact_encoded_text) ... ok
+test_baseline (test_gates.GateTests.test_baseline) ... ok
+test_each_failing_fixture (test_gates.GateTests.test_each_failing_fixture) ... ok
+test_raw_source_claim_is_checked_even_when_hugo_omits_html (test_gates.GateTests.test_raw_source_claim_is_checked_even_when_hugo_omits_html) ... ok
+test_export_filters_unverified_rows (test_registry.RegistryTests.test_export_filters_unverified_rows) ... ok
+test_fixture_has_one_fact_and_contact (test_registry.RegistryTests.test_fixture_has_one_fact_and_contact) ... ok
+test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_text_normalisation) ... ok
+test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 1.631s
+
+OK
