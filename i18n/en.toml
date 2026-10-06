@@ -42,6 +42,9 @@ other = 'The clock'
 # DRAFT: Satya approves.
 [overdue]
 other = 'This page is past its check date.'
-# Satya writes this text before publication.
+# DRAFT: Satya approves. Satya writes this text before publication.
 [ai_line]
 other = ''
+# DRAFT: Satya approves. Existing L03c label, shared with lower branches.
+[playbooks]
+other = 'Help'
