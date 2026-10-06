@@ -21,6 +21,7 @@ MUTATIONS = [
     ('footer-ai', 'layouts/_default/baseof.html', 'data-ai-line', 'data-removed'),
     ('privacy', 'hugo.toml', "urls = ['none']", "urls = ['.*']"),
     ('human-dates', 'layouts/partials/date-value.html', '"October" "10"', '"October" "09"'),
+    ('list-label', 'layouts/_default/list.html', 'i18n "playbooks"', '.Title'),
 ]
 
 def copy_repo(target):
