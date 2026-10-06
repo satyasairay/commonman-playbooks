@@ -24,7 +24,7 @@ def unit_control_mutations():
         ('WhatsApp step parity', "if text != record['whatsapp']:", 'if False:'),
         ('print step parity', 'if actual != expected:', 'if False:'),
         ('print font minimum', "if any(not re.fullmatch(r'(?:\\d+(?:\\.\\d+)?)pt', size.strip()) or float(size.strip()[:-2]) < 12 for size in sizes) or re.search(r'\\bfont\\s*:', text, re.I):", 'if False:'),
-        ('PDF text parity', "if pdf_text is not None and re.sub(r'\\s+', '', pdf_text) != re.sub(r'\\s+', '', visible):", 'if False:'),
+        ('PDF text parity', "if pdf_text is not None and re.sub(r'\\s+', '', normalized_pdf) != re.sub(r'\\s+', '', visible):", 'if False:'),
     ]
     command = [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_formats.py', '-v']
     try:

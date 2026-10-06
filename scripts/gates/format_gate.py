@@ -46,7 +46,12 @@ def check_format(kind, text, record, ctx, pages=None, pdf_text=None):
         if record['page_url'] not in text or record['checked'] not in text:
             out.append(Error('G12', 'print lacks source page address or check status'))
         visible = ''.join(t for t, _, _ in doc.segments)
-        if pdf_text is not None and re.sub(r'\s+', '', pdf_text) != re.sub(r'\s+', '', visible):
+        normalized_pdf = pdf_text or ''
+        # CSS-generated list labels are visible in PDF text but not HTML text nodes.
+        # Remove at most one expected label per step; never strip arbitrary numbers.
+        for ordinal in range(1, len(record['steps']) + 1):
+            normalized_pdf = re.sub(rf'(?m)^[ \t]*{ordinal}\.(?=[ \t\r\n]|$)[ \t]*', '', normalized_pdf, count=1)
+        if pdf_text is not None and re.sub(r'\s+', '', normalized_pdf) != re.sub(r'\s+', '', visible):
             out.append(Error('G12', 'PDF text differs from print HTML'))
     else:
         out.append(Error('G12', f'unsupported format: {kind}'))

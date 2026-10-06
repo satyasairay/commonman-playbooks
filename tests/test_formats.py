@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts/gates'))
 sys.path.insert(0, str(ROOT / 'scripts/facts'))
-from gates import Context, frontmatter
+from gates import Context, Document, frontmatter
 from formats import project
 from format_gate import check_format
 
@@ -55,6 +55,13 @@ class FormatTests(unittest.TestCase):
 
     def test_pdf_text_replacement_fails(self):
         self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text='Send the test note.')})
+
+    def test_pdf_generated_list_marker_is_exempt(self):
+        doc = Document()
+        doc.feed(self.print)
+        text = ''.join(t for t, _, _ in doc.segments) + '\n1.\n'
+        self.assertEqual(check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text=text), [])
+        self.assertIn('G12', {e.gate for e in check_format('print', self.print, self.record, self.ctx, pages=1, pdf_text=text + '2.\n')})
 
     def test_source_claim_blocks_projection(self):
         meta, _ = frontmatter(ROOT / 'tests/fixtures/site/en/playbooks/test-page.md')

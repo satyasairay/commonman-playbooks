@@ -2,6 +2,7 @@ test_reference_and_evidence_render (test_build.BuildTests.test_reference_and_evi
 test_added_step_mutation (test_formats.FormatTests.test_added_step_mutation) ... ok
 test_canonical_overlong_page_fails_length_alone (test_formats.FormatTests.test_canonical_overlong_page_fails_length_alone) ... ok
 test_missing_pdf_count_fails_closed (test_formats.FormatTests.test_missing_pdf_count_fails_closed) ... ok
+test_pdf_generated_list_marker_is_exempt (test_formats.FormatTests.test_pdf_generated_list_marker_is_exempt) ... ok
 test_pdf_text_replacement_fails (test_formats.FormatTests.test_pdf_text_replacement_fails) ... ok
 test_print_added_step_fails_parity (test_formats.FormatTests.test_print_added_step_fails_parity) ... ok
 test_small_print_override_fails (test_formats.FormatTests.test_small_print_override_fails) ... ok
@@ -30,6 +31,6 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 7.293s
+Ran 31 tests in 7.639s
 
 OK
