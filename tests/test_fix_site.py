@@ -105,6 +105,16 @@ class FixSiteTests(unittest.TestCase):
             self.assertIn('Verified by Satyasai Ray on 6 October 2026.', html)
             self.assertIn('Next check by 5 October 2026', html)
 
+    def test_list_heading_uses_draft_label(self):
+        from site_mutations import copy_repo, build
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / 'repo'
+            root.mkdir()
+            copy_repo(root)
+            build(root)
+            html = (root / '.cache/test-public/playbooks/index.html').read_text(encoding='utf-8')
+            self.assertIn('<h1>Help</h1>', html)
+
 
 if __name__ == '__main__':
     unittest.main()
