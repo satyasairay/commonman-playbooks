@@ -4,7 +4,7 @@ kind = 'playbook'
 draft = true
 scope_covers = 'a test.'
 scope_excludes = 'real advice.'
-clock = []
+clock = ['TEST-DEADLINE-01']
 first_steps = 1
 formats = ['web', 'whatsapp', 'print']
 +++

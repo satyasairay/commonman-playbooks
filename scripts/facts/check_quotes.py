@@ -1,6 +1,6 @@
 """Check every quote in rules/facts.md and rules/contacts.md against its snapshot.
 
-Run from the repo root:  python .cache/tools/check_quotes.py
+Run from the repo root:  python scripts/facts/check_quotes.py
 
 For each source row in the facts.md "Sources" table: the raw file
 .cache/sources/<id>.<ext> must exist and its SHA-256 must match the table.

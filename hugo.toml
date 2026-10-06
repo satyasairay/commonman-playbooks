@@ -1,6 +1,7 @@
 baseURL = 'https://satsangee.org/'
 title = 'Commonman Playbooks'
 defaultContentLanguage = 'en'
+disableLanguages = ['or', 'hi']
 disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
 enableRobotsTXT = false
 [languages.en]
@@ -19,3 +20,17 @@ weight = 3
 unsafe = false
 [security.funcs]
 getenv = ['^HUGO_', '^CI$', '^BUILD_COMMIT$', '^BUILD_DATE$']
+[security.http]
+urls = ['none']
+[privacy.disqus]
+disable = true
+[privacy.googleAnalytics]
+disable = true
+[privacy.instagram]
+disable = true
+[privacy.vimeo]
+disable = true
+[privacy.x]
+disable = true
+[privacy.youTube]
+disable = true

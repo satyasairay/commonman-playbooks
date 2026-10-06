@@ -11,6 +11,8 @@ def main():
     parser.add_argument('--contacts', type=Path, default=ROOT / 'rules/contacts.md')
     parser.add_argument('--output', type=Path, default=ROOT / 'data/generated')
     args = parser.parse_args()
+    if args.output.resolve() == (ROOT / 'data/generated').resolve() and (args.facts.resolve() != (ROOT / 'rules/facts.md').resolve() or args.contacts.resolve() != (ROOT / 'rules/contacts.md').resolve()):
+        parser.error('non-production registries require an explicit separate --output')
     facts, contacts, _ = read(args.facts, args.contacts)
     args.output.mkdir(parents=True, exist_ok=True)
     for name, rows in [('facts', facts), ('contacts', contacts)]:
