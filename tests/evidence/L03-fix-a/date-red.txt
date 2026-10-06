@@ -1,0 +1,35 @@
+test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
+test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ok
+test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... ok
+test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit) ... ok
+test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
+test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
+test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ERROR
+test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
+test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
+test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
+test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
+
+======================================================================
+ERROR: test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>\tests\test_fix_site.py", line 103, in test_human_date_page_renders
+    build(root)
+    ~~~~~^^^^^^
+  File "<repo>\tests\site_mutations.py", line 38, in build
+    raise RuntimeError(redact(result.stdout + result.stderr))
+RuntimeError: Start building sites … 
+hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8+extended windows/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio
+
+Total in 95 ms
+ERROR error building site: render: [en v1.0.0 guest] failed to render pages: render of "<home>/AppData/Local/Temp/tmpqlzhq4p3/repo/tests/fixtures/site/en/playbooks/test-signed.md" failed: "<home>\AppData\Local\Temp\tmpqlzhq4p3\repo\layouts\_default\single.html:11:3": execute of template failed: template: single.html:11:3: executing "main" at <partial "trust.html" .>: error calling partial: "<home>\AppData\Local\Temp\tmpqlzhq4p3\repo\layouts\partials\trust.html:2:106": execute of template failed: template: _partials/trust.html:2:106: executing "_partials/trust.html" at <time.Format>: error calling Format: unable to parse date: 6 October 2026
+
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.698s
+
+FAILED (errors=1)
+
+EXIT 1

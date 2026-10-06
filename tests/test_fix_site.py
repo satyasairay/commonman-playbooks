@@ -92,6 +92,19 @@ class FixSiteTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'HTTPS'):
             handler.redirect_request(req, None, 302, 'Found', {}, 'http://rbi.org.in/test')
 
+    def test_human_date_page_renders(self):
+        from site_mutations import copy_repo, build
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / 'repo'
+            root.mkdir()
+            copy_repo(root)
+            file = root / 'tests/fixtures/site/en/playbooks/test-signed.md'
+            file.write_text(file.read_text(encoding='utf-8').replace('2026-10-06', '6 October 2026').replace('2026-10-05', '5 October 2026'), encoding='utf-8')
+            build(root)
+            html = (root / '.cache/test-public/playbooks/test-signed/index.html').read_text(encoding='utf-8')
+            self.assertIn('Verified by Satyasai Ray on 6 October 2026.', html)
+            self.assertIn('Next check by 5 October 2026', html)
+
 
 if __name__ == '__main__':
     unittest.main()

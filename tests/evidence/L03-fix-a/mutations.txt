@@ -6,6 +6,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -18,10 +19,10 @@ Traceback (most recent call last):
   File "<temp-repo>\tests\test_fix_site.py", line 27, in test_S14_card_label_under_opening
     self.assertIn('Confirmed by TEST agency on 6 October 2026', html)
     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 'Confirmed by TEST agency on 6 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST card</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n<p data-confidence>Confirmed</p>\n\n<h1>TEST card</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n<aside>\n\n\n\n\n<span data-fact="TEST-ADVISORY-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-ADVISORY-01" aria-label="Evidence">[Evidence]</a>\n</aside>\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-ADVISORY-01" data-evidence-fact="TEST-ADVISORY-01">\n<summary>Evidence: TEST-ADVISORY-01</summary>\n<p>TEST advisory · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
+AssertionError: 'Confirmed by TEST agency on 6 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST card</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n<p data-confidence>Confirmed</p>\n\n<h1>TEST card</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n<aside>\n\n\n\n\n<span data-fact="TEST-ADVISORY-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-ADVISORY-01" aria-label="Evidence">[Evidence]</a>\n</aside>\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-ADVISORY-01" data-evidence-fact="TEST-ADVISORY-01">\n<summary>Evidence: TEST-ADVISORY-01</summary>\n<p><a href="https://rbi.org.in/test-advisory">TEST advisory</a> · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.115s
+Ran 12 tests in 0.665s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -31,13 +32,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.125s
+Ran 12 tests in 0.629s
 
 OK
 
@@ -49,6 +51,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -71,7 +74,7 @@ First extra element 0:
 + ['or', 'hi']
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.125s
+Ran 12 tests in 0.644s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -81,13 +84,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.121s
+Ran 12 tests in 0.661s
 
 OK
 
@@ -99,6 +103,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -114,7 +119,7 @@ Traceback (most recent call last):
 AssertionError: 'data-overdue' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n<p data-next-check>Next check by 5 October 2026</p>\n<p data-removed>This page is past its check date.</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.122s
+Ran 12 tests in 0.667s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -124,13 +129,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.121s
+Ran 12 tests in 0.634s
 
 OK
 
@@ -142,6 +148,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -154,10 +161,10 @@ Traceback (most recent call last):
   File "<temp-repo>\tests\test_fix_site.py", line 43, in test_S18_readable_dates_short_commit
     self.assertNotIn('Build abcdef0123456789', html)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 'Build abcdef0123456789' unexpectedly found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Test page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>Test page</h1>\n<p class="scope">This page covers a test.</p>\n<p class="scope">It does not cover real advice.</p>\n<aside class="clock"><h2>The clock</h2><ul><li>\n\n\n\n\n<span data-fact="TEST-DEADLINE-01">Read the test note within three days of this test under the test rule.</span><a class="evidence-link" href="#evidence-TEST-DEADLINE-01" aria-label="Evidence">[Evidence]</a>\n</li></ul></aside>\n<article data-reader><h2 id="do-this-now">Do this now</h2>\n<ol>\n<li>\n\n\n\n\n<span data-fact="TEST-STEP-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-STEP-01" aria-label="Evidence">[Evidence]</a>\n\n \n \n <a data-contact="C99" href="https://example.invalid/test">https://example.invalid/test</a>\n</li>\n</ol>\n</article>\n\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-DEADLINE-01" data-evidence-fact="TEST-DEADLINE-01">\n<summary>Evidence: TEST-DEADLINE-01</summary>\n<p>TEST source · TEST paragraph</p>\n<blockquote>Read the test note within three days of this test under the test rule.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n<details id="evidence-TEST-STEP-01" data-evidence-fact="TEST-STEP-01">\n<summary>Evidence: TEST-STEP-01</summary>\n<p>TEST source · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0123456789abcdef0123456789abcdef0123 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
+AssertionError: 'Build abcdef0123456789' unexpectedly found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Test page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>Test page</h1>\n<p class="scope">This page covers a test.</p>\n<p class="scope">It does not cover real advice.</p>\n<aside class="clock"><h2>The clock</h2><ul><li>\n\n\n\n\n<span data-fact="TEST-DEADLINE-01">Read the test note within three days of this test under the test rule.</span><a class="evidence-link" href="#evidence-TEST-DEADLINE-01" aria-label="Evidence">[Evidence]</a>\n</li></ul></aside>\n<article data-reader><h2 id="do-this-now">Do this now</h2>\n<ol>\n<li>\n\n\n\n\n<span data-fact="TEST-STEP-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-STEP-01" aria-label="Evidence">[Evidence]</a>\n\n \n \n <a data-contact="C99" href="https://example.invalid/test">https://example.invalid/test</a>\n</li>\n</ol>\n</article>\n\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-DEADLINE-01" data-evidence-fact="TEST-DEADLINE-01">\n<summary>Evidence: TEST-DEADLINE-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> · TEST paragraph</p>\n<blockquote>Read the test note within three days of this test under the test rule.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n<details id="evidence-TEST-STEP-01" data-evidence-fact="TEST-STEP-01">\n<summary>Evidence: TEST-STEP-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0123456789abcdef0123456789abcdef0123 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.126s
+Ran 12 tests in 0.636s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -167,13 +174,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.122s
+Ran 12 tests in 0.629s
 
 OK
 
@@ -185,6 +193,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... FAIL
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -197,10 +206,10 @@ Traceback (most recent call last):
   File "<temp-repo>\tests\test_fix_site.py", line 48, in test_S19_clock_heading_list_fact
     self.assertRegex(html, r'(?s)<aside class="clock"[^>]*>\s*<h2>.*?</h2>\s*<ul>\s*<li>.*?data-fact="TEST-DEADLINE-01"')
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: Regex didn't match: '(?s)<aside class="clock"[^>]*>\\s*<h2>.*?</h2>\\s*<ul>\\s*<li>.*?data-fact="TEST-DEADLINE-01"' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Test page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>Test page</h1>\n<p class="scope">This page covers a test.</p>\n<p class="scope">It does not cover real advice.</p>\n<aside class="clock"><ul><li>\n\n\n\n\n<span data-fact="TEST-DEADLINE-01">Read the test note within three days of this test under the test rule.</span><a class="evidence-link" href="#evidence-TEST-DEADLINE-01" aria-label="Evidence">[Evidence]</a>\n</li></ul></aside>\n<article data-reader><h2 id="do-this-now">Do this now</h2>\n<ol>\n<li>\n\n\n\n\n<span data-fact="TEST-STEP-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-STEP-01" aria-label="Evidence">[Evidence]</a>\n\n \n \n <a data-contact="C99" href="https://example.invalid/test">https://example.invalid/test</a>\n</li>\n</ol>\n</article>\n\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-DEADLINE-01" data-evidence-fact="TEST-DEADLINE-01">\n<summary>Evidence: TEST-DEADLINE-01</summary>\n<p>TEST source · TEST paragraph</p>\n<blockquote>Read the test note within three days of this test under the test rule.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n<details id="evidence-TEST-STEP-01" data-evidence-fact="TEST-STEP-01">\n<summary>Evidence: TEST-STEP-01</summary>\n<p>TEST source · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
+AssertionError: Regex didn't match: '(?s)<aside class="clock"[^>]*>\\s*<h2>.*?</h2>\\s*<ul>\\s*<li>.*?data-fact="TEST-DEADLINE-01"' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Test page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>Test page</h1>\n<p class="scope">This page covers a test.</p>\n<p class="scope">It does not cover real advice.</p>\n<aside class="clock"><ul><li>\n\n\n\n\n<span data-fact="TEST-DEADLINE-01">Read the test note within three days of this test under the test rule.</span><a class="evidence-link" href="#evidence-TEST-DEADLINE-01" aria-label="Evidence">[Evidence]</a>\n</li></ul></aside>\n<article data-reader><h2 id="do-this-now">Do this now</h2>\n<ol>\n<li>\n\n\n\n\n<span data-fact="TEST-STEP-01">Read the test note.</span><a class="evidence-link" href="#evidence-TEST-STEP-01" aria-label="Evidence">[Evidence]</a>\n\n \n \n <a data-contact="C99" href="https://example.invalid/test">https://example.invalid/test</a>\n</li>\n</ol>\n</article>\n\n\n<section data-evidence>\n<h2>Evidence</h2>\n\n<details id="evidence-TEST-DEADLINE-01" data-evidence-fact="TEST-DEADLINE-01">\n<summary>Evidence: TEST-DEADLINE-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> · TEST paragraph</p>\n<blockquote>Read the test note within three days of this test under the test rule.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n<details id="evidence-TEST-STEP-01" data-evidence-fact="TEST-STEP-01">\n<summary>Evidence: TEST-STEP-01</summary>\n<p><a href="https://rbi.org.in/test">TEST source</a> · TEST paragraph</p>\n<blockquote>Read the test note.</blockquote>\n<p>TEST only; not advice.</p>\n<p>Checked on 6 October 2026 · TEST</p>\n</details>\n\n</section>\n\n\n<section class="trust" data-frame="trust">\n<p data-draft>Draft awaiting review</p>\n\n\n<p data-next-check>Next check by 1 January 2099</p>\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.124s
+Ran 12 tests in 0.638s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -210,13 +219,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.126s
+Ran 12 tests in 0.633s
 
 OK
 
@@ -228,6 +238,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ERROR
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -246,10 +257,10 @@ Traceback (most recent call last):
   File "<home>\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 771, in open
     return io.open(self, mode, buffering, encoding, errors, newline)
            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileExistsError: [Errno 17] File exists: 'C:\\Users\\USER\\AppData\\Local\\Temp\\tmpqw9684py\\.cache\\sources\\src-test.txt'
+FileExistsError: [Errno 17] File exists: 'C:\\Users\\USER\\AppData\\Local\\Temp\\tmpf_ecx6r7\\.cache\\sources\\src-test.txt'
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.131s
+Ran 12 tests in 0.646s
 
 FAILED (errors=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -259,13 +270,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.126s
+Ran 12 tests in 0.691s
 
 OK
 
@@ -277,6 +289,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... FAIL
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -292,7 +305,7 @@ Traceback (most recent call last):
 AssertionError: 0 == 0
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.139s
+Ran 12 tests in 0.667s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -302,13 +315,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.118s
+Ran 12 tests in 0.649s
 
 OK
 
@@ -320,6 +334,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -335,7 +350,7 @@ Traceback (most recent call last):
 AssertionError: ValueError not raised
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.123s
+Ran 12 tests in 0.658s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -345,13 +360,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.121s
+Ran 12 tests in 0.647s
 
 OK
 
@@ -363,6 +379,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... FAIL
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -378,7 +395,7 @@ Traceback (most recent call last):
 AssertionError: ValueError not raised
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.119s
+Ran 12 tests in 0.654s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -388,13 +405,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.116s
+Ran 12 tests in 0.651s
 
 OK
 
@@ -406,6 +424,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... FAIL
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... FAIL
@@ -421,6 +440,15 @@ Traceback (most recent call last):
 AssertionError: 'data-overdue' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ======================================================================
+FAIL: test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>\tests\test_fix_site.py", line 106, in test_human_date_page_renders
+    self.assertIn('Next check by 5 October 2026', html)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Next check by 5 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
+
+======================================================================
 FAIL: test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -430,9 +458,9 @@ Traceback (most recent call last):
 AssertionError: 'Next check by 5 October 2026' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n\n\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.123s
+Ran 12 tests in 0.652s
 
-FAILED (failures=2)
+FAILED (failures=3)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
 test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ok
 test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... ok
@@ -440,13 +468,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.125s
+Ran 12 tests in 0.650s
 
 OK
 
@@ -458,6 +487,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... FAIL
@@ -473,7 +503,7 @@ Traceback (most recent call last):
 AssertionError: 'data-ai-line' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 October 2026.</p>\n<p data-checked-on>Checked on 6 October 2026</p>\n\n<p data-next-check>Next check by 5 October 2026</p>\n<p data-overdue>This page is past its check date.</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-removed></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.117s
+Ran 12 tests in 0.675s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -483,13 +513,14 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.123s
+Ran 12 tests in 0.653s
 
 OK
 
@@ -501,6 +532,7 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... FAIL
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
@@ -523,7 +555,7 @@ First differing element 0:
 + ['none']
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.124s
+Ran 12 tests in 0.661s
 
 FAILED (failures=1)
 test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
@@ -533,12 +565,58 @@ test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readab
 test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
 test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
 test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
 test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
 test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
 test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
 test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.118s
+Ran 12 tests in 0.655s
+
+OK
+
+human-dates: disabled RED exit 1; backup restored GREEN exit 0
+test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
+test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ok
+test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... ok
+test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit) ... ok
+test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
+test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
+test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... FAIL
+test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
+test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
+test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
+test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
+
+======================================================================
+FAIL: test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temp-repo>\tests\test_fix_site.py", line 105, in test_human_date_page_renders
+    self.assertIn('Verified by Satyasai Ray on 6 October 2026.', html)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Verified by Satyasai Ray on 6 October 2026.' not found in '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>TEST signed page</title>\n  <link rel="stylesheet" href="/site.css">\n</head>\n<body>\n<main>\n<p class="opening" data-opening>Don&#39;t worry. What happened is not in your hands now. What you do next is in your hands.</p>\n\n<h1>TEST signed page</h1>\n\n\n\n<article data-reader><p>Read the test note.</p>\n</article>\n\n\n\n<section class="trust" data-frame="trust">\n<p data-verified-by>Verified by Satyasai Ray on 6 September 2026.</p>\n<p data-checked-on>Checked on 6 September 2026</p>\n\n<p data-next-check>Next check by 5 September 2026</p>\n<p data-overdue>This page is past its check date.</p>\n<p data-no-contact>We never call you, ask for money or file anything for you.</p>\n</section>\n\n</main>\n<footer data-frame="footer">\n  <p>This site sets no cookies and loads nothing from other sites. You can check this in your browser.</p>\n  <p><a href="/corrections/">Report a mistake</a></p>\n  <p data-ai-line></p>\n  <p data-build-commit="abcdef0123456789abcdef0123456789abcdef0123" data-build-date="2026-10-06">Build abcdef0 · 6 October 2026</p>\n</footer>\n</body>\n</html>\n'
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.681s
+
+FAILED (failures=1)
+test_S14_card_label_under_opening (test_fix_site.FixSiteTests.test_S14_card_label_under_opening) ... ok
+test_S16_deferred_languages (test_fix_site.FixSiteTests.test_S16_deferred_languages) ... ok
+test_S17_overdue_notice (test_fix_site.FixSiteTests.test_S17_overdue_notice) ... ok
+test_S18_readable_dates_short_commit (test_fix_site.FixSiteTests.test_S18_readable_dates_short_commit) ... ok
+test_S19_clock_heading_list_fact (test_fix_site.FixSiteTests.test_S19_clock_heading_list_fact) ... ok
+test_S21_snapshot_never_overwritten (test_fix_site.FixSiteTests.test_S21_snapshot_never_overwritten) ... ok
+test_fixture_export_refuses_default_output (test_fix_site.FixSiteTests.test_fixture_export_refuses_default_output) ... ok
+test_human_date_page_renders (test_fix_site.FixSiteTests.test_human_date_page_renders) ... ok
+test_privacy_and_http_disabled (test_fix_site.FixSiteTests.test_privacy_and_http_disabled) ... ok
+test_redirect_to_http_refused (test_fix_site.FixSiteTests.test_redirect_to_http_refused) ... ok
+test_signed_fixture_exact_line_and_page_recheck (test_fix_site.FixSiteTests.test_signed_fixture_exact_line_and_page_recheck) ... ok
+test_source_ids_closed_pattern (test_fix_site.FixSiteTests.test_source_ids_closed_pattern) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.677s
 
 OK

@@ -4,7 +4,7 @@
 {{ range $id, $row := . }}
 <details id="evidence-{{ $id }}" data-evidence-fact="{{ $id }}">
 <summary>{{ i18n "evidence" }}: {{ $id }}</summary>
-<p>{{ $row.source_title }} · {{ $row.source_location }}</p>
+<p><a href="{{ $row.source_url }}">{{ $row.source_title }}</a> · {{ $row.source_location }}</p>
 <blockquote>{{ $row.quote }}</blockquote>
 {{ with $row.conditions }}<p>{{ . }}</p>{{ end }}
 <p>{{ i18n "checked" }} {{ time.Format "2 January 2006" $row.verified_on }} · {{ $row.verified_by }}</p>
