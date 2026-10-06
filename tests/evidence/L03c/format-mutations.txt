@@ -20,7 +20,7 @@ Traceback (most recent call last):
 AssertionError: 'G12' not found in set()
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.564s
+Ran 11 tests in 1.345s
 
 FAILED (failures=1)
 
@@ -38,7 +38,7 @@ test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
 test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.540s
+Ran 11 tests in 1.347s
 
 OK
 
@@ -72,7 +72,7 @@ Traceback (most recent call last):
 AssertionError: 'G12' not found in set()
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.564s
+Ran 11 tests in 1.346s
 
 FAILED (failures=2)
 
@@ -90,7 +90,7 @@ test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
 test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.568s
+Ran 11 tests in 1.349s
 
 OK
 
@@ -116,7 +116,7 @@ Traceback (most recent call last):
 AssertionError: 'G12' not found in set()
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.522s
+Ran 11 tests in 1.350s
 
 FAILED (failures=1)
 
@@ -134,7 +134,7 @@ test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
 test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.535s
+Ran 11 tests in 1.347s
 
 OK
 
@@ -160,7 +160,7 @@ Traceback (most recent call last):
 AssertionError: 'G12' not found in {'G2'}
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.549s
+Ran 11 tests in 1.341s
 
 FAILED (failures=1)
 
@@ -178,7 +178,7 @@ test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
 test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.540s
+Ran 11 tests in 1.369s
 
 OK
 
@@ -204,7 +204,7 @@ Traceback (most recent call last):
 AssertionError: 'G12' not found in set()
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.529s
+Ran 11 tests in 1.348s
 
 FAILED (failures=1)
 
@@ -222,7 +222,7 @@ test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
 test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.524s
+Ran 11 tests in 1.365s
 
 OK
 
@@ -256,7 +256,7 @@ Traceback (most recent call last):
 AssertionError: 'G12' not found in set()
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.534s
+Ran 11 tests in 1.355s
 
 FAILED (failures=2)
 
@@ -274,7 +274,17 @@ test_whatsapp_baseline (test_formats.FormatTests.test_whatsapp_baseline) ... ok
 test_whatsapp_length_mutation (test_formats.FormatTests.test_whatsapp_length_mutation) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.528s
+Ran 11 tests in 1.342s
 
 OK
 
+G12 overlong WhatsApp: RED (expected)
+G12 RED : WhatsApp has 1081 characters; limit 700
+G12 RED : WhatsApp differs from source steps or frame
+G12 overlong WhatsApp: GREEN after backup restore
+G12 two-page sheet: RED (expected)
+G12 RED : print has 2 pages; exactly one required
+G12 two-page sheet: GREEN after backup restore
+G12 step absent from page: RED (expected)
+G12 RED : WhatsApp differs from source steps or frame
+G12 step absent from page: GREEN after backup restore

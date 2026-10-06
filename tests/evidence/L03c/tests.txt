@@ -34,6 +34,6 @@ test_port_keeps_text_normalisation (test_registry.RegistryTests.test_port_keeps_
 test_real_registry_does_not_parse_format_example_as_fact (test_registry.RegistryTests.test_real_registry_does_not_parse_format_example_as_fact) ... ok
 
 ----------------------------------------------------------------------
-Ran 34 tests in 1.518s
+Ran 34 tests in 1.631s
 
 OK

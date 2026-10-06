@@ -1,0 +1,3 @@
+public/playbooks/test-page/whatsapp.txt: 252 characters
+public/playbooks/test-page/print.html: PDF 1 page(s)
+G12: GREEN

@@ -1,0 +1,36 @@
+[
+  {
+    "state": "closed",
+    "width": 320,
+    "height": 1400,
+    "dpr": 1,
+    "mobile_viewport": true,
+    "browser": "Google Chrome 154.0.8037.57",
+    "url": "http://127.0.0.1:39593/playbooks/test-page/",
+    "requests": [
+      "http://127.0.0.1:39593/favicon.ico",
+      "http://127.0.0.1:39593/playbooks/test-page/",
+      "http://127.0.0.1:39593/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "web-320-closed.png",
+    "ready": "page load lifecycle event and loaded CSS"
+  },
+  {
+    "state": "expanded",
+    "width": 320,
+    "height": 1400,
+    "dpr": 1,
+    "mobile_viewport": true,
+    "browser": "Google Chrome 154.0.8037.57",
+    "url": "http://127.0.0.1:39593/playbooks/test-page/",
+    "requests": [
+      "http://127.0.0.1:39593/favicon.ico",
+      "http://127.0.0.1:39593/playbooks/test-page/",
+      "http://127.0.0.1:39593/site.css"
+    ],
+    "outside_requests": [],
+    "screenshot": "web-320-expanded.png",
+    "ready": "page load lifecycle event and loaded CSS"
+  }
+]
